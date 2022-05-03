@@ -1,1 +1,4 @@
-# My-projects
+# TypeScript projects
+
+- **RS-Lang** - this single page application was developed as part of the **[RS School JavaScript/Front-end course](https://rs.school/js/)** by a *team of 3 people* ([Ihar](https://github.com/Ihar-dev) and [Alexandr Karatkevich](https://github.com/koraleaxandr)). The application allows you to learn English words. The application implements user authentication, 2 mini-games, a textbook of words with different complexity, statistics. A ready-made server with its own API is used as a data source (if the server is not available, please let me know). [![My projects](https://img.shields.io/badge/DEPLOY-black?style=flat&logo=github&logoColor=black&labelColor=F3F3F3)](https://hauzinski.github.io/My-projects/RS-Lang/)
+- **Christmas**  - this single page application was developed as part of the **[RS School JavaScript/Front-end course](https://rs.school/js/)**. This application allows you to decorate a Christmas tree with a choice of Christmas toys. [![My projects](https://img.shields.io/badge/DEPLOY-black?style=flat&logo=github&logoColor=black&labelColor=F3F3F3)](https://hauzinski.github.io/My-projects/Christmas/)
