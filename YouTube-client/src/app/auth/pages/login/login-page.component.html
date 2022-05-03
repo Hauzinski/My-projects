@@ -1,0 +1,37 @@
+<div class="login__container">
+  <h3 class="login__title">login</h3>
+  <form class="login__form" [formGroup]="loginForm" novalidate (ngSubmit)="login()">
+    <label for="userName">login</label>
+    <input type="text" id="userName" name="userName" formControlName="userName" />
+    <ul
+      class="validatorErrorMessageList"
+      *ngIf="getInput('userName').invalid && (getInput('userName').dirty || getInput('userName').touched)"
+    >
+      <li *ngIf="!getInput('userName').value.length">Please enter a login email</li>
+      <li *ngIf="getError('userName').email">The login email is invalid</li>
+    </ul>
+
+    <label for="userPassword">password</label>
+    <input type="password" id="userPassword" name="userPassword" formControlName="userPassword" />
+    <div
+      *ngIf="getInput('userPassword').invalid && (getInput('userPassword').dirty || getInput('userPassword').touched)"
+    >
+      <ul class="validatorErrorMessageList">
+        <li *ngIf="!getInput('userPassword').value.length">Please enter a password</li>
+      </ul>
+      <p *ngIf="getInput('userPassword').value.length">Your password isn't strong enough:</p>
+      <ul class="validatorErrorMessageList" *ngIf="getInput('userPassword').value.length">
+        <li *ngIf="getError('userPassword').minlength">at least 8 characters</li>
+        <li *ngIf="getError('userPassword').uppercaseAndLowercase">
+          a mixture of both uppercase and lowercase letters
+        </li>
+        <li *ngIf="getError('userPassword').lettersAndNumbers">a mixture of letters and numbers</li>
+        <li *ngIf="getError('userPassword').specialCharacter">
+          inclusion of at least one special character, e.g., ! @ # ? ]
+        </li>
+      </ul>
+    </div>
+
+    <button class="button login__button" [disabled]="loginForm.invalid">login</button>
+  </form>
+</div>

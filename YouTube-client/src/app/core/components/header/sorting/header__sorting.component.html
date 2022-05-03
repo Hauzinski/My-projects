@@ -1,0 +1,9 @@
+<ul class="sorting__options" toggle>
+  <li><p>Sorting by:</p></li>
+  <li><a (click)="sortByDate()">data</a></li>
+  <li><a (click)="sortByView()">count of views</a></li>
+  <li>
+    <a (click)="sortByWord()">by word or sentance</a>
+    <input type="text" [(ngModel)]="sortingWord" />
+  </li>
+</ul>

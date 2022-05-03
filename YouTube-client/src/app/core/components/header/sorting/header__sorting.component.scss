@@ -1,0 +1,44 @@
+.sorting__options {
+  display: flex;
+  padding: 0px;
+}
+
+.sorting__options > li {
+  display: flex;
+  align-items: center;
+
+  white-space: nowrap;
+
+  list-style-type: none;
+}
+
+.sorting__options > li:not(:last-child) {
+  margin-right: 1em;
+}
+
+.sorting__options input {
+  margin-left: 0.5em;
+
+  border: none;
+  outline: none;
+
+  &.ng-touched {
+    border-radius: 0;
+  }
+}
+
+.sorting__options a {
+  color: var(--blue);
+
+  user-select: none;
+
+  &:hover {
+    font-weight: 900;
+
+    cursor: pointer;
+  }
+}
+
+.sorting__options > li:not(:last-child) > a {
+  text-decoration: underline;
+}

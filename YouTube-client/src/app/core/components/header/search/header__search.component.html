@@ -1,0 +1,9 @@
+<div class="logo">
+  <div></div>
+</div>
+<form class="search__form" [formGroup]="searchForm" novalidate>
+  <input type="text" name="searchText" placeholder="Enter a request" formControlName="searchText" />
+</form>
+<div class="search-options__button button" (click)="toggleSorting()">
+  <div></div>
+</div>

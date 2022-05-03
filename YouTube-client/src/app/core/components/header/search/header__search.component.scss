@@ -1,0 +1,90 @@
+:host {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 55px;
+  height: 40px;
+
+  background-color: var(--blue);
+  border-radius: 50%/10%;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 10%;
+    bottom: 10%;
+    right: -5%;
+    left: -5%;
+    background: inherit;
+    border-radius: 5%/50%;
+  }
+}
+
+.logo > div {
+  width: 30px;
+  height: 35px;
+
+  -webkit-mask: url(../../../../../assets/svg/logo.svg) no-repeat center;
+  mask: url(../../../../../assets/svg/logo.svg) no-repeat center;
+  background-color: var(--white);
+}
+
+.search__form {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  margin: 0 1em;
+}
+
+.search__form > input,
+.search__form > button {
+  height: 25px;
+  padding: 0 5px;
+
+  border: none;
+}
+
+.search__form > input {
+  flex: 1;
+
+  border-radius: 5px;
+  background-color: rgb(230, 230, 230);
+  outline: none;
+
+  &.ng-touched {
+    border-radius: 5px;
+  }
+}
+
+.search__form > button {
+  padding: 0 2em;
+  min-width: 100px;
+
+  color: var(--white);
+  text-transform: lowercase;
+
+  border-radius: 0 5px 5px 0;
+}
+
+.search-options__button {
+  min-width: 25px;
+  height: 25px;
+  padding: 2px;
+
+  border-radius: 7px;
+}
+
+.search-options__button > div {
+  height: 100%;
+  width: 100%;
+
+  -webkit-mask: url(../../../../../assets/svg/search-options.svg) no-repeat center;
+  mask: url(../../../../../assets/svg/search-options.svg) no-repeat center;
+  background-color: var(--white);
+}

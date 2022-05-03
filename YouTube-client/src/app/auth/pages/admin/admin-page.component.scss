@@ -1,0 +1,54 @@
+:host {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.admin__container {
+  width: 300px;
+
+  margin: 2em 0;
+  padding: 2em 1.5em;
+
+  border-radius: 10px;
+  background-color: var(--grey);
+}
+
+.admin__title,
+.admin__form > label {
+  user-select: none;
+}
+
+.admin__title {
+  margin: 0 0 0.5em;
+
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+.admin__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.admin__form > label {
+  margin: 0.25em 0.5em;
+}
+
+.admin__form > input,
+.admin__form > button {
+  height: 35px;
+  padding: 0 5px;
+
+  border: none;
+}
+
+.admin__form > input {
+  border-bottom: solid transparent 5px;
+  background-color: rgb(230, 230, 230);
+  outline: none;
+}
+
+.admin__button {
+  margin-top: 2em;
+}

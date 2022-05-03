@@ -1,0 +1,18 @@
+<ul class="video-item__metrics" *ngIf="item.statistics">
+  <li data-tooltip="Views">
+    <div class="metrics__icon"></div>
+    <p class="metrics__count">{{ item.statistics.viewCount | videoMetricsFormat }}</p>
+  </li>
+  <li data-tooltip="Likes">
+    <div class="metrics__icon"></div>
+    <p class="metrics__count">{{ item.statistics.likeCount | videoMetricsFormat }}</p>
+  </li>
+  <li data-tooltip="Favorites">
+    <div class="metrics__icon"></div>
+    <p class="metrics__count">{{ item.statistics.favoriteCount | videoMetricsFormat }}</p>
+  </li>
+  <li data-tooltip="Comments">
+    <div class="metrics__icon"></div>
+    <p class="metrics__count">{{ item.statistics.commentCount | videoMetricsFormat }}</p>
+  </li>
+</ul>

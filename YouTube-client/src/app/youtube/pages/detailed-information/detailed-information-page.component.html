@@ -1,0 +1,11 @@
+<div class="main-container video-detail-container" *ngIf="item">
+  <img class="video-detail__img" [src]="item | videoImageThumbnail" [alt]="item.snippet.title" />
+  <h3 class="video-detail__title title">{{ item.snippet.title }}</h3>
+  <p class="video-detail__date">{{ item.snippet.publishedAt | date: "fullDate" }}</p>
+  <h4 class="video-detail__description-title">Description:</h4>
+  <p class="video-detail__description">{{ item.snippet.description }}</p>
+  <div class="video-detail__metrics-container" [item]="item" borderColor>
+    <youtube__video-metrics class="video-detail__metrics" [item]="item"></youtube__video-metrics>
+  </div>
+  <div class="button video-detail__button" (click)="goMainPage()"><div></div></div>
+</div>

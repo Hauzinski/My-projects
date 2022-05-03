@@ -1,0 +1,4 @@
+<img class="video-item__img" [src]="item | videoImageThumbnail" [alt]="item.snippet.title" />
+<youtube__video-metrics [item]="item"></youtube__video-metrics>
+<p class="video-item__video-title title">{{ item.snippet.title }}</p>
+<button class="video-item__button button" (click)="detailed()">more...</button>

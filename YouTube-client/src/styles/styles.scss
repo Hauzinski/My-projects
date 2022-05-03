@@ -1,0 +1,127 @@
+@font-face {
+  font-family: 'Lato';
+  src: url('../assets/fonts/Lato-Regular.ttf') format('truetype');
+}
+
+:root {
+  --white: rgb(255, 255, 255);
+  --grey: rgb(200, 200, 200);
+  --black: rgb(0, 0, 0);
+  --borderBlack: rgba(0, 0, 0, 0.15);
+  --red: rgb(230, 0, 0);
+  --blue: rgb(0, 110, 255);
+  --green: rgb(0, 156, 13);
+  --gold: rgb(202, 176, 28);
+}
+
+body {
+  font-family: 'Lato', 'Arial', sans-serif;
+
+  background-color: var(--white);
+}
+
+p {
+  margin: 0;
+}
+
+.main-container {
+  width: 80%;
+
+  @media screen and (max-width: 800px) {
+    width: 95%;
+  }
+
+  @media screen and (max-width: 640px) {
+    width: 100%;
+  }
+}
+
+.button {
+  box-sizing: border-box;
+
+  background-color: var(--blue);
+  box-shadow: 0px 0px 5px var(--blue);
+
+  transition: 0.5s;
+  user-select: none;
+
+  &:hover,
+  &:focus-visible {
+    background-color: var(--green);
+    box-shadow: 0px 0px 5px var(--green);
+    cursor: pointer;
+    outline: none;
+  }
+
+  &:active {
+    transform: scale(0.8);
+  }
+
+  &:disabled {
+    color: var(--black);
+
+    background-color: var(--red);
+    box-shadow: 0px 0px 5px var(--red);
+  }
+}
+
+.validatorErrorMessageList {
+  margin: 0 0 0.5em;
+  padding: 0 0 0 1.75em;
+
+  user-select: none;
+}
+
+.validatorErrorMessageList > li {
+  margin: 0.25em 0;
+
+  list-style-image: url('../assets/svg/validation-error.svg');
+}
+
+.title {
+  // display: -webkit-box;
+
+  text-overflow: ellipsis;
+  // -webkit-line-clamp: 3;
+  // -webkit-box-orient: vertical;
+  // line-clamp: 3;
+  // box-orient: vertical;
+
+  overflow: hidden;
+}
+
+input.ng-touched {
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+
+  &.ng-invalid {
+    border-color: var(--red) !important;
+  }
+  &.ng-valid {
+    border-color: var(--green) !important;
+  }
+}
+
+[data-tooltip] {
+  position: relative;
+
+  &::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    width: auto;
+    left: 0;
+    top: 0;
+    background: var(--blue);
+    color: #fff;
+    padding: 0.5em;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    pointer-events: none;
+    opacity: 0;
+    transition: 0.5s;
+  }
+
+  &:hover::after {
+    opacity: 1;
+    top: 2em;
+  }
+}

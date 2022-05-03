@@ -1,0 +1,62 @@
+<div class="admin__container">
+  <h3 class="admin__title">create new card</h3>
+  <form class="admin__form" [formGroup]="adminForm" novalidate (ngSubmit)="createVideo()">
+    <label for="videoTitle">Title</label>
+    <input type="text" id="videoTitle" name="videoTitle" formControlName="videoTitle" />
+    <div *ngIf="getInput('videoTitle').invalid && (getInput('videoTitle').dirty || getInput('videoTitle').touched)">
+      <ul class="validatorErrorMessageList">
+        <li *ngIf="!getInput('videoTitle').value.length">Please enter a title</li>
+      </ul>
+      <ul class="validatorErrorMessageList" *ngIf="getInput('videoTitle').value.length">
+        <li *ngIf="getError('videoTitle')?.minlength">The title is too short</li>
+        <li *ngIf="getError('videoTitle')?.maxlength">The title is too long</li>
+      </ul>
+    </div>
+
+    <label for="videoDiscription">Discription</label>
+    <input type="text" id="videoDiscription" name="videoDiscription" formControlName="videoDiscription" />
+    <ul class="validatorErrorMessageList" *ngIf="getInput('videoDiscription').value.length">
+      <li *ngIf="getError('videoDiscription')?.maxlength">The title is too long</li>
+    </ul>
+
+    <label for="videoImg">Image</label>
+    <input type="text" id="videoImg" name="videoImg" formControlName="videoImg" />
+    <div *ngIf="getInput('videoImg').invalid && (getInput('videoImg').dirty || getInput('videoImg').touched)">
+      <ul class="validatorErrorMessageList">
+        <li *ngIf="!getInput('videoImg').value.length">Please enter a link to the image</li>
+      </ul>
+      <ul class="validatorErrorMessageList" *ngIf="getInput('videoImg').value.length">
+        <li *ngIf="getError('videoImg').imgUrlValidator">The image link is invalid</li>
+      </ul>
+    </div>
+
+    <label for="videoLink">Link video</label>
+    <input type="text" id="videoLink" name="videoLink" formControlName="videoLink" />
+    <div *ngIf="getInput('videoLink').invalid && (getInput('videoLink').dirty || getInput('videoLink').touched)">
+      <ul class="validatorErrorMessageList">
+        <li *ngIf="!getInput('videoLink').value.length">Please enter a link to the video</li>
+      </ul>
+      <ul class="validatorErrorMessageList" *ngIf="getInput('videoLink').value.length">
+        <li *ngIf="getError('videoLink').videoUrlValidator">The video link is invalid</li>
+      </ul>
+    </div>
+
+    <label for="videoCreationDate">Creation date</label>
+    <input type="date" id="videoCreationDate" name="videoCreationDate" formControlName="videoCreationDate" />
+    <div
+      *ngIf="
+        getInput('videoCreationDate').invalid &&
+        (getInput('videoCreationDate').dirty || getInput('videoCreationDate').touched)
+      "
+    >
+      <ul class="validatorErrorMessageList">
+        <li *ngIf="!getInput('videoCreationDate').value.length">Please enter a creation date</li>
+      </ul>
+      <ul class="validatorErrorMessageList" *ngIf="getInput('videoCreationDate').value.length">
+        <li *ngIf="getError('videoCreationDate').dateValidator">The date is invalid</li>
+      </ul>
+    </div>
+
+    <button class="button admin__button" [disabled]="adminForm.invalid">Create card</button>
+  </form>
+</div>

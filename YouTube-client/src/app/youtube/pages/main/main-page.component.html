@@ -1,0 +1,7 @@
+<div class="main__content main-container">
+  <youtube__video-item
+    *ngFor="let item of getData() | sortingWord: getWord() | sortingDate: getDate() | sortingView: getView()"
+    [item]="item"
+    borderColor
+  ></youtube__video-item>
+</div>

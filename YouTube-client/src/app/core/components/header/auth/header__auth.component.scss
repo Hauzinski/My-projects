@@ -1,0 +1,22 @@
+:host {
+  display: flex;
+  align-items: center;
+}
+
+.login__button {
+  min-width: 35px;
+  height: 35px;
+  padding: 5px;
+  margin: 5px;
+
+  border-radius: 7px;
+}
+
+.login__button > div {
+  height: 100%;
+  width: 100%;
+
+  -webkit-mask: url(../../../../../assets/svg/user-login.svg) no-repeat center;
+  mask: url(../../../../../assets/svg/user-login.svg) no-repeat center;
+  background-color: var(--white);
+}

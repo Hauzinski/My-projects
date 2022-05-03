@@ -1,0 +1,25 @@
+:host {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.main__content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.75em 2em;
+
+  margin: 2em 0;
+
+  @media screen and (max-width: 1366px) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  @media screen and (max-width: 1024px) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media screen and (max-width: 640px) {
+    grid-template-columns: 1fr;
+  }
+}
