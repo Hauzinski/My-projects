@@ -1,0 +1,169 @@
+.main__chooseGarland {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.main__chooseGarland > h3 {
+  font-size: 1.5em;
+  line-height: 1.7rem;
+  font-family: inherit;
+}
+
+.main__garlandContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main__chooseGarland,
+.main__chooseGarland > h3,
+.main__garlandContainer {
+  margin: 0.5em;
+}
+
+.dot {
+  width: 30px;
+  height: 30px;
+
+  -webkit-mask: url(../../../../assets/svg/dot.svg) no-repeat center;
+  mask: url(../../../../assets/svg/dot.svg) no-repeat center;
+
+  transition: 0.5s;
+}
+
+input[type='radio'] {
+  position: absolute;
+  opacity: 0;
+}
+
+input[type='radio'] + .dot {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+input + .dot {
+  cursor: pointer;
+}
+
+.garlandColor_multicolor + .dot {
+  background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8);
+}
+
+.garlandColor_red + .dot {
+  background: rgb(239, 42, 16);
+}
+
+.garlandColor_blue + .dot {
+  background: rgb(0, 109, 217);
+}
+
+.garlandColor_yellow + .dot {
+  background: rgb(232, 214, 0);
+}
+
+.garlandColor_green + .dot {
+  background: rgb(7, 217, 0);
+}
+
+.garlandColor_multicolor:checked + .dot,
+.garlandColor_red:checked + .dot,
+.garlandColor_blue:checked + .dot,
+.garlandColor_yellow:checked + .dot,
+.garlandColor_green:checked + .dot {
+  background: var(--black);
+}
+
+.main__garlandContainer > label {
+  border-radius: 50%;
+  border: 3px solid transparent;
+}
+
+.main__garlandContainer > label:hover {
+  border-color: var(--gold);
+}
+
+.onoffswitch {
+  position: relative;
+  width: 85px;
+}
+
+.main__garlandCheckbox {
+  display: none;
+}
+
+.onoffswitch-label {
+  display: block;
+  overflow: hidden;
+  cursor: pointer;
+  border: 1px solid var(--grey);
+  border-radius: 20px;
+}
+
+.onoffswitch-inner {
+  width: 200%;
+  margin-left: -100%;
+  transition: margin 0.3s ease-in 0s;
+}
+
+.onoffswitch-inner:before,
+.onoffswitch-inner:after {
+  float: left;
+  width: 50%;
+  height: 30px;
+  padding: 0;
+  line-height: 30px;
+  font-size: 16px;
+  color: var(--white);
+  font-weight: 600;
+  box-sizing: border-box;
+}
+
+.onoffswitch-inner:before {
+  content: 'Вкл';
+  padding-left: 12px;
+  background-color: var(--darkGreen);
+  color: var(--white);
+}
+
+.onoffswitch-inner:after {
+  content: 'Выкл';
+  padding-right: 10px;
+  background-color: var(--white);
+  color: var(--black);
+  text-align: right;
+}
+
+.onoffswitch-switch {
+  width: 26px;
+  margin: 2px;
+  background: var(--white);
+  border: 2px solid var(--grey);
+  border-radius: 20px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 55px;
+  transition: all 0.3s ease-in 0s;
+}
+
+.main__garlandCheckbox:checked + .onoffswitch-label .onoffswitch-inner {
+  margin-left: 0;
+}
+
+.main__garlandCheckbox:checked + .onoffswitch-label .onoffswitch-switch {
+  right: 0px;
+}
+
+@media (max-width: 1280px) {
+  .main__chooseGarland,
+  .main__chooseGarland > h3,
+  .main__garlandContainer {
+    margin: 0.25em;
+  }
+
+  .dot {
+    width: 20px;
+    height: 20px;
+  }
+}

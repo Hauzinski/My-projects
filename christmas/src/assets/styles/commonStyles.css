@@ -1,0 +1,55 @@
+@font-face {
+  font-family: SourceSansPro;
+  src: url('../fonts/SourceSansPro-Regular.ttf');
+}
+
+:root {
+  --black: rgb(0, 0, 0);
+  --gold: rgb(185, 152, 3);
+  --white: rgb(226, 226, 226);
+  --grey: rgb(134, 134, 134);
+  --lightBlue: rgb(25, 106, 255);
+  --darkGreen: rgb(29, 112, 18);
+  --darkRed: rgba(112, 18, 18, 0.65);
+  --bgColor: rgba(56, 56, 56, 0.65);
+  --bgColorDark: rgba(56, 56, 56, 0.95);
+}
+
+html {
+  overflow: hidden;
+}
+
+.body {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+
+  flex-direction: column;
+  align-items: center;
+
+  color: var(--white);
+  font-weight: 500;
+  font-family: SourceSansPro, Arial, Helvetica, sans-serif;
+
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-image: url('../img/background.jpg');
+
+  overflow: inherit;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;  
+}

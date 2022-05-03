@@ -1,0 +1,106 @@
+.main__options {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin: 1em;
+}
+
+.main__sound,
+.main__snowflake {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.main__sound + label,
+.main__snowflake + label {
+  width: 30px;
+  height: 30px;
+  margin: 0em 1em;
+
+  background-color: var(--white);
+
+  transition: 0.5s;
+}
+
+.main__sound + label {
+  -webkit-mask: url(../../../../assets/svg/soundOff.svg) no-repeat center;
+  mask: url(../../../../assets/svg/soundOff.svg) no-repeat center;
+}
+
+.main__snowflake + label {
+  -webkit-mask: url(../../../../assets/svg/snowflake.svg) no-repeat center;
+  mask: url(../../../../assets/svg/snowflake.svg) no-repeat center;
+}
+
+.main__sound + label:hover,
+.main__snowflake + label:hover,
+.main__sound:checked + label,
+.main__snowflake:checked + label {
+  background-color: var(--gold);
+}
+
+.main__sound:checked + label:hover,
+.main__snowflake:checked + label:hover {
+  background-color: var(--darkGreen);
+}
+
+.main__sound:checked + label {
+  -webkit-mask: url(../../../../assets/svg/soundOn.svg) no-repeat center;
+  mask: url(../../../../assets/svg/soundOn.svg) no-repeat center;
+}
+
+.main__search {
+  margin: 0em 1em;
+  width: 100%;
+  max-width: 300px;
+  padding-left: 25px;
+
+  color: var(--white);
+  font-family: inherit;
+
+  border-radius: 5px;
+  border: 3px solid var(--darkGreen);
+  background-image: url('../../../../assets/svg/search.svg');
+  background-size: 15px;
+  background-repeat: no-repeat;
+  background-position: 5px center;
+  backdrop-filter: blur(6px);
+  background-color: var(--bgColor);
+
+  outline: none;
+  transition: 0.5s;
+}
+
+.main__search::placeholder {
+  color: var(--gold);
+  opacity: 0.6;
+}
+
+.main__search:hover,
+.main__search:focus {
+  border-color: var(--gold);
+}
+
+@media (max-width: 1280px) {
+  .main__options {
+    margin: 0.5em;
+  }
+
+  .main__sound + label,
+  .main__snowflake + label {
+    margin: 0em 0.5em;
+  }
+
+  .main__search {
+    margin: 0em 0.5em;
+    max-width: none;
+  }
+}
+
+@media (max-width: 1024px) {
+  .main__search {
+    margin: 0em 0.25em;
+    max-width: none;
+  }
+}

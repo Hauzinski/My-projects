@@ -1,0 +1,117 @@
+.main__size {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  align-content: center;
+  margin: 1em;
+
+  flex-wrap: wrap;
+}
+
+.main__size > p {
+  margin: 0em 1em;
+
+  font-family: inherit;
+}
+
+.main__size_large,
+.main__size_medium,
+.main__size_small {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.main__size_large + label,
+.main__size_medium + label,
+.main__size_small + label {
+  margin: 0em 1em;
+
+  -webkit-mask: url(../../../../assets/svg/shapes/ball.svg) no-repeat center;
+  mask: url(../../../../assets/svg/shapes/ball.svg) no-repeat center;
+  background-color: var(--white);
+
+  transition: 0.5s;
+}
+
+.main__size_large + label {
+  width: 45px;
+  height: 45px;
+}
+
+.main__size_medium + label {
+  width: 35px;
+  height: 35px;
+}
+
+.main__size_small + label {
+  width: 25px;
+  height: 25px;
+}
+
+.main__size_large + label:hover,
+.main__size_medium + label:hover,
+.main__size_small + label:hover,
+.main__size_large:checked + label,
+.main__size_medium:checked + label,
+.main__size_small:checked + label {
+  background-color: var(--gold);
+}
+
+.main__size_large:checked + label:hover,
+.main__size_medium:checked + label:hover,
+.main__size_small:checked + label:hover {
+  background-color: var(--darkGreen);
+}
+
+@media (max-width: 1280px) {
+  .main__size {
+    margin: 0.5em;
+  }
+
+  .main__size > p,
+  .main__size_large + label,
+  .main__size_medium + label,
+  .main__size_small + label {
+    margin: 0em 0.5em;
+  }
+
+  .main__size_large + label {
+    width: 40px;
+    height: 40px;
+  }
+
+  .main__size_medium + label {
+    width: 30px;
+    height: 30px;
+  }
+
+  .main__size_small + label {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .main__size > p,
+  .main__size_large + label,
+  .main__size_medium + label,
+  .main__size_small + label {
+    margin: 0em 0.25em;
+  }
+
+  .main__size_large + label {
+    width: 38px;
+    height: 38px;
+  }
+
+  .main__size_medium + label {
+    width: 28px;
+    height: 28px;
+  }
+
+  .main__size_small + label {
+    width: 18px;
+    height: 18px;
+  }
+}

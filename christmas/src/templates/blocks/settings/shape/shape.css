@@ -1,0 +1,119 @@
+.main__shape {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin: 1em;
+
+  flex-wrap: wrap;
+}
+
+.main__shape > p {
+  margin: 0em 1em;
+
+  font-family: inherit;
+}
+
+.main__shape_bell,
+.main__shape_ball,
+.main__shape_cone,
+.main__shape_snowflake,
+.main__shape_figure {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.main__shape_bell + label,
+.main__shape_ball + label,
+.main__shape_cone + label,
+.main__shape_snowflake + label,
+.main__shape_figure + label {
+  width: 30px;
+  height: 50px;
+  margin: 0em 1em;
+
+  background-color: var(--white);
+
+  transition: 0.5s;
+}
+
+.main__shape_bell + label {
+  -webkit-mask: url(../../../../assets/svg/shapes/bell.svg) no-repeat center;
+  mask: url(../../../../assets/svg/shapes/bell.svg) no-repeat center;
+}
+
+.main__shape_ball + label {
+  -webkit-mask: url(../../../../assets/svg/shapes/ball.svg) no-repeat center;
+  mask: url(../../../../assets/svg/shapes/ball.svg) no-repeat center;
+}
+
+.main__shape_cone + label {
+  -webkit-mask: url(../../../../assets/svg/shapes/cone.svg) no-repeat center;
+  mask: url(../../../../assets/svg/shapes/cone.svg) no-repeat center;
+}
+
+.main__shape_snowflake + label {
+  -webkit-mask: url(../../../../assets/svg/shapes/snowflake.svg) no-repeat center;
+  mask: url(../../../../assets/svg/shapes/snowflake.svg) no-repeat center;
+}
+
+.main__shape_figure + label {
+  -webkit-mask: url(../../../../assets/svg/shapes/figure.svg) no-repeat center;
+  mask: url(../../../../assets/svg/shapes/figure.svg) no-repeat center;
+}
+
+.main__shape_bell + label:hover,
+.main__shape_ball + label:hover,
+.main__shape_cone + label:hover,
+.main__shape_snowflake + label:hover,
+.main__shape_figure + label:hover,
+.main__shape_bell:checked + label,
+.main__shape_ball:checked + label,
+.main__shape_cone:checked + label,
+.main__shape_snowflake:checked + label,
+.main__shape_figure:checked + label {
+  background-color: var(--gold);
+}
+
+.main__shape_bell:checked + label:hover,
+.main__shape_ball:checked + label:hover,
+.main__shape_cone:checked + label:hover,
+.main__shape_snowflake:checked + label:hover,
+.main__shape_figure:checked + label:hover {
+  background-color: var(--darkGreen);
+}
+
+@media (max-width: 1280px) {
+  .main__shape {
+    margin: 0.5em;
+  }
+
+  .main__shape > p,
+  .main__shape_bell + label,
+  .main__shape_ball + label,
+  .main__shape_cone + label,
+  .main__shape_snowflake + label,
+  .main__shape_figure + label {
+    margin: 0em 0.5em;
+  }
+}
+
+@media (max-width: 1280px) {
+  .main__shape > p,
+  .main__shape_bell + label,
+  .main__shape_ball + label,
+  .main__shape_cone + label,
+  .main__shape_snowflake + label,
+  .main__shape_figure + label {
+    margin: 0em 0.25em;
+  }
+
+  .main__shape_bell + label,
+  .main__shape_ball + label,
+  .main__shape_cone + label,
+  .main__shape_snowflake + label,
+  .main__shape_figure + label {
+    width: 25px;
+    height: 40px;
+  }
+}

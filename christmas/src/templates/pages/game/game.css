@@ -1,0 +1,58 @@
+.main__gamePage {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+
+  user-select: none;
+}
+
+.main__gameMenu,
+.main__gameToys {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 25%;
+  padding: 1em;
+
+  background-color: var(--bgColor);
+}
+
+.main__gameTree {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: 50%;
+  padding-bottom: 1em;
+
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-image: url('../../../assets/img/backgrounds/1.jpg');
+
+  overflow: hidden;
+}
+
+@media (max-width: 1280px) {
+  .main__gameMenu,
+  .main__gameToys {
+    padding: 0.5em;
+  }
+}
+
+@media (max-width: 1024px) {
+  .main__gameMenu,
+  .main__gameToys {
+    padding: 0.25em;
+  }
+
+  .main__gameMenu,
+  .main__gameToys {
+    width: 30%;
+  }
+
+  .main__gameTree {
+    width: 40%;
+  }
+}

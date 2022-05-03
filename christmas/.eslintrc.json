@@ -1,0 +1,56 @@
+{
+  "env": {
+    "browser": true,
+    "es2020": true,
+    "node": true
+  },
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "sourceType": "module",
+    "project": ["./**/tsconfig.json"]
+  },
+  "extends": [
+    "airbnb-base",
+    "airbnb-typescript/base",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    // "plugin:@typescript-eslint/recommended-requiring-type-checking",
+    "plugin:prettier/recommended",
+    "eslint:recommended",
+    "prettier",
+    "prettier/prettier"
+  ],
+  "plugins": [
+    "@typescript-eslint",
+    "prettier",  
+    "import"
+  ],
+  "rules": {
+    "no-plusplus": "off",
+    "no-console": "off",    
+    "max-len": ["warn", { "code": 120 }],
+    "indent": ["warn", 2, {
+      "SwitchCase": 1
+      }],
+    "@typescript-eslint/no-explicit-any": "error",
+    "@typescript-eslint/indent": ["warn", 2, {
+      "SwitchCase": 1
+    }],   
+    "prettier/prettier": [
+      "error",
+      {
+        "endOfLine": "auto"
+      }],
+    "import/prefer-default-export": "off",
+    "no-param-reassign": ["error", {
+      "props": false
+    }]
+  },
+  "ignorePatterns": ["*.config.js", "node_modules/", "dist/"],
+  "globals" : {
+    "window": true,
+    "document": true
+  }
+}

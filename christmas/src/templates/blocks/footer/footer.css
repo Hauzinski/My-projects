@@ -1,0 +1,46 @@
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5em 2em;
+  border-top: 1px solid var(--black);
+  width: 100%;
+
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 1.7rem;
+
+  background-color: var(--bgColor);
+
+  user-select: none;
+}
+
+.footer__logoContainer {
+  display: flex;
+  flex-direction: row;
+}
+
+.footer a,
+.footer span {
+  display: block;
+
+  color: var(--white);
+  text-decoration: none;
+
+  transition: 0.5s;
+}
+
+.RSlogo {
+  height: 1.25em;
+  width: 2.5em;
+  margin-right: 1em;
+
+  -webkit-mask: url(../../../assets/svg/rs_school_js.svg) no-repeat center;
+  mask: url(../../../assets/svg/rs_school_js.svg) no-repeat center;
+  background-color: var(--white);
+}
+
+.footer a:hover {
+  color: var(--gold);
+}

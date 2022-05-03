@@ -1,0 +1,46 @@
+.main__chooseToys {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.main__chooseToys > h3 {
+  font-size: 1.5em;
+  line-height: 1.7rem;
+  font-family: inherit;
+}
+
+.main__toysContainer {
+  display: flex;
+  justify-content: flex-start;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  column-gap: 1em;
+  row-gap: 1em;
+}
+
+.main__chooseToys,
+.main__chooseToys > h3,
+.main__toysContainer {
+  margin: 0.5em;
+}
+
+@media (max-width: 1280px) {
+  .main__toysContainer {
+    column-gap: 0.85em;
+    row-gap: 0.85em;
+  }
+
+  .main__chooseToys,
+  .main__chooseToys > h3,
+  .main__toysContainer {
+    margin: 0.25em;
+  }
+}
+
+@media (max-width: 1024px) {
+  .main__toysContainer {
+    column-gap: 0.75em;
+    row-gap: 0.75em;
+  }
+}

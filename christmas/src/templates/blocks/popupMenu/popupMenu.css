@@ -1,0 +1,67 @@
+.popupMenu {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  left: -2000px;
+  z-index: 4;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 50%;
+  max-height: 50%;
+  padding: 2em;
+
+  border-radius: 1em;
+  background-color: var(--bgColorDark);
+  box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.15);
+
+  transform: translate(-50%, -50%);
+  transition: 0.5s;
+}
+
+.popupMenu__message {
+  margin: 3em;
+
+  color: var(--white);
+  font-size: 1.5em;
+  text-align: center;
+
+  user-select: none;
+}
+
+.popupMenu__button {
+  width: 50%;
+  padding: 0.5em 1em;
+
+  font-family: inherit;
+  font-weight: 900;
+  font-size: 1em;
+
+  border-radius: 5px;
+  border: none;
+  background-color: var(--white);
+  box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.15);
+
+  transition: 0.5s;
+}
+
+.popupMenu__button:hover {
+  background-color: var(--gold);
+
+  cursor: pointer;
+}
+
+.popupMenu__button:active {
+  transform: scale(0.95);
+  transition: 0.15s;
+}
+
+@media (max-width: 1024px) {
+  .popupMenu {
+    max-width: 75%;
+    max-height: 75%;
+    padding: 1.5em;
+  }
+}
