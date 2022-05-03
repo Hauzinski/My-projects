@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="CSS-Reset.css" />
+    <link rel="stylesheet" href="style.css" />
+    <title>drum-kit</title>
+  </head>
+  <body class="background-light">
+    <div class="instrumentsControls">
+      <button class="btnInstLeft btnInstLeft_style theme-light btn-active">Drums</button>
+      <button class="btnInstRight btnInstRight_style theme-light">Piano</button>
+    </div>
+    <div class="keys">
+      <div class="keys__key button_style theme-light" data-key="65"><p>A</p></div>
+      <div class="keys__key button_style theme-light" data-key="83"><p>S</p></div>
+      <div class="keys__key button_style theme-light" data-key="68"><p>D</p></div>
+      <div class="keys__key button_style theme-light" data-key="70"><p>F</p></div>
+      <div class="keys__key button_style theme-light" data-key="71"><p>G</p></div>
+      <div class="keys__key button_style theme-light" data-key="72"><p>H</p></div>
+      <div class="keys__key button_style theme-light" data-key="74"><p>J</p></div>
+      <div class="keys__key button_style theme-light" data-key="75"><p>K</p></div>
+      <div class="keys__key button_style theme-light" data-key="76"><p>L</p></div>
+    </div>
+    <button class="btnTheme button_style theme-light">Theme</button>
+    <audio data-key="65"></audio>
+    <audio data-key="83"></audio>
+    <audio data-key="68"></audio>
+    <audio data-key="70"></audio>
+    <audio data-key="71"></audio>
+    <audio data-key="72"></audio>
+    <audio data-key="74"></audio>
+    <audio data-key="75"></audio>
+    <audio data-key="76"></audio>
+    <script src="code.js"></script>
+  </body>
+</html>
