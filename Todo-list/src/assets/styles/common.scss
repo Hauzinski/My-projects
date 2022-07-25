@@ -1,0 +1,175 @@
+@charset 'utf-8';
+
+@import './variables.scss';
+
+@font-face {
+  font-family: RobotoMono;
+  src: url('../fonts/RobotoMono-VariableFont_wght.ttf');
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+:global html {
+  overflow: hidden;
+}
+
+body,
+#root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+body {
+  justify-content: center;
+
+  color: $black;
+  font-weight: 500;
+  font-family: RobotoMono, Arial, Helvetica, sans-serif;
+
+  background-blend-mode: screen;
+  background: linear-gradient($lime-green, transparent), linear-gradient(90deg, $sky-blue, transparent),
+    linear-gradient(-90deg, $coral, transparent);
+
+  overflow: inherit;
+}
+
+input[type='text'] {
+  &::placeholder {
+    color: $grey;
+  }
+
+  &:focus::placeholder {
+    color: transparent;
+  }
+}
+
+#root {
+  justify-content: space-between;
+}
+
+.header,
+.footer {
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+
+  font-size: 1.2em;
+
+  user-select: none;
+}
+
+.link {
+  padding: 0.25em;
+
+  color: $black;
+  text-decoration: none;
+
+  border: 2px solid $black;
+  border-radius: 2px;
+
+  transition: 0.75s;
+
+  &:hover {
+    color: $white;
+    border-color: $gold;
+  }
+}
+
+.button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: 0.75s;
+
+  &:hover {
+    background-color: $gold;
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+}
+
+.todo-item-container {
+  display: flex;
+  justify-content: start;
+  align-items: flex-start;
+  width: 40vw;
+  min-width: 350px;
+
+  @media screen and (max-width: $window-width-large) {
+    width: 50vw;
+  }
+
+  @media screen and (max-width: $window-width-medium) {
+    width: 60vw;
+  }
+
+  @media screen and (max-width: $window-width-small) {
+    width: 70vw;
+  }
+}
+
+.todo-item-buttons-container {
+  display: flex;
+  margin: 0.25em;
+
+  border-radius: 5px;
+  background-color: $background;
+
+  user-select: none;
+}
+
+.todo-item-input {
+  width: 100%;
+  height: 28px;
+
+  font-family: inherit;
+  color: $white;
+
+  border: 3px solid $deep-sky-blue;
+  border-radius: 5px;
+  background-color: transparent;
+  outline: none;
+
+  transition: 0.75s;
+
+  &:focus,
+  &:hover {
+    border-color: $gold;
+  }
+}
+
+.todo-item-input-border {
+  display: flex;
+  width: 100%;
+  margin: 0.25em;
+  padding: 0.5em;
+
+  border-radius: 5px;
+  background-color: $background;
+}
+
+.todo-item-completed {
+  text-decoration: line-through;
+}

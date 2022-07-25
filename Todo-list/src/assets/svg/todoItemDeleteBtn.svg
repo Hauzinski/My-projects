@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 48 48"
+   version="1.1"
+   id="svg197"
+   sodipodi:docname="todoItem__deleteBtn2.svg"
+   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs201" />
+  <sodipodi:namedview
+     id="namedview199"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="16.958333"
+     inkscape:cx="24"
+     inkscape:cy="24"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg197" />
+  <!-- Uploaded to SVGRepo https://www.svgrepo.com -->
+  <title
+     id="title190">ic_fluent_delete_48_filled</title>
+  <desc
+     id="desc192">Created with Sketch.</desc>
+  <g
+     id="🔍-Product-Icons"
+     stroke="none"
+     stroke-width="1"
+     fill="none"
+     fill-rule="evenodd"
+     transform="matrix(1.6271186,0,0,1.3617021,-15.050849,-9.1914894)">
+    <g
+       id="ic_fluent_delete_48_filled"
+       fill="#212121"
+       fill-rule="nonzero">
+      <path
+         d="m 24,6.75 c 3.375073,0 6.125312,2.6752368 6.245878,6.020873 L 30.25,13.001001 37,13 c 0.966498,0 1.75,0.783502 1.75,1.75 0,0.918173 -0.70711,1.671192 -1.606473,1.744199 L 37,16.5 H 35.833 L 34.205831,38.069845 C 34.038523,40.286678 32.191021,42 29.967883,42 H 18.032117 c -2.223138,0 -4.07064,-1.713322 -4.237948,-3.930155 L 12.166,16.5 H 11 c -0.918173,0 -1.6711923,-0.70711 -1.7441988,-1.606473 L 9.25,14.75 c 0,-0.918173 0.7071103,-1.671192 1.606473,-1.744199 L 11,13 h 6.75 c 0,-3.2983673 2.555017,-5.9999783 5.793824,-6.2336062 l 0.227049,-0.012272 z m 3.75,13 c -0.647209,0 -1.179534,0.491875 -1.243546,1.122195 L 26.5,21 v 12 l 0.0065,0.127805 C 26.57047,33.758125 27.102791,34.25 27.75,34.25 c 0.647209,0 1.179534,-0.491875 1.243546,-1.122195 L 29,33 V 21 L 28.9935,20.872195 C 28.929534,20.241875 28.397209,19.75 27.75,19.75 Z m -7.5,0 c -0.647209,0 -1.179534,0.491875 -1.243546,1.122195 L 19,21 v 12 l 0.0065,0.127805 C 19.07047,33.758125 19.602791,34.25 20.25,34.25 c 0.647209,0 1.179534,-0.491875 1.243546,-1.122195 L 21.5,33 V 21 L 21.4935,20.872195 C 21.429534,20.241875 20.897209,19.75 20.25,19.75 Z M 24.167522,10.255019 24,10.25 c -1.462532,0 -2.658404,1.141705 -2.744981,2.582478 L 21.25,13.001004 26.75,13 c 0,-1.462532 -1.141705,-2.658404 -2.582478,-2.744981 z"
+         id="🎨-Color" />
+    </g>
+  </g>
+</svg>

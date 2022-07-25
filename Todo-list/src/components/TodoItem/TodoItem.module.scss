@@ -1,0 +1,11 @@
+@import '../../assets/styles/variables.scss';
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-height: 28px;
+
+  font-family: inherit;
+  color: $white;
+}

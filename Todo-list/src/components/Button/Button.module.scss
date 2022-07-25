@@ -1,0 +1,30 @@
+@import '../../assets/styles/variables.scss';
+
+.button {
+  width: 30px;
+  height: 30px;
+  margin: 0.5em;
+}
+
+@mixin buttons($svg-path, $color) {
+  background-color: $color;
+  -webkit-mask: $svg-path no-repeat center;
+  mask: $svg-path no-repeat center;
+}
+
+.btn-complete,
+.btn-add {
+  @include buttons(url(../../assets/svg/todoItemCompleteBtn.svg), $lime-green);
+}
+
+.btn-edit {
+  @include buttons(url(../../assets/svg/todoItemEditBtn.svg), $deep-sky-blue);
+}
+
+.btn-delete {
+  @include buttons(url(../../assets/svg/todoItemDeleteBtn.svg), $orange-red);
+}
+
+.btn-clear {
+  @include buttons(url(../../assets/svg/todoItemClearBtn.svg), $orange-red);
+}

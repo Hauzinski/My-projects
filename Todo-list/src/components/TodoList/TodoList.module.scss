@@ -1,0 +1,73 @@
+@import '../../assets/styles/variables.scss';
+
+.todo-list-container {
+  position: relative;
+
+  padding: 0.5em;
+}
+
+.todo-list-title {
+  position: absolute;
+
+  font-size: 1.4em;
+  text-decoration: underline;
+
+  transform: translateX(-110%);
+
+  @media screen and (max-width: $window-width-medium) {
+    font-size: 1.2em;
+  }
+
+  @media screen and (max-width: $window-width-small) {
+    position: static;
+
+    margin: 0.5em;
+
+    font-size: 1em;
+
+    transform: translateX(0);
+  }
+}
+
+.todo-list {
+  margin: 0;
+  padding: 0;
+  max-height: 55vh;
+
+  overflow: hidden auto;
+
+  &::-webkit-scrollbar {
+    width: 0.9em;
+  }
+
+  &::-webkit-scrollbar-track {
+    border-radius: 100vw;
+    background-color: $background;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border: 0.15em solid $black;
+    border-radius: 100vw;
+    background-color: $deep-sky-blue;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background-color: $gold;
+  }
+
+  @media screen and (max-width: $window-width-small) {
+    max-height: 40vh;
+  }
+}
+
+.todo-list > li {
+  list-style-type: none;
+}
+
+.todo-list-completed {
+  max-height: 25vh;
+
+  @media screen and (max-width: $window-width-small) {
+    max-height: 20vh;
+  }
+}
