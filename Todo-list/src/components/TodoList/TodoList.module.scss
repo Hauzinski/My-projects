@@ -14,16 +14,14 @@
 
   transform: translateX(-110%);
 
-  @media screen and (max-width: $window-width-medium) {
+  @media screen and (max-width: $screen-width-medium) {
     font-size: 1.2em;
   }
 
-  @media screen and (max-width: $window-width-small) {
+  @media screen and (max-width: $screen-width-small) {
     position: static;
 
     margin: 0.5em;
-
-    font-size: 1em;
 
     transform: translateX(0);
   }
@@ -55,7 +53,7 @@
     background-color: $gold;
   }
 
-  @media screen and (max-width: $window-width-small) {
+  @media screen and (max-width: $screen-width-small) {
     max-height: 40vh;
   }
 }
@@ -67,7 +65,7 @@
 .todo-list-completed {
   max-height: 25vh;
 
-  @media screen and (max-width: $window-width-small) {
+  @media screen and (max-width: $screen-width-small) {
     max-height: 20vh;
   }
 }

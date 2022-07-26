@@ -3,21 +3,20 @@ import Button from '../../Button/Button';
 import { IPropsNewTodoItemButtons } from '../../../interfaces/interfaces';
 
 export default function AddNewTodoItemButtonsComponent(props: IPropsNewTodoItemButtons) {
-  const { btnActionAdd } = props;
-  const { btnActionClear } = props;
+  const { actions } = props;
 
   const buttons = [
     {
       class: 'btn-add',
-      action: btnActionAdd,
+      action: actions.addTodo,
       title: 'Add todo',
       label: 'Add todo',
     },
     {
-      class: 'btn-clear',
-      action: btnActionClear,
-      title: 'Clear text',
-      label: 'Clear todo',
+      class: 'btn-delete-text',
+      action: actions.deleteText,
+      title: 'Delete text',
+      label: 'Delete text',
     },
   ];
 

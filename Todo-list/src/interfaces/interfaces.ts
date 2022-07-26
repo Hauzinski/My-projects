@@ -1,12 +1,16 @@
 export interface IPropsNewTodoItemButtons {
-  btnActionAdd: () => void;
-  btnActionClear: () => void;
+  actions: {
+    addTodo: () => void;
+    deleteText: () => void;
+  };
 }
 
 export interface IPropsTodoItemButtons {
-  btnActionComplete: () => void;
-  btnActionEdit: () => void;
-  btnActionRemove: () => void;
+  actions: {
+    completeTodo: () => void;
+    editTodo: () => void;
+    removeTodo: () => void;
+  };
 }
 
 export interface IPropsButton {

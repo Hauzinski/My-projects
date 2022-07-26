@@ -21,10 +21,10 @@
   @include buttons(url(../../assets/svg/todoItemEditBtn.svg), $deep-sky-blue);
 }
 
-.btn-delete {
-  @include buttons(url(../../assets/svg/todoItemDeleteBtn.svg), $orange-red);
+.btn-remove {
+  @include buttons(url(../../assets/svg/todoItemRemoveBtn.svg), $orange-red);
 }
 
-.btn-clear {
-  @include buttons(url(../../assets/svg/todoItemClearBtn.svg), $orange-red);
+.btn-delete-text {
+  @include buttons(url(../../assets/svg/todoItemDeleteTextBtn.svg), $orange-red);
 }

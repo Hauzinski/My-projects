@@ -1,4 +1,6 @@
+import { useEffect } from 'react';
 import { Route, Routes } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 import './assets/styles/common.scss';
 
@@ -6,7 +8,17 @@ import Header from './layouts/Header/Header';
 import Footer from './layouts/Footer/Footer';
 import MainPage from './pages/MainPage/MainPage';
 
+import { setLocalStorage } from './utils/manageLocalStorage';
+
+import { IItemTodoList } from './interfaces/interfaces';
+
 export default function App() {
+  const todoList = useSelector((state: { todoList: [IItemTodoList] }) => state.todoList);
+
+  useEffect(() => {
+    setLocalStorage(todoList);
+  }, [todoList]);
+
   return (
     <>
       <Header />

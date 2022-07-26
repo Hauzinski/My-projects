@@ -9,3 +9,21 @@
   font-family: inherit;
   color: $white;
 }
+
+.btn-transition-enter {
+  opacity: 0;
+  transform: scale(0.4);
+}
+.btn-transition-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 200ms, transform 200ms;
+}
+.btn-transition-exit {
+  opacity: 1;
+}
+.btn-transition-exit-active {
+  opacity: 0;
+  transform: scale(0.4);
+  transition: opacity 200ms, transform 200ms;
+}

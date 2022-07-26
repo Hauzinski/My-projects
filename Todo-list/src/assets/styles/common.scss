@@ -117,15 +117,15 @@ input[type='text'] {
   width: 40vw;
   min-width: 350px;
 
-  @media screen and (max-width: $window-width-large) {
+  @media screen and (max-width: $screen-width-large) {
     width: 50vw;
   }
 
-  @media screen and (max-width: $window-width-medium) {
+  @media screen and (max-width: $screen-width-medium) {
     width: 60vw;
   }
 
-  @media screen and (max-width: $window-width-small) {
+  @media screen and (max-width: $screen-width-small) {
     width: 70vw;
   }
 }

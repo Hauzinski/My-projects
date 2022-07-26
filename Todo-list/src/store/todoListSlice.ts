@@ -1,10 +1,12 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
+import { getLocalStorage } from '../utils/manageLocalStorage';
+
 import { IItemTodoList, IEditTodoPayload } from '../interfaces/interfaces';
 
 const defaultTodoList = [
   {
-    title: 'Do react project',
+    title: 'Create react project',
     added: Date.now(),
     isCompleted: true,
     isEdited: false,
@@ -22,21 +24,28 @@ const defaultTodoList = [
     isEdited: false,
   },
 ];
+const localStorageTodoList = getLocalStorage();
 
 export const todoList = createSlice({
   name: 'todoList',
-  initialState: defaultTodoList,
+  initialState: localStorageTodoList || defaultTodoList,
   reducers: {
-    addTodo: (state, action: PayloadAction<IItemTodoList>) => {
-      state.push(action.payload);
+    addTodo: (state, action: PayloadAction<string>) => {
+      state.push({
+        title: action.payload,
+        added: Date.now(),
+        isCompleted: false,
+        isEdited: false,
+      });
     },
+
     removeTodo: (state, action: PayloadAction<IItemTodoList>) => {
       const todoIndex = state.findIndex(
         (value) => value.title === action.payload.title && value.added === action.payload.added
       );
       state.splice(todoIndex, 1);
     },
-    //! Ошибка имени. Посмотреть логику.
+
     completeTodo: (state, action: PayloadAction<IItemTodoList>) => {
       state.map((value) => {
         if (value.title === action.payload.title && value.added === action.payload.added) {
@@ -45,6 +54,7 @@ export const todoList = createSlice({
         return value;
       });
     },
+
     editTodo: (state, action: PayloadAction<IEditTodoPayload>) => {
       state.map((value) => {
         if (value.title === action.payload.todo.title && value.added === action.payload.todo.added) {
