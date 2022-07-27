@@ -12,7 +12,7 @@ import {
   editTodo as editTodoAction,
 } from '../../store/todoListSlice';
 
-import { IItemTodoList } from '../../interfaces/interfaces';
+import { IItemTodoList } from '../../models/models';
 
 export default function TodoItemComponent(props: { item: IItemTodoList }) {
   const { item } = props;

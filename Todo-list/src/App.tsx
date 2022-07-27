@@ -10,7 +10,7 @@ import MainPage from './pages/MainPage/MainPage';
 
 import { setLocalStorage } from './utils/manageLocalStorage';
 
-import { IItemTodoList } from './interfaces/interfaces';
+import { IItemTodoList } from './models/models';
 
 export default function App() {
   const todoList = useSelector((state: { todoList: [IItemTodoList] }) => state.todoList);

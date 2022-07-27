@@ -4,7 +4,7 @@ import styles from './TodoList.module.scss';
 
 import TodoItemComponent from '../TodoItem/TodoItem';
 
-import { IItemTodoList } from '../../interfaces/interfaces';
+import { IItemTodoList } from '../../models/models';
 
 export default function TodoListComponent(props: { isCompleted: boolean }) {
   const { isCompleted } = props;

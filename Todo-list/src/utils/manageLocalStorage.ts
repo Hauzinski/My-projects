@@ -1,4 +1,4 @@
-import { IItemTodoList } from '../interfaces/interfaces';
+import { IItemTodoList } from '../models/models';
 
 export function getLocalStorage(): [IItemTodoList] | null {
   const localStorage = window.localStorage.getItem('todo-app');

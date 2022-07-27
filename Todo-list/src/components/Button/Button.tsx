@@ -1,6 +1,6 @@
 import styles from './Button.module.scss';
 
-import { IPropsButton } from '../../interfaces/interfaces';
+import { IPropsButton } from '../../models/models';
 
 export default function Button(props: IPropsButton) {
   const { data } = props;

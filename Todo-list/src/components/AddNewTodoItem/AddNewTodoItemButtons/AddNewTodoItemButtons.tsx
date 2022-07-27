@@ -1,6 +1,6 @@
 import Button from '../../Button/Button';
 
-import { IPropsNewTodoItemButtons } from '../../../interfaces/interfaces';
+import { IPropsNewTodoItemButtons } from '../../../models/models';
 
 export default function AddNewTodoItemButtonsComponent(props: IPropsNewTodoItemButtons) {
   const { actions } = props;

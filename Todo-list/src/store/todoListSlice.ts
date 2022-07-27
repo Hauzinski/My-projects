@@ -2,7 +2,7 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 import { getLocalStorage } from '../utils/manageLocalStorage';
 
-import { IItemTodoList, IEditTodoPayload } from '../interfaces/interfaces';
+import { IItemTodoList, IEditTodoPayload } from '../models/models';
 
 const defaultTodoList = [
   {
