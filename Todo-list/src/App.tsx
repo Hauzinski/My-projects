@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
-import './assets/styles/common.scss';
+import './styles/common.scss';
 
 import Header from './layouts/Header/Header';
 import Footer from './layouts/Footer/Footer';
