@@ -1,6 +1,6 @@
 {
   "name": "todo-list",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Todo list react app",
   "author": {
     "name": "Vitali Hauzinski",
@@ -24,7 +24,7 @@
     "react-redux": "^8.0.2",
     "react-router": "^6.3.0",
     "react-router-dom": "^6.3.0",
-    "react-transition-group": "^4.4.2",
+    "react-transition-group": "^4.4.4",
     "redux": "^4.2.0"
   },
   "devDependencies": {

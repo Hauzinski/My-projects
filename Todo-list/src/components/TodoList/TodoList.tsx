@@ -6,8 +6,7 @@ import TodoItemComponent from '../TodoItem/TodoItem';
 
 import { IItemTodoList } from '../../models/models';
 
-export default function TodoListComponent(props: { isCompleted: boolean }) {
-  const { isCompleted } = props;
+export default function TodoListComponent({ isCompleted }: { isCompleted: boolean }) {
   const title = isCompleted ? 'Completed' : 'Todo';
   const completedStyle = isCompleted ? styles['todo-list-completed'] : '';
   const todoList = useSelector((state: { todoList: [IItemTodoList] }) => state.todoList).filter(

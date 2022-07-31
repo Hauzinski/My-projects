@@ -2,9 +2,7 @@ import Button from '../../Button/Button';
 
 import { IPropsTodoItemButtons } from '../../../models/models';
 
-export default function TodoItemButtonsComponent(props: IPropsTodoItemButtons) {
-  const { actions } = props;
-
+export default function TodoItemButtonsComponent({ actions }: IPropsTodoItemButtons) {
   const buttons = [
     {
       class: 'btn-complete',

@@ -32,6 +32,10 @@ body,
   width: 100vw;
 }
 
+#root {
+  justify-content: space-between;
+}
+
 body {
   justify-content: center;
 
@@ -54,10 +58,6 @@ input[type='text'] {
   &:focus::placeholder {
     color: transparent;
   }
-}
-
-#root {
-  justify-content: space-between;
 }
 
 .header,

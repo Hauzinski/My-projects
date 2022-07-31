@@ -14,8 +14,7 @@ import {
 
 import { IItemTodoList } from '../../models/models';
 
-export default function TodoItemComponent(props: { item: IItemTodoList }) {
-  const { item } = props;
+export default function TodoItemComponent({ item }: { item: IItemTodoList }) {
   const [isHover, setHover] = useState(false);
   const completedStyle = item.isCompleted ? 'todo-item-completed' : '';
   const input: React.RefObject<HTMLInputElement> = useRef(null);

@@ -1,14 +1,13 @@
 import { useEffect } from 'react';
-import { Route, Routes } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
 import './styles/common.scss';
 
 import Header from './layouts/Header/Header';
 import Footer from './layouts/Footer/Footer';
-import MainPage from './pages/MainPage/MainPage';
 
 import { setLocalStorage } from './utils/manageLocalStorage';
+import AppRoutes from './routes/AppRoutes';
 
 import { IItemTodoList } from './models/models';
 
@@ -22,10 +21,7 @@ export default function App() {
   return (
     <>
       <Header />
-      <Routes>
-        <Route path="/" element={<MainPage />} />
-        <Route path="*" element={<p>404: Page not found.</p>} />
-      </Routes>
+      <AppRoutes />
       <Footer />
     </>
   );
