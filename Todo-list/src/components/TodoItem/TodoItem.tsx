@@ -4,7 +4,7 @@ import { TransitionGroup, CSSTransition } from 'react-transition-group';
 
 import styles from './TodoItem.module.scss';
 
-import TodoItemButtonsComponent from './TodoItemButtons/TodoItemButtons';
+import TodoItemButtonsComponent from '../TodoItemButtons/TodoItemButtons';
 
 import {
   removeTodo as removeTodoAction,
@@ -20,17 +20,40 @@ export default function TodoItemComponent({ item }: { item: IItemTodoList }) {
   const input: React.RefObject<HTMLInputElement> = useRef(null);
   const dispatch = useDispatch();
 
-  const buttonActions = {
-    completeTodo: () => dispatch(completeTodoAction(item)),
+  function completeTodo() {
+    dispatch(completeTodoAction(item));
+  }
 
-    editTodo: () => {
-      const newTitle = input.current ? input.current?.value : item.title;
+  function editTodo() {
+    const newTitle = input.current ? input.current?.value : item.title;
 
-      dispatch(editTodoAction({ todo: item, newTitle }));
+    dispatch(editTodoAction({ todo: item, newTitle }));
+  }
+
+  function removeTodo() {
+    dispatch(removeTodoAction(item));
+  }
+
+  const buttons = [
+    {
+      class: 'btn-complete',
+      action: completeTodo,
+      title: 'Complete todo',
+      label: 'Todo complete',
     },
-
-    removeTodo: () => dispatch(removeTodoAction(item)),
-  };
+    {
+      class: 'btn-edit',
+      action: editTodo,
+      title: 'Edit todo',
+      label: 'Todo edit',
+    },
+    {
+      class: 'btn-remove',
+      action: removeTodo,
+      title: 'Remove todo',
+      label: 'Todo remove',
+    },
+  ];
 
   return (
     <div className="todo-item-container" onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}>
@@ -52,7 +75,7 @@ export default function TodoItemComponent({ item }: { item: IItemTodoList }) {
               exitActive: styles['btn-transition-exit-active'],
             }}
           >
-            <TodoItemButtonsComponent actions={buttonActions} />
+            <TodoItemButtonsComponent buttons={buttons} />
           </CSSTransition>
         )}
       </TransitionGroup>

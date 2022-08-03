@@ -1,0 +1,11 @@
+@import '../../styles/variables.scss';
+
+.todo-item-buttons {
+  display: flex;
+  margin: 0.25em;
+
+  border-radius: 5px;
+  background-color: $background;
+
+  user-select: none;
+}

@@ -1,16 +1,12 @@
-export interface IPropsNewTodoItemButtons {
-  actions: {
-    addTodo: () => void;
-    deleteText: () => void;
-  };
+interface ITodoItemButtons {
+  class: string;
+  action: () => void;
+  title: string;
+  label: string;
 }
 
 export interface IPropsTodoItemButtons {
-  actions: {
-    completeTodo: () => void;
-    editTodo: () => void;
-    removeTodo: () => void;
-  };
+  buttons: ITodoItemButtons[];
 }
 
 export interface IPropsButton {
