@@ -1,0 +1,39 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+$logo-height: 35px;
+
+.logo {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: calc($logo-height * 1.375);
+  height: $logo-height;
+  grid-area: app-logo;
+  align-self: center;
+
+  background-color: $blue;
+  border-radius: 50%/10%;
+
+  &::before {
+    content: '';
+
+    position: absolute;
+    top: 8%;
+    bottom: 8%;
+    right: -4%;
+    left: -4%;
+
+    background: inherit;
+    border-radius: 5%/50%;
+  }
+}
+
+.logo > div {
+  width: calc($logo-height * 0.75);
+  height: calc($logo-height * 0.875);
+
+  @include logo(url(../../assets/svg/app-logo.svg), $white);
+}

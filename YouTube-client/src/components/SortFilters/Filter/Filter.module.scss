@@ -1,0 +1,41 @@
+@import '../../../styles/variables.scss';
+@import '../../../styles/mixins.scss';
+
+.filter {
+  display: flex;
+}
+
+.filter-title {
+  padding: 0px;
+  margin-right: 5px;
+
+  font-size: inherit;
+  font-family: inherit;
+  color: $blue;
+  text-decoration: underline;
+
+  background: none;
+  border: none;
+  cursor: pointer;
+
+  transition: 0.75s;
+
+  &:hover {
+    color: $lime-green;
+  }
+}
+
+.filter-arrow {
+  width: 20px;
+  height: 20px;
+
+  @include logo(url(../../../assets/svg/sort-filter-arrow.svg), $black);
+
+  &.arrow-down {
+    transform: rotate(180deg);
+  }
+
+  &.arrow-hide {
+    visibility: hidden;
+  }
+}

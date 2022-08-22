@@ -1,0 +1,41 @@
+@import '../../styles/variables.scss';
+
+.sort-filters {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1em;
+  grid-area: video-filters;
+
+  font-size: 1rem;
+  font-family: RobotoCondensedRegular, $default-fonts;
+
+  user-select: none;
+
+  li {
+    align-self: center;
+    white-space: nowrap;
+    list-style-type: none;
+
+    &:last-child {
+      display: flex;
+      align-items: center;
+      grid-column: 2 / span 4;
+    }
+  }
+
+  @media screen and (max-width: $screen-width-small) {
+    gap: 1em 0.25em;
+
+    font-size: 0.8rem;
+
+    li {
+      &:last-child {
+        grid-column: 1 / span 4;
+      }
+    }
+  }
+}
+
+.filters-label {
+  margin-right: 5px;
+}

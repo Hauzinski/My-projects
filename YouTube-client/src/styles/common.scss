@@ -1,0 +1,141 @@
+@charset 'utf-8';
+
+@import './variables.scss';
+@import './fonts.scss';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h3,
+h4,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+
+  // background: rgb(124, 185, 232);
+  // background: linear-gradient(90deg, rgba(124, 185, 232, 1) 10%, rgba(0, 45, 98, 1) 55%, rgba(124, 185, 232, 1) 90%);
+}
+
+body {
+  color: $black;
+  font-weight: 500;
+
+  background-color: $white;
+
+  overflow: hidden;
+}
+
+input[type='search'] {
+  border: 1px solid $grey;
+  background-color: $white;
+  outline: none;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  // height: 100%;
+  margin: $content-indent;
+
+  overflow: hidden auto;
+
+  &::-webkit-scrollbar {
+    width: 0;
+  }
+}
+
+.container {
+  width: 80%;
+
+  @media screen and (max-width: $screen-width-medium) {
+    width: 90%;
+  }
+
+  @media screen and (max-width: $screen-width-small) {
+    width: 100%;
+  }
+}
+
+.title {
+  font-family: PTSansRegular, $default-fonts;
+  font-weight: 700;
+  text-overflow: ellipsis;
+
+  overflow: hidden;
+}
+
+.button,
+.button-svg {
+  font-family: PTSansRegular, $default-fonts;
+
+  background-color: $blue;
+  border: none;
+  cursor: pointer;
+
+  transition: 0.75s;
+
+  user-select: none;
+
+  &:hover {
+    background-color: $lime-green;
+  }
+}
+
+.button {
+  color: $white;
+  text-transform: lowercase;
+
+  border-radius: $btn-border-radius;
+
+  &:active {
+    transform: scale(0.95);
+  }
+}
+
+[data-title] {
+  position: relative;
+
+  &::after {
+    content: attr(data-title);
+
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 100;
+
+    width: auto;
+    padding: 0.25em 0.5em;
+
+    color: $white;
+
+    background: $blue;
+    box-shadow: 1px 1px 5px $shadow;
+    border-radius: 3px;
+    opacity: 0;
+
+    transition: 0.25s;
+
+    pointer-events: none;
+    user-select: none;
+  }
+
+  &:hover::after {
+    top: -2em;
+
+    opacity: 1;
+  }
+}

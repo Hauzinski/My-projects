@@ -1,0 +1,50 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+.btn-sort-filters {
+  $size: 25px;
+
+  width: $size;
+  height: $size;
+  grid-area: filters-toggle-btn;
+  align-self: center;
+  padding: 1px;
+  border-radius: $btn-border-radius;
+
+  span {
+    @include buttons-svg(url(../../assets/svg/sort-filters.svg), $white);
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+}
+
+.btn-video-page-back {
+  $size: 35px;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: $size;
+  height: $size;
+  grid-area: video-page-btn;
+  padding: 5px;
+  border-radius: $btn-border-radius 0 0 $btn-border-radius;
+
+  transform: translateX(-100%);
+
+  span {
+    @include buttons-svg(url(../../assets/svg/videoPage/video-page-arrow-back.svg), $white);
+  }
+
+  @media screen and (max-width: $screen-width-medium) {
+    position: static;
+
+    width: 100%;
+    border-radius: 0 0 10px 10px;
+
+    transform: none;
+  }
+}

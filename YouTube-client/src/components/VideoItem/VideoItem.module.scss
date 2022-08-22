@@ -1,0 +1,47 @@
+@import '../../styles/variables.scss';
+
+.video-item {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto auto 1fr auto;
+  grid-template-areas:
+    'video-item-img'
+    'video-metrics'
+    'video-item-title'
+    '.'
+    'video-item-btn';
+  gap: 0.75em;
+  padding: 1.5em;
+
+  border-radius: 0.4em;
+  background-color: $light-grey;
+}
+
+.video-item-img,
+.video-item-button {
+  justify-self: center;
+}
+
+.video-item-img {
+  grid-area: video-item-img;
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+}
+
+.video-item-title {
+  grid-area: video-item-title;
+  justify-self: end;
+  padding: 0px 10px;
+  max-width: 95%;
+
+  font-size: 1.3rem;
+  text-align: right;
+}
+
+.video-item-button {
+  grid-area: video-item-btn;
+  align-self: flex-end;
+  height: 25px;
+  padding: 0 2em;
+}

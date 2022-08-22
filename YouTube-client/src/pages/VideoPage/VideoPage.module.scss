@@ -1,0 +1,143 @@
+@import '../../styles/variables.scss';
+
+$border: 10px;
+$margin: 1rem;
+
+.main-content {
+  position: relative;
+
+  display: grid;
+  grid-template-columns: 3.7fr 1.2fr 0.8fr;
+  grid-template-rows: auto auto auto 1fr auto;
+  grid-template-areas:
+    'video-page-img video-page-title video-page-date'
+    'video-page-img video-page-description-title video-page-description-title'
+    'video-page-img video-page-description video-page-description'
+    'video-page-img . .'
+    'video-page-img video-page-metrics video-page-metrics';
+  gap: 1em 0;
+  height: max-content;
+
+  border-radius: 0 $border $border $border;
+  background-color: $light-grey;
+
+  @media screen and (max-width: $screen-width-medium) {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, auto) 1fr auto;
+    grid-template-areas:
+      'video-page-img'
+      'video-page-title'
+      'video-page-date'
+      'video-page-description-title'
+      'video-page-description'
+      'video-page-metrics'
+      'video-page-btn';
+    gap: 0.5em 0;
+    border-radius: $border;
+  }
+}
+
+.title,
+.date,
+.description-title,
+.metrics {
+  margin: 0 $margin;
+}
+
+.img {
+  grid-area: video-page-img;
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+
+  border-radius: 0 0 0 $border;
+
+  @media screen and (max-width: $screen-width-medium) {
+    border-radius: $border $border 0 0;
+  }
+}
+
+.title {
+  grid-area: video-page-title;
+  margin-top: $margin;
+
+  @media screen and (max-width: $screen-width-medium) {
+    margin-top: 0;
+  }
+}
+
+.date {
+  grid-area: video-page-date;
+  align-self: end;
+  justify-self: end;
+  margin-top: $margin;
+
+  font-size: 0.9rem;
+
+  @media screen and (max-width: $screen-width-medium) {
+    margin-top: 0;
+  }
+}
+
+.description-title {
+  grid-area: video-page-description-title;
+}
+
+.description {
+  grid-area: video-page-description;
+  margin: 0 $margin;
+  max-height: calc(30vh);
+
+  font-size: 0.9rem;
+
+  overflow: hidden auto;
+
+  &::-webkit-scrollbar {
+    width: 0.9em;
+  }
+
+  &::-webkit-scrollbar-track {
+    margin-block: 0.25em;
+
+    border-radius: 100vw;
+    background-color: $black;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border: 0.2em solid $black;
+    border-radius: 100vw;
+    background-color: $blue;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background-color: $lime-green;
+  }
+
+  @media screen and (max-width: $screen-width-large) {
+    max-height: calc(20vh);
+  }
+
+  @media screen and (max-width: $screen-width-medium) {
+    max-height: calc(20vh);
+  }
+}
+
+.metrics {
+  grid-area: video-page-metrics;
+  justify-self: center;
+  width: 70%;
+  margin-bottom: $margin;
+
+  @media screen and (max-width: $screen-width-large) {
+    width: 90%;
+  }
+
+  @media screen and (max-width: $screen-width-medium) {
+    width: 75%;
+    margin-bottom: 0;
+  }
+
+  @media screen and (max-width: $screen-width-small) {
+    width: 70%;
+  }
+}

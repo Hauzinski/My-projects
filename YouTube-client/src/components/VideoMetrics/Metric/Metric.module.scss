@@ -1,0 +1,38 @@
+@import '../../../styles/variables.scss';
+@import '../../../styles/mixins.scss';
+
+$logo-size: 20px;
+
+.metric {
+  display: flex;
+  align-items: center;
+
+  user-select: none;
+}
+
+.logo {
+  width: $logo-size;
+  height: $logo-size;
+}
+
+.count {
+  margin-left: 5px;
+
+  font-family: RobotoCondensedRegular, $default-fonts;
+}
+
+.logo-comments {
+  @include logo(url(../../../assets/svg/videoMetrics/metrics-comments.svg), $black);
+}
+
+.logo-favorites {
+  @include logo(url(../../../assets/svg/videoMetrics/metrics-favorites.svg), $black);
+}
+
+.logo-likes {
+  @include logo(url(../../../assets/svg/videoMetrics/metrics-likes.svg), $black);
+}
+
+.logo-views {
+  @include logo(url(../../../assets/svg/videoMetrics/metrics-views.svg), $black);
+}
