@@ -1,7 +1,9 @@
 ## YouTube client
 
 **App version:** 1.2.2.
+
 **Last update:** 23.08.2022.
+
 **App technology stack:**
 
 - WebPack;
