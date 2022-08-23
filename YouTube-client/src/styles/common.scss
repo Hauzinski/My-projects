@@ -48,13 +48,17 @@ input[type='search'] {
   display: flex;
   justify-content: center;
   width: 100%;
-  // height: 100%;
+  height: 100%;
   margin: $content-indent;
 
   overflow: hidden auto;
 
   &::-webkit-scrollbar {
     width: 0;
+  }
+
+  @media screen and (max-width: $screen-width-small) {
+    margin: 0;
   }
 }
 
@@ -72,6 +76,7 @@ input[type='search'] {
 
 .title {
   font-family: PTSansRegular, $default-fonts;
+  font-size: 1.3rem;
   font-weight: 700;
   text-overflow: ellipsis;
 

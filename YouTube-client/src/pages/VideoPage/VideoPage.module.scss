@@ -33,7 +33,14 @@ $margin: 1rem;
       'video-page-metrics'
       'video-page-btn';
     gap: 0.5em 0;
+    height: 100%;
     border-radius: $border;
+
+    overflow: hidden;
+  }
+
+  @media screen and (max-width: $screen-width-small) {
+    border-radius: 0;
   }
 }
 
@@ -42,6 +49,13 @@ $margin: 1rem;
 .description-title,
 .metrics {
   margin: 0 $margin;
+}
+
+.date,
+.description-title,
+.description {
+  font-family: RobotoCondensedRegular, $default-fonts;
+  font-size: 0.9rem;
 }
 
 .img {
@@ -54,6 +68,10 @@ $margin: 1rem;
 
   @media screen and (max-width: $screen-width-medium) {
     border-radius: $border $border 0 0;
+  }
+
+  @media screen and (max-width: $screen-width-small) {
+    border-radius: 0;
   }
 }
 
@@ -72,8 +90,6 @@ $margin: 1rem;
   justify-self: end;
   margin-top: $margin;
 
-  font-size: 0.9rem;
-
   @media screen and (max-width: $screen-width-medium) {
     margin-top: 0;
   }
@@ -81,14 +97,15 @@ $margin: 1rem;
 
 .description-title {
   grid-area: video-page-description-title;
+
+  font-size: 1rem;
+  font-weight: 700;
 }
 
 .description {
   grid-area: video-page-description;
   margin: 0 $margin;
   max-height: calc(30vh);
-
-  font-size: 0.9rem;
 
   overflow: hidden auto;
 
@@ -118,7 +135,7 @@ $margin: 1rem;
   }
 
   @media screen and (max-width: $screen-width-medium) {
-    max-height: calc(20vh);
+    max-height: 100%;
   }
 }
 

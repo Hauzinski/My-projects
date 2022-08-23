@@ -27,8 +27,12 @@ export default function VideoPage() {
           <img className={styles.img} src={getVideoImageThumbnail(videoData)} alt={videoData.snippet.title} />
           <h3 className={`title ${styles.title}`}>{videoData.snippet.title}</h3>
           <p className={styles.date}>{formatDate(videoData.snippet.publishedAt)}</p>
-          <h4 className={styles['description-title']}>Description:</h4>
-          <p className={styles.description}>{videoData.snippet.description}</p>
+          {videoData.snippet.description && (
+            <>
+              <h4 className={styles['description-title']}>Description:</h4>
+              <p className={styles.description}>{videoData.snippet.description}</p>
+            </>
+          )}
           <div className={styles.metrics}>
             <VideoMetricsComponent data={videoData.statistics} />
           </div>

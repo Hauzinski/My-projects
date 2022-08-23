@@ -29,7 +29,7 @@ module.exports = {
     }),
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify('production'),
-      'process.env.BASENAME': JSON.stringify('/My-projects/YouTube-client/'), //github repository (for deploy)
+      'process.env.BASENAME': JSON.stringify('/My-projects/YouTube-client-react/'), //github repository (for deploy)
     }),
     // new BundleAnalyzerPlugin(),
   ],

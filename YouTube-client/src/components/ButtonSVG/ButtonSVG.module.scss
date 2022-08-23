@@ -47,4 +47,8 @@
 
     transform: none;
   }
+
+  @media screen and (max-width: $screen-width-small) {
+    border-radius: 0;
+  }
 }
