@@ -22,26 +22,24 @@ export default function VideoPage() {
 
   return (
     <main className={`main ${styles.main}`}>
-      <div className={`container ${styles['main-content']}`}>
-        {videoData && (
-          <>
-            <img className={styles.img} src={getVideoImageThumbnail(videoData)} alt={videoData.snippet.title} />
-            <h3 className={`title ${styles.title}`}>{videoData.snippet.title}</h3>
-            <p className={styles.date}>{formatDate(videoData.snippet.publishedAt)}</p>
-            {videoData.snippet.description && (
-              <>
-                <h4 className={styles['description-title']}>Description:</h4>
-                <p className={styles.description}>{videoData.snippet.description}</p>
-              </>
-            )}
-            <div className={styles.metrics}>
-              <VideoMetricsComponent data={videoData.statistics} />
-            </div>
-            <ButtonSVGComponent data={button} />
-          </>
-        )}
-        {!videoData && <p>Video not found!</p>}
-      </div>
+      {videoData && (
+        <div className={`container ${styles['main-content']}`}>
+          <img className={styles.img} src={getVideoImageThumbnail(videoData)} alt={videoData.snippet.title} />
+          <h3 className={`title ${styles.title}`}>{videoData.snippet.title}</h3>
+          <p className={styles.date}>{formatDate(videoData.snippet.publishedAt)}</p>
+          {videoData.snippet.description && (
+            <>
+              <h4 className={styles['description-title']}>Description:</h4>
+              <p className={styles.description}>{videoData.snippet.description}</p>
+            </>
+          )}
+          <div className={styles.metrics}>
+            <VideoMetricsComponent data={videoData.statistics} />
+          </div>
+          <ButtonSVGComponent data={button} />
+        </div>
+      )}
+      {!videoData && <p className={styles['not-found']}>Sorry, video not found!</p>}
     </main>
   );
 }

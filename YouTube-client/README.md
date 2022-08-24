@@ -1,6 +1,8 @@
 # YouTube client
 
-**App version:** 1.2.4.
+**App status:** MVP.
+
+**App version:** 1.2.5.
 
 **Last update:** 24.08.2022.
 
