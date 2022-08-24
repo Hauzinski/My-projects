@@ -1,10 +1,12 @@
 const webpack = require('webpack');
 const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
 
+const publicPath = '/';
+
 module.exports = {
   mode: 'development',
   output: {
-    publicPath: '/',
+    publicPath: publicPath,
   },
   devtool: 'cheap-module-source-map',
   devServer: {
@@ -27,7 +29,7 @@ module.exports = {
     new ReactRefreshWebpackPlugin(),
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify('development'),
-      'process.env.BASENAME': JSON.stringify(''),
+      'process.env.BASENAME': JSON.stringify(publicPath),
     }),
   ],
 };

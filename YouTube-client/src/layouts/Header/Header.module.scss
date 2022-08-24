@@ -6,6 +6,10 @@
   width: 100%;
 
   background-color: $light-grey;
+
+  @media screen and (max-width: $screen-width-small) and (orientation: landscape) {
+    border-bottom: 3px solid $grey;
+  }
 }
 
 .header-content {

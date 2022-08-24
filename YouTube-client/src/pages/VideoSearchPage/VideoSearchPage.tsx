@@ -6,10 +6,12 @@ export default function VideoSearchPage() {
   const sortedVideoData = useSort();
 
   return (
-    <div className={`container ${styles['main-content']}`}>
-      {sortedVideoData.map((item) => (
-        <VideoItemComponent key={item.id} data={item} />
-      ))}
-    </div>
+    <main className="main">
+      <div className={`container ${styles['main-content']}`}>
+        {sortedVideoData.map((item) => (
+          <VideoItemComponent key={item.id} data={item} />
+        ))}
+      </div>
+    </main>
   );
 }

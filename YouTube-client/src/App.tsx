@@ -18,9 +18,7 @@ export default function App() {
   return (
     <>
       <Header />
-      <main className="main">
-        <AppRoutes />
-      </main>
+      <AppRoutes />
     </>
   );
 }

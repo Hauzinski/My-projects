@@ -39,7 +39,7 @@
     @include buttons-svg(url(../../assets/svg/videoPage/video-page-arrow-back.svg), $white);
   }
 
-  @media screen and (max-width: $screen-width-medium) {
+  @media screen and (max-width: $screen-width-medium), (orientation: portrait) {
     position: static;
 
     width: 100%;

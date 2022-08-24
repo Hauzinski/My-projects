@@ -3,6 +3,13 @@
 $border: 10px;
 $margin: 1rem;
 
+.main {
+  @media screen and (max-width: $screen-width-small) {
+    height: 100%;
+    margin: 0;
+  }
+}
+
 .main-content {
   position: relative;
 
@@ -21,7 +28,7 @@ $margin: 1rem;
   border-radius: 0 $border $border $border;
   background-color: $light-grey;
 
-  @media screen and (max-width: $screen-width-medium) {
+  @media screen and (max-width: $screen-width-medium), (orientation: portrait) {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(4, auto) 1fr auto;
     grid-template-areas:
@@ -33,10 +40,13 @@ $margin: 1rem;
       'video-page-metrics'
       'video-page-btn';
     gap: 0.5em 0;
-    height: 100%;
     border-radius: $border;
 
     overflow: hidden;
+  }
+
+  @media screen and (max-width: $screen-width-medium) and (orientation: portrait) {
+    height: 100%;
   }
 
   @media screen and (max-width: $screen-width-small) {
@@ -134,7 +144,7 @@ $margin: 1rem;
     max-height: calc(20vh);
   }
 
-  @media screen and (max-width: $screen-width-medium) {
+  @media screen and (max-width: $screen-width-medium), (orientation: portrait) {
     max-height: 100%;
   }
 }

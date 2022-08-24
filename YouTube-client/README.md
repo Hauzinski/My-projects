@@ -1,8 +1,8 @@
-## YouTube client
+# YouTube client
 
-**App version:** 1.2.2.
+**App version:** 1.2.4.
 
-**Last update:** 23.08.2022.
+**Last update:** 24.08.2022.
 
 **App technology stack:**
 
