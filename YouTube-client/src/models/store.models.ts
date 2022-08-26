@@ -9,6 +9,7 @@ export interface IState {
 interface IStateCache {
   request: string;
   requestData: Item[];
+  pageTokens: string[];
 }
 
 export interface IStateSortFilters {
@@ -21,4 +22,5 @@ export interface IStateSortFilters {
 
 interface IStateSettings {
   isSortFilters: boolean;
+  countOfVideoPerPage: string;
 }

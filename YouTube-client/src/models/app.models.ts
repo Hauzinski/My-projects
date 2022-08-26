@@ -10,9 +10,10 @@ export interface IPropsMetric {
 
 export interface IPropsButton {
   data: {
-    class: string;
+    class: string[];
     action: () => void;
     label: string;
+    disabled: boolean;
   };
 }
 

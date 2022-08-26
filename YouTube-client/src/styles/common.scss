@@ -93,6 +93,10 @@ input[type='search'] {
   &:hover {
     background-color: $lime-green;
   }
+
+  &:disabled {
+    background-color: $grey;
+  }
 }
 
 .button {

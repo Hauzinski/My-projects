@@ -2,6 +2,7 @@ export interface VideoDataInterface {
   kind: string;
   etag: string;
   nextPageToken?: string;
+  prevPageToken?: string;
   regionCode?: string;
   pageInfo: PageInfo;
   items: Item[];

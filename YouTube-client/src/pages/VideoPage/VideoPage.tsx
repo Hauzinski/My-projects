@@ -15,9 +15,10 @@ export default function VideoPage() {
   const videoData = requestData.find((value) => value.id === id);
 
   const button = {
-    class: 'btn-video-page-back',
+    class: ['btn-video-page-back'],
     action: () => navigate('/'),
     label: 'Return to main page options',
+    disabled: false,
   };
 
   return (

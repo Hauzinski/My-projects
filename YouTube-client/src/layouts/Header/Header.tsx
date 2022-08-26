@@ -19,9 +19,10 @@ export default function Header() {
   const search = useSearch();
 
   const button = {
-    class: 'btn-sort-filters',
+    class: ['btn-sort-filters'],
     action: () => dispatch(toggleSortFilters()),
     label: 'Search options',
+    disabled: false,
   };
 
   function setRequest() {

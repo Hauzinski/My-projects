@@ -1,7 +1,6 @@
 import { useNavigate } from 'react-router';
 
 import { IPropsVideoItemComponent } from '../../models/app.models';
-import getVideoImageThumbnail from '../../utils/getVideoImageThumbnail';
 import VideoMetricsComponent from '../VideoMetrics/VideoMetrics';
 import styles from './VideoItem.module.scss';
 
@@ -14,7 +13,7 @@ export default function VideoItemComponent({ data }: IPropsVideoItemComponent) {
 
   return (
     <div className={styles['video-item']}>
-      <img className={styles['video-item-img']} src={getVideoImageThumbnail(data)} alt={data.snippet.title} />
+      <img className={styles['video-item-img']} src={data.snippet.thumbnails.high?.url} alt={data.snippet.title} />
       <VideoMetricsComponent data={data.statistics} />
       <h3 className={`title ${styles['video-item-title']}`}>{data.snippet.title}</h3>
       <button className={`button ${styles['video-item-button']}`} type="button" onClick={selectVideo}>

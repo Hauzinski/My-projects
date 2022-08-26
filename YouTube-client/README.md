@@ -2,9 +2,9 @@
 
 **App status:** MVP.
 
-**App version:** 1.2.5.
+**App version:** 1.3.5.
 
-**Last update:** 24.08.2022.
+**Last update:** 26.08.2022.
 
 **App technology stack:**
 
