@@ -5,6 +5,7 @@ import { getLocalStorage } from '../utils/manageLocalStorage';
 const defaultAppSettings = {
   isSortFilters: false,
   countOfVideoPerPage: '24',
+  mainPageScrollTop: 0,
 };
 
 const localStorageAppSettings = getLocalStorage()?.settings;
@@ -19,9 +20,12 @@ export const appSettings = createSlice({
     changeCountOfVideoPerPage: (state, action: PayloadAction<string>) => {
       state.countOfVideoPerPage = action.payload;
     },
+    setMainPageScrollTop: (state, action: PayloadAction<number>) => {
+      state.mainPageScrollTop = action.payload;
+    },
   },
 });
 
-export const { toggleSortFilters, changeCountOfVideoPerPage } = appSettings.actions;
+export const { toggleSortFilters, changeCountOfVideoPerPage, setMainPageScrollTop } = appSettings.actions;
 
 export default appSettings.reducer;

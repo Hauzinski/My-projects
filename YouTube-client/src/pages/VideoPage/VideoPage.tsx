@@ -1,5 +1,5 @@
 import { useSelector } from 'react-redux';
-import { useNavigate, useParams } from 'react-router';
+import { useNavigate, useParams } from 'react-router-dom';
 
 import ButtonSVGComponent from '../../components/ButtonSVG/ButtonSVG';
 import VideoMetricsComponent from '../../components/VideoMetrics/VideoMetrics';
@@ -17,7 +17,7 @@ export default function VideoPage() {
   const button = {
     class: ['btn-video-page-back'],
     action: () => navigate('/'),
-    label: 'Return to main page options',
+    label: 'Return to main page',
     disabled: false,
   };
 

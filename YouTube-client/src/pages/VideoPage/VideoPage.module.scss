@@ -41,8 +41,6 @@ $margin: 1rem;
       'video-page-btn';
     gap: 0.5em 0;
     border-radius: $border;
-
-    overflow: hidden;
   }
 
   @media screen and (max-width: $screen-width-medium) and (orientation: portrait) {
@@ -76,7 +74,7 @@ $margin: 1rem;
 
   border-radius: 0 0 0 $border;
 
-  @media screen and (max-width: $screen-width-medium) {
+  @media screen and (max-width: $screen-width-medium), (orientation: portrait) {
     border-radius: $border $border 0 0;
   }
 

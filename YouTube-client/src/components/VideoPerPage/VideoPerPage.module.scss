@@ -1,0 +1,33 @@
+@import '../../styles/variables.scss';
+
+.video-per-page {
+  display: flex;
+  align-items: center;
+  grid-area: video-per-page;
+
+  font-family: RobotoCondensedRegular, $default-fonts;
+  font-size: 1rem;
+
+  @media screen and (max-width: $screen-width-small) {
+    font-size: 0.8rem;
+  }
+}
+
+.label {
+  margin-right: 0.5em;
+
+  user-select: none;
+}
+
+.select {
+  font-family: inherit;
+  font-size: 1rem;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  @media screen and (max-width: $screen-width-small) {
+    font-size: 0.8rem;
+  }
+}

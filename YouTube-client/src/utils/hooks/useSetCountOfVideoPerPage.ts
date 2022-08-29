@@ -1,4 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 
 import { getVideoData } from '../../api/youtubeAPI';
 import { IState } from '../../models/store.models';
@@ -6,18 +7,20 @@ import {
   setRequestData as setRequestDataReducer,
   setPageTokensData as setPageTokensDataReducer,
 } from '../../store/appCacheSlice';
-import { setMainPageScrollTop as setMainPageScrollTopReducer } from '../../store/appSettingsSlice';
+import { changeCountOfVideoPerPage as changeCountOfVideoPerPageReducer } from '../../store/appSettingsSlice';
 
-export default function useChangeVideoListPage() {
+export default function useSetCountOfVideoPerPage() {
   const request = useSelector((state: IState) => state.cache.request);
-  const maxResults = useSelector((state: IState) => state.settings.countOfVideoPerPage);
+  const navigate = useNavigate();
   const dispatch = useDispatch();
 
-  return async (pageToken: string) => {
-    const response = await getVideoData(request, maxResults, pageToken);
+  return async (maxResults: string) => {
+    const response = await getVideoData(request, maxResults);
 
+    navigate('/');
+
+    dispatch(changeCountOfVideoPerPageReducer(maxResults));
     dispatch(setRequestDataReducer(response.videoData));
     dispatch(setPageTokensDataReducer(response.pageTokens));
-    dispatch(setMainPageScrollTopReducer(0));
   };
 }

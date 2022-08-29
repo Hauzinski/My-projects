@@ -23,4 +23,5 @@ export interface IStateSortFilters {
 interface IStateSettings {
   isSortFilters: boolean;
   countOfVideoPerPage: string;
+  mainPageScrollTop: number;
 }

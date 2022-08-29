@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import AppLogoComponent from '../../components/AppLogo/AppLogo';
 import ButtonSVGComponent from '../../components/ButtonSVG/ButtonSVG';
 import SortFiltersComponent from '../../components/SortFilters/SortFilters';
+import VideoPerPageComponent from '../../components/VideoPerPage/VideoPerPage';
 import { IState } from '../../models/store.models';
 import { toggleSortFilters } from '../../store/appSettingsSlice';
 import callbackTimer from '../../utils/callbackTimer';
@@ -47,7 +48,12 @@ export default function Header() {
           />
         </form>
         <ButtonSVGComponent data={button} />
-        {isSortFilters && <SortFiltersComponent />}
+        {isSortFilters && (
+          <>
+            <SortFiltersComponent />
+            <VideoPerPageComponent />
+          </>
+        )}
       </div>
     </header>
   );

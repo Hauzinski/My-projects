@@ -1,4 +1,4 @@
-import { useNavigate } from 'react-router';
+import { useNavigate } from 'react-router-dom';
 
 import { IPropsVideoItemComponent } from '../../models/app.models';
 import VideoMetricsComponent from '../VideoMetrics/VideoMetrics';
