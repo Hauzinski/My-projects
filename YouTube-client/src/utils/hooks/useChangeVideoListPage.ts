@@ -6,7 +6,7 @@ import {
   setRequestData as setRequestDataReducer,
   setPageTokensData as setPageTokensDataReducer,
 } from '../../store/appCacheSlice';
-import { setMainPageScrollTop as setMainPageScrollTopReducer } from '../../store/appSettingsSlice';
+import { setMainPageScroll as setMainPageScrollReducer } from '../../store/appSettingsSlice';
 
 export default function useChangeVideoListPage() {
   const request = useSelector((state: IState) => state.cache.request);
@@ -18,6 +18,6 @@ export default function useChangeVideoListPage() {
 
     dispatch(setRequestDataReducer(response.videoData));
     dispatch(setPageTokensDataReducer(response.pageTokens));
-    dispatch(setMainPageScrollTopReducer(0));
+    dispatch(setMainPageScrollReducer(0));
   };
 }

@@ -7,7 +7,7 @@ import {
   setRequestData as setRequestDataReducer,
   setPageTokensData as setPageTokensDataReducer,
 } from '../../store/appCacheSlice';
-import { changeCountOfVideoPerPage as changeCountOfVideoPerPageReducer } from '../../store/appSettingsSlice';
+import { setCountOfVideoPerPage as setCountOfVideoPerPageReducer } from '../../store/appSettingsSlice';
 
 export default function useSetCountOfVideoPerPage() {
   const request = useSelector((state: IState) => state.cache.request);
@@ -19,7 +19,7 @@ export default function useSetCountOfVideoPerPage() {
 
     navigate('/');
 
-    dispatch(changeCountOfVideoPerPageReducer(maxResults));
+    dispatch(setCountOfVideoPerPageReducer(maxResults));
     dispatch(setRequestDataReducer(response.videoData));
     dispatch(setPageTokensDataReducer(response.pageTokens));
   };

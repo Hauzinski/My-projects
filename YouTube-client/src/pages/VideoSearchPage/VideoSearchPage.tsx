@@ -5,22 +5,22 @@ import { useDispatch, useSelector } from 'react-redux';
 import VideoItemComponent from '../../components/VideoItem/VideoItem';
 import VideoSearchNavigationComponent from '../../components/VideoSearchNavigation/VideoSearchNavigation';
 import { IState } from '../../models/store.models';
-import { setMainPageScrollTop as setMainPageScrollTopReducer } from '../../store/appSettingsSlice';
+import { setMainPageScroll as setMainPageScrollReducer } from '../../store/appSettingsSlice';
 import useSort from '../../utils/hooks/useSort';
 import styles from './VideoSearchPage.module.scss';
 
 export default function VideoSearchPage() {
   const sortedVideoData = useSort();
   const dispatch = useDispatch();
-  const mainPageScrollTop = useSelector((state: IState) => state.settings.mainPageScrollTop);
-  const main: React.RefObject<HTMLElement> = useRef(null);
+  const mainPageScroll = useSelector((state: IState) => state.settings.mainPageScroll);
+  const mainPage: React.RefObject<HTMLElement> = useRef(null);
   let scrollTimer: NodeJS.Timeout;
 
   useLayoutEffect(() => {
-    if (main.current) {
-      main.current.scrollTop = mainPageScrollTop;
+    if (mainPage.current) {
+      mainPage.current.scrollTop = mainPageScroll;
     }
-  }, [mainPageScrollTop]);
+  }, [mainPageScroll]);
 
   function setMainPageScroll() {
     const doneScrollInterval = 500;
@@ -28,22 +28,22 @@ export default function VideoSearchPage() {
     clearTimeout(scrollTimer);
 
     scrollTimer = setTimeout(() => {
-      if (main.current) {
-        dispatch(setMainPageScrollTopReducer(main.current.scrollTop));
+      if (mainPage.current) {
+        dispatch(setMainPageScrollReducer(mainPage.current.scrollTop));
       }
     }, doneScrollInterval);
   }
 
   return (
     <>
-      <main className={`main ${styles.main}`} ref={main} onScroll={setMainPageScroll}>
+      <main className={`main ${styles.main}`} ref={mainPage} onScroll={setMainPageScroll}>
         <div className={`container ${styles['main-content']}`}>
           {sortedVideoData.map((item) => (
             <VideoItemComponent key={item.id} data={item} />
           ))}
         </div>
       </main>
-      <VideoSearchNavigationComponent />
+      {Boolean(sortedVideoData.length) && <VideoSearchNavigationComponent />}
     </>
   );
 }

@@ -17,11 +17,11 @@ $margin: 1rem;
   grid-template-columns: 3.7fr 1.2fr 0.8fr;
   grid-template-rows: auto auto auto 1fr auto;
   grid-template-areas:
-    'video-page-img video-page-title video-page-date'
-    'video-page-img video-page-description-title video-page-description-title'
-    'video-page-img video-page-description video-page-description'
-    'video-page-img . .'
-    'video-page-img video-page-metrics video-page-metrics';
+    'video-page-iframe video-page-title video-page-date'
+    'video-page-iframe video-page-description-title video-page-description-title'
+    'video-page-iframe video-page-description video-page-description'
+    'video-page-iframe . .'
+    'video-page-iframe video-page-metrics video-page-metrics';
   gap: 1em 0;
   height: max-content;
 
@@ -32,7 +32,7 @@ $margin: 1rem;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(4, auto) 1fr auto;
     grid-template-areas:
-      'video-page-img'
+      'video-page-iframe'
       'video-page-title'
       'video-page-date'
       'video-page-description-title'
@@ -66,11 +66,27 @@ $margin: 1rem;
   font-size: 0.9rem;
 }
 
-.img {
-  grid-area: video-page-img;
+// .img {
+//   grid-area: video-page-img;
+//   width: 100%;
+//   aspect-ratio: 16/9;
+//   object-fit: cover;
+
+//   border-radius: 0 0 0 $border;
+
+//   @media screen and (max-width: $screen-width-medium), (orientation: portrait) {
+//     border-radius: $border $border 0 0;
+//   }
+
+//   @media screen and (max-width: $screen-width-small) {
+//     border-radius: 0;
+//   }
+// }
+
+.iframe {
+  grid-area: video-page-iframe;
   width: 100%;
   aspect-ratio: 16/9;
-  object-fit: cover;
 
   border-radius: 0 0 0 $border;
 
@@ -113,7 +129,7 @@ $margin: 1rem;
 .description {
   grid-area: video-page-description;
   margin: 0 $margin;
-  max-height: calc(30vh);
+  max-height: calc(28vh);
 
   overflow: hidden auto;
 

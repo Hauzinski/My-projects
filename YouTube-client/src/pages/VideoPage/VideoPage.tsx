@@ -5,7 +5,6 @@ import ButtonSVGComponent from '../../components/ButtonSVG/ButtonSVG';
 import VideoMetricsComponent from '../../components/VideoMetrics/VideoMetrics';
 import { IState } from '../../models/store.models';
 import formatDate from '../../utils/formatDate';
-import getVideoImageThumbnail from '../../utils/getVideoImageThumbnail';
 import styles from './VideoPage.module.scss';
 
 export default function VideoPage() {
@@ -25,7 +24,14 @@ export default function VideoPage() {
     <main className={`main ${styles.main}`}>
       {videoData && (
         <div className={`container ${styles['main-content']}`}>
-          <img className={styles.img} src={getVideoImageThumbnail(videoData)} alt={videoData.snippet.title} />
+          <iframe
+            className={styles.iframe}
+            src={`https://www.youtube.com/embed/${videoData.id}`}
+            title="YouTube video"
+            frameBorder="0"
+            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          />
           <h3 className={`title ${styles.title}`}>{videoData.snippet.title}</h3>
           <p className={styles.date}>{formatDate(videoData.snippet.publishedAt)}</p>
           {videoData.snippet.description && (

@@ -2,16 +2,16 @@
 
 **App status:** MVP.
 
-**App version:** 1.5.5.
+**App version:** 1.6.6.
 
-**Last update:** 29.08.2022.
+**Last update:** 30.08.2022.
 
 **App technology stack:**
 
 - WebPack;
 - TypeScript;
 - React;
-- Redux (Redux Tool);
+- Redux (Redux Toolkit);
 - Axios;
 - Sass/SCSS;
 - ESLint;
