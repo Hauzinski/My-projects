@@ -12,6 +12,7 @@ import useCheckValueRequest from './useCheckValueRequest';
 
 export default function useSearch() {
   const minCharactersForSearch = 3;
+  const videoOrder = useSelector((state: IState) => state.settings.videoOrder);
   const maxResults = useSelector((state: IState) => state.settings.countOfVideoPerPage);
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -21,7 +22,7 @@ export default function useSearch() {
     if (!checkValueRequest(value) && (value.trim().length >= minCharactersForSearch || value === '')) {
       navigate('/');
 
-      const response = await getVideoData(value, maxResults);
+      const response = await getVideoData(value, videoOrder, maxResults);
 
       dispatch(setRequestDataReducer(response.videoData));
       dispatch(setPageTokensDataReducer(response.pageTokens));

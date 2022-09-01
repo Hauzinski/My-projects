@@ -2,7 +2,7 @@
 
 **App status:** Stable.
 
-**App version:** 1.7.8.
+**App version:** 1.8.8.
 
 **Last update:** 01.09.2022.
 

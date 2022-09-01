@@ -19,7 +19,7 @@ export default function VideoPerPageComponent() {
       <p className={styles.label}>Video per page:</p>
       <select
         className={styles.select}
-        value={countOfVideoPerPage}
+        defaultValue={countOfVideoPerPage}
         onChange={handleChange}
         aria-label="Select count of video per page"
       >

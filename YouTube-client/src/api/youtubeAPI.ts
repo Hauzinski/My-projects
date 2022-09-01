@@ -20,13 +20,13 @@ async function getVideoDataByID(id: string) {
     return [];
   }
 }
-async function getVideoData(text: string, maxResults: string, pageToken = '') {
+async function getVideoData(text: string, order: string, maxResults: string, pageToken = '') {
   const searchText = text.trim().toLocaleLowerCase().replace(/ /gi, '+');
   const params = {
     key: apiKey,
     part: 'snippet',
     type: 'video',
-    order: 'relevance', // default
+    order,
     maxResults,
     pageToken,
     q: searchText,

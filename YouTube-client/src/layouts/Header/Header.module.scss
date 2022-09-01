@@ -14,27 +14,27 @@
 
 .header-content {
   display: grid;
-  grid-template-columns: 1fr auto 2fr auto 1fr;
+  grid-template-columns: 1fr auto 1fr 1fr auto 1fr;
   gap: 1em 1em;
   grid-template-areas:
-    '. app-logo search-video-input filters-toggle-btn .'
-    '. . video-filters . .'
-    '. . video-per-page . .';
+    '. app-logo search-video-input search-video-input filters-toggle-btn .'
+    '. . video-filters video-filters . .'
+    '. . video-per-page video-order . .';
   padding: $content-indent;
 
   @media screen and (max-width: $screen-width-large) {
-    grid-template-columns: 1fr auto 3fr auto 1fr;
+    grid-template-columns: 1fr auto 1.5fr 1.5fr auto 1fr;
   }
 
   @media screen and (max-width: $screen-width-medium) {
-    grid-template-columns: auto auto 3fr auto auto;
+    grid-template-columns: auto auto 1.5fr 1.5fr auto auto;
   }
 
   @media screen and (max-width: $screen-width-small) {
     grid-template-areas:
-      '. app-logo search-video-input filters-toggle-btn .'
-      '. video-filters video-filters video-filters .'
-      '. video-per-page video-per-page video-per-page .';
+      '. app-logo search-video-input search-video-input filters-toggle-btn .'
+      '. video-filters video-filters video-filters video-filters .'
+      '. video-per-page video-per-page video-order video-order .';
   }
 }
 

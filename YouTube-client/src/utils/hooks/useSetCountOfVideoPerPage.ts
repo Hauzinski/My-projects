@@ -11,11 +11,12 @@ import { setCountOfVideoPerPage as setCountOfVideoPerPageReducer } from '../../s
 
 export default function useSetCountOfVideoPerPage() {
   const request = useSelector((state: IState) => state.cache.request);
+  const videoOrder = useSelector((state: IState) => state.settings.videoOrder);
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
   return async (maxResults: string) => {
-    const response = await getVideoData(request, maxResults);
+    const response = await getVideoData(request, videoOrder, maxResults);
 
     navigate('/');
 
