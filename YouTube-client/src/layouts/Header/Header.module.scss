@@ -39,8 +39,8 @@
 }
 
 .search-form {
-  grid-area: search-video-input;
   align-self: center;
+  grid-area: search-video-input;
 }
 
 .search-input {
@@ -60,4 +60,8 @@
   &:focus::placeholder {
     color: transparent;
   }
+}
+
+.sort-filters-hidden {
+  row-gap: 0;
 }

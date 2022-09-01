@@ -16,6 +16,7 @@ export default function Header() {
   const request = useSelector((state: IState) => state.cache.request);
   const isSortFilters = useSelector((state: IState) => state.settings.isSortFilters);
   const input: React.RefObject<HTMLInputElement> = useRef(null);
+  const sortFiltersStyle = isSortFilters ? '' : styles['sort-filters-hidden'];
   const dispatch = useDispatch();
   const search = useSearch();
 
@@ -34,7 +35,7 @@ export default function Header() {
 
   return (
     <header className={styles.header}>
-      <div className={`container ${styles['header-content']}`}>
+      <div className={`container ${styles['header-content']} ${sortFiltersStyle}`}>
         <AppLogoComponent />
         <form className={styles['search-form']} noValidate>
           <input

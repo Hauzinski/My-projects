@@ -24,16 +24,16 @@
 
 .video-item-img {
   grid-area: video-item-img;
+  object-fit: cover;
   width: 100%;
   aspect-ratio: 16/9;
-  object-fit: cover;
 }
 
 .video-item-title {
   grid-area: video-item-title;
   justify-self: end;
-  padding: 0px 10px;
   max-width: 95%;
+  padding: 0px 10px;
 
   text-align: right;
 }

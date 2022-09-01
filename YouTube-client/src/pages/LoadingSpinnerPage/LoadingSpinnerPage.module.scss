@@ -1,0 +1,68 @@
+@import '../../styles/variables.scss';
+
+.main {
+  align-items: center;
+  height: 100%;
+}
+
+.loader {
+  position: fixed;
+  top: calc(50% - 10vmin);
+  left: calc(50% - 10vmin);
+  z-index: 1;
+
+  box-sizing: border-box;
+  height: 20vmin;
+  width: 20vmin;
+
+  border: solid 2vmin transparent;
+  border-radius: 50%;
+  border-right-color: $blue;
+  border-top-color: $blue;
+
+  animation: spin 1s infinite linear;
+
+  &:before {
+    content: '';
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    box-sizing: border-box;
+    height: 16vmin;
+    width: 16vmin;
+
+    border: solid 2vmin transparent;
+    border-radius: 50%;
+    border-right-color: $deep-sky-blue;
+    border-top-color: $deep-sky-blue;
+
+    animation: spin 2s infinite linear;
+  }
+
+  &:after {
+    content: '';
+
+    box-sizing: border-box;
+    height: 12vmin;
+    width: 12vmin;
+
+    position: absolute;
+    top: 2vmin;
+    left: 2vmin;
+
+    border: solid 2vmin transparent;
+    border-radius: 50%;
+    border-right-color: $aqua;
+    border-top-color: $aqua;
+
+    animation: spin 3s infinite linear;
+  }
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
