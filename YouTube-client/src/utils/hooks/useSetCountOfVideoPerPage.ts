@@ -1,27 +1,15 @@
-import { useDispatch, useSelector } from 'react-redux';
-import { useNavigate } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
 
-import { getVideoData } from '../../api/youtubeAPI';
-import { IState } from '../../models/store.models';
-import {
-  setRequestData as setRequestDataReducer,
-  setPageTokensData as setPageTokensDataReducer,
-} from '../../store/appCacheSlice';
 import { setCountOfVideoPerPage as setCountOfVideoPerPageReducer } from '../../store/appSettingsSlice';
+import useRequestVideoData from './useRequestVideoData';
 
 export default function useSetCountOfVideoPerPage() {
-  const request = useSelector((state: IState) => state.cache.request);
-  const videoOrder = useSelector((state: IState) => state.settings.videoOrder);
-  const navigate = useNavigate();
+  const requestVideoData = useRequestVideoData();
   const dispatch = useDispatch();
 
-  return async (maxResults: string) => {
-    const response = await getVideoData(request, videoOrder, maxResults);
+  return (value: string) => {
+    requestVideoData('maxResults', value);
 
-    navigate('/');
-
-    dispatch(setCountOfVideoPerPageReducer(maxResults));
-    dispatch(setRequestDataReducer(response.videoData));
-    dispatch(setPageTokensDataReducer(response.pageTokens));
+    dispatch(setCountOfVideoPerPageReducer(value));
   };
 }

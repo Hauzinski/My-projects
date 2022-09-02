@@ -7,6 +7,7 @@ import useSortByWord from './useSortByWord';
 export default function useSort() {
   const data = useSelector((state: IState) => state.cache.requestData);
   const newArray = [...data];
+
   const sortByWord = useSortByWord();
 
   useSortByCount(newArray);

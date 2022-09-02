@@ -9,6 +9,7 @@ export default function FilterComponent({ data }: IPropsFilter) {
   const filterValue = useSelector((state: IState) => state.sortFilters[data.type as keyof IStateSortFilters]);
   const isFilterArrowHide = filterValue === 'off' ? styles['arrow-hide'] : '';
   const filterArrowStyle = filterValue === 'descending' ? styles['arrow-down'] : '';
+
   const dispatch = useDispatch();
 
   return (

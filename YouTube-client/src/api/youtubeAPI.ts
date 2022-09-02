@@ -2,7 +2,7 @@ import axios from 'axios';
 
 import { VideoDataInterface } from '../models/youtubeAPI.model';
 
-const apiKey = 'AIzaSyBWrP4EwVwKHY2ZJXm4o0oa_z4j4ttE7hA';
+const apiKey = 'AIzaSyA1i2_U2pt47w5g-cm-fJfgkRAz2vYqqgA';
 const apiURL = 'https://youtube.googleapis.com/youtube/v3';
 
 async function getVideoDataByID(id: string) {
@@ -20,7 +20,7 @@ async function getVideoDataByID(id: string) {
     return [];
   }
 }
-async function getVideoData(text: string, order: string, maxResults: string, pageToken = '') {
+async function getVideoData(text: string, order: string, maxResults: string, pageToken: string) {
   const searchText = text.trim().toLocaleLowerCase().replace(/ /gi, '+');
   const params = {
     key: apiKey,

@@ -10,8 +10,6 @@ import styles from './SortFilters.module.scss';
 export default function SortFiltersComponent() {
   const wordFilter = useSelector((state: IState) => state.sortFilters.byWord);
   const input: React.RefObject<HTMLInputElement> = useRef(null);
-  const dispatch = useDispatch();
-
   const filters = [
     {
       type: 'byDate',
@@ -34,6 +32,8 @@ export default function SortFiltersComponent() {
       label: 'Sorting by count of comments',
     },
   ];
+
+  const dispatch = useDispatch();
 
   function setWordFilter() {
     const inputValue = input.current?.value;

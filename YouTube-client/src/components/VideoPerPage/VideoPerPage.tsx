@@ -6,9 +6,9 @@ import styles from './VideoPerPage.module.scss';
 
 export default function VideoPerPageComponent() {
   const countOfVideoPerPage = useSelector((state: IState) => state.settings.countOfVideoPerPage);
-  const setCountOfVideoPerPage = useSetCountOfVideoPerPage();
-
   const videoPerPage = ['12', '24', '36', '48'];
+
+  const setCountOfVideoPerPage = useSetCountOfVideoPerPage();
 
   function handleChange(event: { target: { value: string } }) {
     setCountOfVideoPerPage(event.target.value);

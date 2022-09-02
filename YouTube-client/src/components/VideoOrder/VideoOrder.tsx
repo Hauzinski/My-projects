@@ -1,14 +1,15 @@
 import { useSelector } from 'react-redux';
 
 import { IState } from '../../models/store.models';
+import formatLowerCamelCaseToCase from '../../utils/formatLowerCamelCaseToCase';
 import useVideoOrder from '../../utils/hooks/useVideoOrder';
 import styles from './VideoOrder.module.scss';
 
 export default function VideoOrderComponent() {
   const videoOrder = useSelector((state: IState) => state.settings.videoOrder);
-  const setVideoOrder = useVideoOrder();
-
   const videoPerPage = ['date', 'rating', 'relevance', 'title', 'videoCount', 'viewCount'];
+
+  const setVideoOrder = useVideoOrder();
 
   function handleChange(event: { target: { value: string } }) {
     setVideoOrder(event.target.value);
@@ -25,7 +26,7 @@ export default function VideoOrderComponent() {
       >
         {videoPerPage.map((value) => (
           <option value={value} key={value}>
-            {value}
+            {formatLowerCamelCaseToCase(value)}
           </option>
         ))}
       </select>

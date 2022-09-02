@@ -8,22 +8,23 @@ import SortFiltersComponent from '../../components/SortFilters/SortFilters';
 import VideoOrderComponent from '../../components/VideoOrder/VideoOrder';
 import VideoPerPageComponent from '../../components/VideoPerPage/VideoPerPage';
 import { IState } from '../../models/store.models';
-import { toggleSortFilters } from '../../store/appSettingsSlice';
+import { toggleAppSettings } from '../../store/appSettingsSlice';
 import callbackTimer from '../../utils/callbackTimer';
 import useSearch from '../../utils/hooks/useSearch';
 import styles from './Header.module.scss';
 
 export default function Header() {
   const request = useSelector((state: IState) => state.cache.request);
-  const isSortFilters = useSelector((state: IState) => state.settings.isSortFilters);
+  const isAppSettings = useSelector((state: IState) => state.settings.isAppSettings);
   const input: React.RefObject<HTMLInputElement> = useRef(null);
-  const sortFiltersStyle = isSortFilters ? '' : styles['sort-filters-hidden'];
+  const sortFiltersStyle = isAppSettings ? '' : styles['sort-filters-hidden'];
+
   const dispatch = useDispatch();
   const search = useSearch();
 
   const button = {
     class: ['btn-sort-filters'],
-    action: () => dispatch(toggleSortFilters()),
+    action: () => dispatch(toggleAppSettings()),
     label: 'Search options',
     disabled: false,
   };
@@ -50,7 +51,7 @@ export default function Header() {
           />
         </form>
         <ButtonSVGComponent data={button} />
-        {isSortFilters && (
+        {isAppSettings && (
           <>
             <SortFiltersComponent />
             <VideoPerPageComponent />
