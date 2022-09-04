@@ -1,5 +1,3 @@
-import { useRef } from 'react';
-
 import { useDispatch, useSelector } from 'react-redux';
 
 import { IState } from '../../models/store.models';
@@ -9,7 +7,6 @@ import styles from './SortFilters.module.scss';
 
 export default function SortFiltersComponent() {
   const wordFilter = useSelector((state: IState) => state.sortFilters.byWord);
-  const input: React.RefObject<HTMLInputElement> = useRef(null);
   const filters = [
     {
       type: 'byDate',
@@ -35,10 +32,8 @@ export default function SortFiltersComponent() {
 
   const dispatch = useDispatch();
 
-  function setWordFilter() {
-    const inputValue = input.current?.value;
-
-    dispatch(setWordFilterReducer(inputValue?.length ? inputValue : ''));
+  function setWordFilter(event: React.ChangeEvent<HTMLInputElement>) {
+    dispatch(setWordFilterReducer(event.target.value));
   }
 
   return (
@@ -53,7 +48,7 @@ export default function SortFiltersComponent() {
       ))}
       <li>
         <p className={styles['filters-label']}>by word or sentence</p>
-        <input name="sortByWord" onChange={setWordFilter} type="search" defaultValue={wordFilter} ref={input} />
+        <input name="sortByWord" onChange={setWordFilter} type="search" value={wordFilter} />
       </li>
     </ul>
   );

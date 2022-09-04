@@ -10,7 +10,7 @@ export default function VideoPerPageComponent() {
 
   const setCountOfVideoPerPage = useSetCountOfVideoPerPage();
 
-  function handleChange(event: { target: { value: string } }) {
+  function handleChange(event: React.ChangeEvent<HTMLSelectElement>) {
     setCountOfVideoPerPage(event.target.value);
   }
 
@@ -19,7 +19,7 @@ export default function VideoPerPageComponent() {
       <p className={styles.label}>Video per page:</p>
       <select
         className={styles.select}
-        defaultValue={countOfVideoPerPage}
+        value={countOfVideoPerPage}
         onChange={handleChange}
         aria-label="Select count of video per page"
       >

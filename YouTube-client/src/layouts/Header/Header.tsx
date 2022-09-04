@@ -1,5 +1,3 @@
-import { useRef } from 'react';
-
 import { useDispatch, useSelector } from 'react-redux';
 
 import AppLogoComponent from '../../components/AppLogo/AppLogo';
@@ -16,7 +14,6 @@ import styles from './Header.module.scss';
 export default function Header() {
   const request = useSelector((state: IState) => state.cache.request);
   const isAppSettings = useSelector((state: IState) => state.settings.isAppSettings);
-  const input: React.RefObject<HTMLInputElement> = useRef(null);
   const sortFiltersStyle = isAppSettings ? '' : styles['sort-filters-hidden'];
 
   const dispatch = useDispatch();
@@ -29,10 +26,8 @@ export default function Header() {
     disabled: false,
   };
 
-  function setRequest() {
-    const inputValue = input.current?.value;
-
-    callbackTimer(search, inputValue?.length ? inputValue : '');
+  function setRequest(event: React.ChangeEvent<HTMLInputElement>) {
+    callbackTimer(search, event.target.value);
   }
 
   return (
@@ -47,7 +42,6 @@ export default function Header() {
             type="search"
             placeholder="Enter a request"
             defaultValue={request}
-            ref={input}
           />
         </form>
         <ButtonSVGComponent data={button} />

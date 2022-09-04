@@ -11,19 +11,14 @@ export default function VideoOrderComponent() {
 
   const setVideoOrder = useVideoOrder();
 
-  function handleChange(event: { target: { value: string } }) {
+  function handleChange(event: React.ChangeEvent<HTMLSelectElement>) {
     setVideoOrder(event.target.value);
   }
 
   return (
     <div className={styles['video-order']}>
       <p className={styles.label}>Video order:</p>
-      <select
-        className={styles.select}
-        defaultValue={videoOrder}
-        onChange={handleChange}
-        aria-label="Select video order"
-      >
+      <select className={styles.select} value={videoOrder} onChange={handleChange} aria-label="Select video order">
         {videoPerPage.map((value) => (
           <option value={value} key={value}>
             {formatLowerCamelCaseToCase(value)}
