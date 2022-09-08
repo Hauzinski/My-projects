@@ -22,7 +22,7 @@ $margin: 1rem;
     'video-page-iframe video-page-description video-page-description'
     'video-page-iframe . .'
     'video-page-iframe video-page-metrics video-page-metrics';
-  gap: 1em 0;
+  row-gap: 1em;
   height: max-content;
 
   border-radius: 0 $border $border $border;
@@ -39,7 +39,7 @@ $margin: 1rem;
       'video-page-description'
       'video-page-metrics'
       'video-page-btn';
-    gap: 0.5em 0;
+    row-gap: 0.5em;
 
     border-radius: $border;
   }

@@ -15,7 +15,7 @@
 .header-content {
   display: grid;
   grid-template-columns: 1fr auto 1fr 1fr auto 1fr;
-  gap: 1em 1em;
+  gap: 1em;
   grid-template-areas:
     '. app-logo search-video-input search-video-input filters-toggle-btn .'
     '. . video-filters video-filters . .'
@@ -64,4 +64,38 @@
 
 .sort-filters-hidden {
   row-gap: 0;
+}
+
+.app-settings-transition-enter {
+  max-height: 0;
+
+  opacity: 0;
+
+  transform: scaleY(0);
+}
+
+.app-settings-transition-enter-active {
+  max-height: 100px;
+
+  opacity: 1;
+
+  transform: scaleY(1);
+  transition: all 500ms;
+}
+
+.app-settings-transition-exit {
+  max-height: 100px;
+
+  opacity: 1;
+
+  transform: scaleY(1);
+}
+
+.app-settings-transition-exit-active {
+  max-height: 0;
+
+  opacity: 0;
+
+  transform: scaleY(0);
+  transition: all 500ms;
 }
