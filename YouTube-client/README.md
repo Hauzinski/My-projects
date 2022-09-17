@@ -16,6 +16,7 @@
 - Redux (Redux Toolkit);
 - Axios;
 - Sass/SCSS;
+- Jest;
 - ESLint;
 - Babel;
 
