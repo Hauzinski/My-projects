@@ -25,8 +25,8 @@ export default function useSortByCount(data: Item[]) {
       data.sort(
         (a, b) =>
           sortingType *
-          (Number(a.statistics[filterTypes[filter as keyof Statistics]]) -
-            Number(b.statistics[filterTypes[filter as keyof Statistics]]))
+          (Number(a.statistics[filterTypes[filter] as keyof Statistics]) -
+            Number(b.statistics[filterTypes[filter] as keyof Statistics]))
       );
     }
   });
