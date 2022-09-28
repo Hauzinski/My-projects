@@ -1,21 +1,23 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "isolatedModules": true,
+    "jsx": "react-jsx",
+    "lib": ["es2015", "es2016", "es2017", "dom", "esnext", "dom.iterable"],
     "module": "esnext",
     "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "lib": ["es2015", "es2016", "es2017", "dom", "esnext"],
-    "jsx": "react-jsx",
     "noEmit": true,
-    "isolatedModules": true,
-    "esModuleInterop": true,
-    "strict": true,
+    "noFallthroughCasesInSwitch": true,
     "noImplicitAny": true,
+    "resolveJsonModule": true,
     "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true,
-    "allowSyntheticDefaultImports": true,
     "sourceMap": true,
-    "allowJs": true,
+    "strict": true,
+    "target": "es5",
+    "typeRoots": ["./node_modules/@types"]
     // "checkJs": true /* Report errors in .js files. Works in tandem with allowJs. */,
     // "strictNullChecks": true,
     // "strictPropertyInitialization": true,
@@ -23,8 +25,7 @@
     // "declaration": false,
     // "downlevelIteration": true,
     // "experimentalDecorators": true,
-    "typeRoots": ["./node_modules/@types"]
   },
-  "include": ["./src/**/*"],
-  "exclude": ["./node_modules"]
+  "exclude": ["./node_modules"],
+  "include": ["./src/**/*"]
 }

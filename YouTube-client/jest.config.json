@@ -1,4 +1,7 @@
 {
   "bail": 1,
+  "clearMocks": true,
+  "moduleFileExtensions": ["tsx", "ts", "json", "node", "jsx", "js", "mjs", "cjs"],
+  "slowTestThreshold": 8,
   "verbose": true
 }
