@@ -1,3 +1,5 @@
+import React from 'react';
+
 import { IPropsVideoMetricsComponent } from '../../models/app.models';
 import MetricComponent from './Metric/Metric';
 import styles from './VideoMetrics.module.scss';

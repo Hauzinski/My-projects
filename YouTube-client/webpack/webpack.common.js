@@ -54,11 +54,9 @@ module.exports = {
       template: path.resolve(__dirname, '..', './public/index.html'),
       favicon: path.resolve(__dirname, '..', './public/favicon.ico'),
     }),
-    // new CopyPlugin({
-    //   patterns: [
-    //     { from: './src/assets/icon', to: './src/assets/icon' },
-    //   ],
-    // }),
+    new CopyPlugin({
+      patterns: [{ from: path.resolve(__dirname, '..', './public/images/react-logo.jpg') }],
+    }),
   ],
   stats: 'errors-only',
 };

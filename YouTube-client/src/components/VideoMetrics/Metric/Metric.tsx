@@ -1,3 +1,5 @@
+import React from 'react';
+
 import { IPropsMetric } from '../../../models/app.models';
 import formatVideoMetrics from '../../../utils/formatVideoMetrics';
 import styles from './Metric.module.scss';
