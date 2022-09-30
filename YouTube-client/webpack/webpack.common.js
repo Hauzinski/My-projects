@@ -3,7 +3,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
-  entry: path.resolve(__dirname, '..', './src/index.tsx'),
+  context: path.resolve(__dirname, '..'),
+  entry: './src/index.tsx',
   module: {
     rules: [
       // TypeScript and JavaScript
@@ -45,17 +46,17 @@ module.exports = {
   resolve: {
     extensions: ['.tsx', '.ts', '.jsx', '.js'],
     // alias: {
-    //   css: path.resolve(__dirname, '..', './src/assets/styles'),
-    //   '@': path.resolve(__dirname, '..', './src/'),
+    //   css: './src/assets/styles',
+    //   '@': './src/',
     // },
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, '..', './public/index.html'),
-      favicon: path.resolve(__dirname, '..', './public/favicon.ico'),
+      template: './public/index.html',
+      favicon: './public/favicon.ico',
     }),
     new CopyPlugin({
-      patterns: [{ from: path.resolve(__dirname, '..', './public/images/react-logo.jpg') }],
+      patterns: [{ from: './public/images/react-logo.jpg' }],
     }),
   ],
   stats: 'errors-only',
