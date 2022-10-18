@@ -1,8 +1,8 @@
 import axios from 'axios';
 
 import { VideoDataInterface } from '../models/youtubeAPI.model';
+import apiKey from './youtubeAPI.keys';
 
-const apiKey = 'AIzaSyBWrP4EwVwKHY2ZJXm4o0oa_z4j4ttE7hA';
 const apiURL = 'https://youtube.googleapis.com/youtube/v3';
 
 async function getVideoDataByID(id: string) {

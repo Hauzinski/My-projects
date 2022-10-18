@@ -31,8 +31,7 @@ export default function VideoPage() {
             src={`https://www.youtube.com/embed/${videoData.id}`}
             title="YouTube video"
             frameBorder="0"
-            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
+            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
           />
           <h3 className={`title ${styles.title}`}>{videoData.snippet.title}</h3>
           <p className={styles.date}>{formatDate(videoData.snippet.publishedAt)}</p>

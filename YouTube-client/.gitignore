@@ -1,13 +1,19 @@
-# dependencies
+# Dependencies
 node_modules/
 /.pnp
 .pnp.js
 
-# production
+# Production
 build/
 
-# misc
+# Misc
 webpack/
+package-lock.*
+
+
+
+# API keys
+*.keys.*
 
 
 
