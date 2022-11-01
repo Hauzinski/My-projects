@@ -6,6 +6,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 import ButtonSVGComponent from '../../components/ButtonSVG/ButtonSVG';
 import VideoMetricsComponent from '../../components/VideoMetrics/VideoMetrics';
 import { IState } from '../../models/store.models';
+import { Statistics } from '../../models/youtubeAPI.models';
 import formatDate from '../../utils/formatDate';
 import styles from './VideoPage.module.scss';
 
@@ -42,7 +43,7 @@ export default function VideoPage() {
             </>
           )}
           <div className={styles.metrics}>
-            <VideoMetricsComponent data={videoData.statistics} />
+            <VideoMetricsComponent data={videoData.statistics as Statistics} />
           </div>
           <ButtonSVGComponent data={button} />
         </div>

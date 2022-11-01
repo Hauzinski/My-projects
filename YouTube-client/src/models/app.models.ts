@@ -1,4 +1,4 @@
-import { Item, Statistics } from './youtubeAPI.model';
+import { Item, Statistics } from './youtubeAPI.models';
 
 export interface IPropsMetric {
   data: {

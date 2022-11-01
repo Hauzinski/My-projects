@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import VideoItemComponent from '../../components/VideoItem/VideoItem';
 import VideoSearchNavigationComponent from '../../components/VideoSearchNavigation/VideoSearchNavigation';
 import { IState } from '../../models/store.models';
-import { setMainPageScroll as setMainPageScrollReducer } from '../../store/appSettingsSlice';
+import { setMainPageScroll as setMainPageScrollAction } from '../../store/appSettingsSlice';
 import useSort from '../../utils/hooks/useSort';
 import styles from './VideoSearchPage.module.scss';
 
@@ -29,7 +29,7 @@ export default function VideoSearchPage() {
 
     scrollTimer = setTimeout(() => {
       if (mainPage.current) {
-        dispatch(setMainPageScrollReducer(mainPage.current.scrollTop));
+        dispatch(setMainPageScrollAction(mainPage.current.scrollTop));
       }
     }, doneScrollInterval);
   }
@@ -39,7 +39,7 @@ export default function VideoSearchPage() {
       <main className={`main ${styles.main}`} ref={mainPage} onScroll={setMainPageScroll}>
         <div className={`container ${styles['main-content']}`}>
           {sortedVideoData.map((item) => (
-            <VideoItemComponent key={item.id} data={item} />
+            <VideoItemComponent key={item.id as string} data={item} />
           ))}
         </div>
       </main>

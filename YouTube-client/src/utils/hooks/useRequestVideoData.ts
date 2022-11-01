@@ -4,10 +4,10 @@ import { useNavigate } from 'react-router-dom';
 import { getVideoData } from '../../api/youtubeAPI';
 import { IState } from '../../models/store.models';
 import {
-  setRequestData as setRequestDataReducer,
-  setPageTokensData as setPageTokensDataReducer,
+  setRequestData as setRequestDataAction,
+  setPageTokensData as setPageTokensDataAction,
 } from '../../store/appCacheSlice';
-import { setMainPageScroll as setMainPageScrollReducer } from '../../store/appSettingsSlice';
+import { setMainPageScroll as setMainPageScrollAction } from '../../store/appSettingsSlice';
 
 export default function useRequestVideoData() {
   const request = useSelector((state: IState) => state.cache.request);
@@ -29,8 +29,8 @@ export default function useRequestVideoData() {
 
     const response = await getVideoData(...requestParams);
 
-    dispatch(setRequestDataReducer(response.videoData));
-    dispatch(setPageTokensDataReducer(response.pageTokens));
-    dispatch(setMainPageScrollReducer(0));
+    dispatch(setRequestDataAction(response.videoData));
+    dispatch(setPageTokensDataAction(response.pageTokens));
+    dispatch(setMainPageScrollAction(0));
   };
 }

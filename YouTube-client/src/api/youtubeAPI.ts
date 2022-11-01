@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-import { VideoDataInterface } from '../models/youtubeAPI.model';
+import { Id, VideoDataInterface } from '../models/youtubeAPI.models';
 import apiKey from './youtubeAPI.keys';
 
 const apiURL = 'https://youtube.googleapis.com/youtube/v3';
@@ -36,7 +36,7 @@ async function getVideoData(text: string, order: string, maxResults: string, pag
   try {
     const response = await axios.get(`${apiURL}/search`, { params });
     const { data }: { data: VideoDataInterface } = response;
-    const videoIDs = data.items.map((item) => item.id.videoId);
+    const videoIDs = data.items.map((item) => (item.id as Id).videoId);
     const pageTokens = [data.prevPageToken, data.nextPageToken];
 
     return {

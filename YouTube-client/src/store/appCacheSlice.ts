@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
-import { Item } from '../models/youtubeAPI.model';
+import { Item } from '../models/youtubeAPI.models';
 import { getLocalStorage } from '../utils/manageLocalStorage';
 
 const defaultAppCache = {
@@ -11,8 +11,8 @@ const defaultAppCache = {
 
 const localStorageAppCache = getLocalStorage()?.cache;
 
-export const appSettings = createSlice({
-  name: 'settings',
+export const appCache = createSlice({
+  name: 'cache',
   initialState: localStorageAppCache || defaultAppCache,
   reducers: {
     setRequest: (state, action: PayloadAction<string>) => {
@@ -27,6 +27,6 @@ export const appSettings = createSlice({
   },
 });
 
-export const { setRequest, setRequestData, setPageTokensData } = appSettings.actions;
+export const { setRequest, setRequestData, setPageTokensData } = appCache.actions;
 
-export default appSettings.reducer;
+export default appCache.reducer;

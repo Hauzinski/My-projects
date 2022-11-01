@@ -10,10 +10,11 @@ build/
 webpack/
 package-lock.*
 
-
-
 # API keys
 *.keys.*
+
+# Testing
+coverage/
 
 
 

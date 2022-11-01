@@ -1,7 +1,7 @@
 import { useSelector } from 'react-redux';
 
 import { IState, IStateSortFilters } from '../../models/store.models';
-import { Item, Statistics } from '../../models/youtubeAPI.model';
+import { Item, Statistics } from '../../models/youtubeAPI.models';
 
 export default function useSortByCount(data: Item[]) {
   const searchFilters = useSelector((state: IState) => state.sortFilters);

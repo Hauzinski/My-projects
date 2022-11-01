@@ -3,7 +3,7 @@ import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { IState } from '../../models/store.models';
-import { setWordFilter as setWordFilterReducer } from '../../store/appSortFiltersSlice';
+import { setWordFilter as setWordFilterAction } from '../../store/appSortFiltersSlice';
 import FilterComponent from './Filter/Filter';
 import styles from './SortFilters.module.scss';
 
@@ -35,7 +35,7 @@ export default function SortFiltersComponent() {
   const dispatch = useDispatch();
 
   function setWordFilter(event: React.ChangeEvent<HTMLInputElement>) {
-    dispatch(setWordFilterReducer(event.target.value));
+    dispatch(setWordFilterAction(event.target.value));
   }
 
   return (

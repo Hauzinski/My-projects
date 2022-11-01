@@ -16,9 +16,9 @@ export interface PageInfo {
 export interface Item {
   kind: string;
   etag: string;
-  id: string & Id;
+  id: string | Id;
   snippet: Snippet;
-  statistics: Statistics & undefined;
+  statistics?: Statistics;
 }
 
 export interface Id {

@@ -1,6 +1,6 @@
 import { useDispatch } from 'react-redux';
 
-import { setVideoOrder as setVideoOrderReducer } from '../../store/appSettingsSlice';
+import { setVideoOrder as setVideoOrderAction } from '../../store/appSettingsSlice';
 import useRequestVideoData from './useRequestVideoData';
 
 export default function useVideoOrder() {
@@ -10,6 +10,6 @@ export default function useVideoOrder() {
   return (value: string) => {
     requestVideoData('videoOrder', value);
 
-    dispatch(setVideoOrderReducer(value));
+    dispatch(setVideoOrderAction(value));
   };
 }

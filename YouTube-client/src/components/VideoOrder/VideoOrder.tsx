@@ -8,8 +8,8 @@ import useVideoOrder from '../../utils/hooks/useVideoOrder';
 import styles from './VideoOrder.module.scss';
 
 export default function VideoOrderComponent() {
-  const videoOrder = useSelector((state: IState) => state.settings.videoOrder);
-  const videoPerPage = ['date', 'rating', 'relevance', 'title', 'videoCount', 'viewCount'];
+  const valueOfVideoOrder = useSelector((state: IState) => state.settings.videoOrder);
+  const videoOrder = ['date', 'rating', 'relevance', 'title', 'videoCount', 'viewCount'];
 
   const setVideoOrder = useVideoOrder();
 
@@ -20,8 +20,13 @@ export default function VideoOrderComponent() {
   return (
     <div className={styles['video-order']}>
       <p className={styles.label}>Video order:</p>
-      <select className={styles.select} value={videoOrder} onChange={handleChange} aria-label="Select video order">
-        {videoPerPage.map((value) => (
+      <select
+        className={styles.select}
+        value={valueOfVideoOrder}
+        onChange={handleChange}
+        aria-label="Select video order"
+      >
+        {videoOrder.map((value) => (
           <option value={value} key={value}>
             {formatLowerCamelCaseToCase(value)}
           </option>

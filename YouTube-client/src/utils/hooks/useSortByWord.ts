@@ -1,7 +1,7 @@
 import { useSelector } from 'react-redux';
 
 import { IState } from '../../models/store.models';
-import { Item } from '../../models/youtubeAPI.model';
+import { Item } from '../../models/youtubeAPI.models';
 
 export default function useSortByWord() {
   const word = useSelector((state: IState) => state.sortFilters.byWord);

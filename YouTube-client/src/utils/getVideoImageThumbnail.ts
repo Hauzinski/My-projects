@@ -1,4 +1,6 @@
-import { Item, Thumbnails } from '../models/youtubeAPI.model';
+// Not used
+
+import { Item, Thumbnails } from '../models/youtubeAPI.models';
 
 export default function getVideoImageThumbnail(data: Item) {
   const imageSizes = ['maxres', 'standard', 'high', 'medium'];
