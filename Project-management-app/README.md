@@ -1,9 +1,6 @@
 # Kanban Task Manager
-- [GO TO APP](https://kanban-app-rsschool.netlify.app/)
-
-## Backend
-- [Repo](https://github.com/EugeneTsalko/kanban-task-backend)
-- [Deploy](https://rs-react-backend-production.up.railway.app/api-docs)
+- [Original app repo](https://github.com/Hauzinski/project-management-app/tree/main)
+- [Original backend repo](https://github.com/rolling-scopes-school/final-task-backend)
 
 ## Description
 Kanban-board application. The final [task](https://github.com/rolling-scopes-school/tasks/blob/master/tasks/react/project-management-system-EN.md) of the React 2022 Q3 course at Rolling Scopes School. 
