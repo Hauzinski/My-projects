@@ -1,5 +1,5 @@
 # Kanban Task Manager
-- [Original app repo](https://github.com/Hauzinski/project-management-app/tree/main)
+- [Original app repo](https://github.com/EugeneTsalko/project-management-app)
 - [Original backend repo](https://github.com/rolling-scopes-school/final-task-backend)
 
 ## Description
