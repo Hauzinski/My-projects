@@ -1,4 +1,4 @@
-@import '../../styles/variables.scss';
+@use '../../styles/variables.scss' as var;
 
 .sort-filters {
   display: grid;
@@ -7,7 +7,7 @@
   grid-area: video-filters;
 
   font-size: 1rem;
-  font-family: RobotoCondensedRegular, $default-fonts;
+  font-family: RobotoCondensedRegular, var.$default-fonts;
 
   user-select: none;
 
@@ -24,7 +24,7 @@
     }
   }
 
-  @media screen and (max-width: $screen-width-small) {
+  @media screen and (max-width: var.$screen-width-small) {
     gap: 1em 0.25em;
 
     font-size: 0.8rem;

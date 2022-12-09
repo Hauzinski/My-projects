@@ -1,4 +1,4 @@
-@import '../../styles/variables.scss';
+@use '../../styles/variables.scss' as var;
 
 .main {
   align-items: center;
@@ -17,8 +17,8 @@
 
   border: solid 2vmin transparent;
   border-radius: 50%;
-  border-right-color: $blue;
-  border-top-color: $blue;
+  border-right-color: var.$blue;
+  border-top-color: var.$blue;
 
   animation: spin 1s infinite linear;
 
@@ -35,8 +35,8 @@
 
     border: solid 2vmin transparent;
     border-radius: 50%;
-    border-right-color: $deep-sky-blue;
-    border-top-color: $deep-sky-blue;
+    border-right-color: var.$deep-sky-blue;
+    border-top-color: var.$deep-sky-blue;
 
     animation: spin 2s infinite linear;
   }
@@ -54,8 +54,8 @@
 
     border: solid 2vmin transparent;
     border-radius: 50%;
-    border-right-color: $aqua;
-    border-top-color: $aqua;
+    border-right-color: var.$aqua;
+    border-top-color: var.$aqua;
 
     animation: spin 3s infinite linear;
   }

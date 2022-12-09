@@ -1,5 +1,5 @@
-@import '../../../styles/variables.scss';
-@import '../../../styles/mixins.scss';
+@use '../../../styles/variables.scss' as var;
+@use '../../../styles/mixins.scss' as mix;
 
 .filter {
   display: flex;
@@ -11,7 +11,7 @@
 
   font-size: inherit;
   font-family: inherit;
-  color: $blue;
+  color: var.$blue;
   text-decoration: underline;
 
   background: none;
@@ -21,7 +21,7 @@
   transition: 0.75s;
 
   &:hover {
-    color: $lime-green;
+    color: var.$lime-green;
   }
 }
 
@@ -29,7 +29,7 @@
   width: 20px;
   height: 20px;
 
-  @include logo(url(../../../assets/svg/sort-filter-arrow.svg), $black);
+  @include mix.logo(url(../../../assets/svg/sort-filter-arrow.svg), var.$black);
 
   &.arrow-down {
     transform: rotate(180deg);

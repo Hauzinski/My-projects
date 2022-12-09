@@ -1,5 +1,5 @@
-@import '../../../styles/variables.scss';
-@import '../../../styles/mixins.scss';
+@use '../../../styles/variables.scss' as var;
+@use '../../../styles/mixins.scss' as mix;
 
 $logo-size: 20px;
 
@@ -18,21 +18,21 @@ $logo-size: 20px;
 .count {
   margin-left: 5px;
 
-  font-family: RobotoCondensedRegular, $default-fonts;
+  font-family: RobotoCondensedRegular, var.$default-fonts;
 }
 
 .logo-comments {
-  @include logo(url(../../../assets/svg/videoMetrics/metrics-comments.svg), $black);
+  @include mix.logo(url(../../../assets/svg/videoMetrics/metrics-comments.svg), var.$black);
 }
 
 .logo-favorites {
-  @include logo(url(../../../assets/svg/videoMetrics/metrics-favorites.svg), $black);
+  @include mix.logo(url(../../../assets/svg/videoMetrics/metrics-favorites.svg), var.$black);
 }
 
 .logo-likes {
-  @include logo(url(../../../assets/svg/videoMetrics/metrics-likes.svg), $black);
+  @include mix.logo(url(../../../assets/svg/videoMetrics/metrics-likes.svg), var.$black);
 }
 
 .logo-views {
-  @include logo(url(../../../assets/svg/videoMetrics/metrics-views.svg), $black);
+  @include mix.logo(url(../../../assets/svg/videoMetrics/metrics-views.svg), var.$black);
 }

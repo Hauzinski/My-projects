@@ -1,4 +1,4 @@
-@import '../../styles/variables.scss';
+@use '../../styles/variables.scss' as var;
 
 .video-item {
   display: grid;
@@ -14,7 +14,7 @@
   padding: 1.5em;
 
   border-radius: 0.4em;
-  background-color: $light-grey;
+  background-color: var.$light-grey;
 }
 
 .video-item-img,

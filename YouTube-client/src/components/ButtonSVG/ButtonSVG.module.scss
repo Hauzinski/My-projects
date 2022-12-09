@@ -1,5 +1,5 @@
-@import '../../styles/variables.scss';
-@import '../../styles/mixins.scss';
+@use '../../styles/variables.scss' as var;
+@use '../../styles/mixins.scss' as mix;
 
 .btn-sort-filters {
   $size: 25px;
@@ -10,10 +10,10 @@
   grid-area: filters-toggle-btn;
   align-self: center;
 
-  border-radius: $btn-border-radius;
+  border-radius: var.$btn-border-radius;
 
   span {
-    @include buttons-svg(url(../../assets/svg/sort-filters.svg), $white);
+    @include mix.buttons-svg(url(../../assets/svg/sort-filters.svg), var.$white);
   }
 
   &:active {
@@ -33,15 +33,15 @@
   padding: 5px;
   grid-area: video-page-btn;
 
-  border-radius: $btn-border-radius 0 0 $btn-border-radius;
+  border-radius: var.$btn-border-radius 0 0 var.$btn-border-radius;
 
   transform: translateX(-100%);
 
   span {
-    @include buttons-svg(url(../../assets/svg/videoPage/video-page-arrow-back.svg), $white);
+    @include mix.buttons-svg(url(../../assets/svg/videoPage/video-page-arrow-back.svg), var.$white);
   }
 
-  @media screen and (max-width: $screen-width-medium), (orientation: portrait) {
+  @media screen and (max-width: var.$screen-width-medium), (orientation: portrait) {
     position: static;
 
     width: 100%;
@@ -51,7 +51,7 @@
     transform: none;
   }
 
-  @media screen and (max-width: $screen-width-small) {
+  @media screen and (max-width: var.$screen-width-small) {
     border-radius: 0;
   }
 }
@@ -64,10 +64,10 @@
   margin: 0 0.8em;
   padding: 5px;
 
-  border-radius: $btn-border-radius;
+  border-radius: var.$btn-border-radius;
 
   span {
-    @include buttons-svg(url(../../assets/svg/videoSearchPage/video-search-arrow-back.svg), $white);
+    @include mix.buttons-svg(url(../../assets/svg/videoSearchPage/video-search-arrow-back.svg), var.$white);
   }
 
   &.arrow-next {

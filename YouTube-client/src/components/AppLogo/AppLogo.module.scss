@@ -1,5 +1,5 @@
-@import '../../styles/variables.scss';
-@import '../../styles/mixins.scss';
+@use '../../styles/variables.scss' as var;
+@use '../../styles/mixins.scss' as mix;
 
 $logo-height: 35px;
 
@@ -14,7 +14,7 @@ $logo-height: 35px;
   grid-area: app-logo;
   align-self: center;
 
-  background-color: $blue;
+  background-color: var.$blue;
   border-radius: 50%/10%;
 
   &::before {
@@ -35,5 +35,5 @@ $logo-height: 35px;
   width: calc($logo-height * 0.75);
   height: calc($logo-height * 0.875);
 
-  @include logo(url(../../assets/svg/app-logo.svg), $white);
+  @include mix.logo(url(../../assets/svg/app-logo.svg), var.$white);
 }

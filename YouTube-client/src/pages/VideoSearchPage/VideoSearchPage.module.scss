@@ -1,4 +1,4 @@
-@import '../../styles/variables.scss';
+@use '../../styles/variables.scss' as var;
 
 .main {
   height: 100%;
@@ -11,15 +11,15 @@
   gap: 1.75em 2em;
   height: max-content;
 
-  @media screen and (max-width: $screen-width-large) {
+  @media screen and (max-width: var.$screen-width-large) {
     grid-template-columns: 1fr 1fr 1fr;
   }
 
-  @media screen and (max-width: $screen-width-medium) {
+  @media screen and (max-width: var.$screen-width-medium) {
     grid-template-columns: 1fr 1fr;
   }
 
-  @media screen and (max-width: $screen-width-small) {
+  @media screen and (max-width: var.$screen-width-small) {
     grid-template-columns: 1fr;
     gap: 1em;
   }

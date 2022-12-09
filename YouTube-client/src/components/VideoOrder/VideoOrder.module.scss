@@ -1,14 +1,14 @@
-@import '../../styles/variables.scss';
+@use '../../styles/variables.scss' as var;
 
 .video-order {
   display: flex;
   align-items: center;
   grid-area: video-order;
 
-  font-family: RobotoCondensedRegular, $default-fonts;
+  font-family: RobotoCondensedRegular, var.$default-fonts;
   font-size: 1rem;
 
-  @media screen and (max-width: $screen-width-small) {
+  @media screen and (max-width: var.$screen-width-small) {
     font-size: 0.8rem;
   }
 }
@@ -27,7 +27,7 @@
     cursor: pointer;
   }
 
-  @media screen and (max-width: $screen-width-small) {
+  @media screen and (max-width: var.$screen-width-small) {
     font-size: 0.8rem;
   }
 }

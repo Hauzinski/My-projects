@@ -1,10 +1,10 @@
-@import '../../styles/variables.scss';
+@use '../../styles/variables.scss' as var;
 
 $border: 10px;
 $margin: 1rem;
 
 .main {
-  @media screen and (max-width: $screen-width-small) {
+  @media screen and (max-width: var.$screen-width-small) {
     height: 100%;
     margin: 0;
   }
@@ -26,9 +26,9 @@ $margin: 1rem;
   height: max-content;
 
   border-radius: 0 $border $border $border;
-  background-color: $light-grey;
+  background-color: var.$light-grey;
 
-  @media screen and (max-width: $screen-width-medium), (orientation: portrait) {
+  @media screen and (max-width: var.$screen-width-medium), (orientation: portrait) {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(4, auto) 1fr auto;
     grid-template-areas:
@@ -44,11 +44,11 @@ $margin: 1rem;
     border-radius: $border;
   }
 
-  @media screen and (max-width: $screen-width-medium) and (orientation: portrait) {
+  @media screen and (max-width: var.$screen-width-medium) and (orientation: portrait) {
     height: 100%;
   }
 
-  @media screen and (max-width: $screen-width-small) {
+  @media screen and (max-width: var.$screen-width-small) {
     border-radius: 0;
   }
 }
@@ -63,7 +63,7 @@ $margin: 1rem;
 .date,
 .description-title,
 .description {
-  font-family: RobotoCondensedRegular, $default-fonts;
+  font-family: RobotoCondensedRegular, var.$default-fonts;
   font-size: 0.9rem;
 }
 
@@ -74,11 +74,11 @@ $margin: 1rem;
 
   border-radius: 0 0 0 $border;
 
-  @media screen and (max-width: $screen-width-medium), (orientation: portrait) {
+  @media screen and (max-width: var.$screen-width-medium), (orientation: portrait) {
     border-radius: $border $border 0 0;
   }
 
-  @media screen and (max-width: $screen-width-small) {
+  @media screen and (max-width: var.$screen-width-small) {
     border-radius: 0;
   }
 }
@@ -87,7 +87,7 @@ $margin: 1rem;
   margin-top: $margin;
   grid-area: video-page-title;
 
-  @media screen and (max-width: $screen-width-medium) {
+  @media screen and (max-width: var.$screen-width-medium) {
     margin-top: 0;
   }
 }
@@ -98,7 +98,7 @@ $margin: 1rem;
   margin-top: $margin;
   grid-area: video-page-date;
 
-  @media screen and (max-width: $screen-width-medium) {
+  @media screen and (max-width: var.$screen-width-medium) {
     margin-top: 0;
   }
 }
@@ -127,24 +127,24 @@ $margin: 1rem;
     margin-block: 0.25em;
 
     border-radius: 100vw;
-    background-color: $black;
+    background-color: var.$black;
   }
 
   &::-webkit-scrollbar-thumb {
-    border: 0.2em solid $black;
+    border: 0.2em solid var.$black;
     border-radius: 100vw;
-    background-color: $blue;
+    background-color: var.$blue;
   }
 
   &::-webkit-scrollbar-thumb:hover {
-    background-color: $lime-green;
+    background-color: var.$lime-green;
   }
 
-  @media screen and (max-width: $screen-width-large) {
+  @media screen and (max-width: var.$screen-width-large) {
     max-height: calc(20vh);
   }
 
-  @media screen and (max-width: $screen-width-medium), (orientation: portrait) {
+  @media screen and (max-width: var.$screen-width-medium), (orientation: portrait) {
     max-height: 100%;
   }
 }
@@ -155,16 +155,16 @@ $margin: 1rem;
   margin-bottom: $margin;
   grid-area: video-page-metrics;
 
-  @media screen and (max-width: $screen-width-large) {
+  @media screen and (max-width: var.$screen-width-large) {
     width: 90%;
   }
 
-  @media screen and (max-width: $screen-width-medium) {
+  @media screen and (max-width: var.$screen-width-medium) {
     width: 75%;
     margin-bottom: 0;
   }
 
-  @media screen and (max-width: $screen-width-small) {
+  @media screen and (max-width: var.$screen-width-small) {
     width: 70%;
   }
 }
@@ -172,7 +172,7 @@ $margin: 1rem;
 .not-found {
   margin: 2em;
 
-  font-family: PTSansRegular, $default-fonts;
+  font-family: PTSansRegular, var.$default-fonts;
   font-size: 1.5rem;
   font-weight: 700;
 }

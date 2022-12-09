@@ -1,14 +1,14 @@
-@import '../../styles/variables.scss';
+@use '../../styles/variables.scss' as var;
 
 .header {
   display: flex;
   justify-content: center;
   width: 100%;
 
-  background-color: $light-grey;
+  background-color: var.$light-grey;
 
-  @media screen and (max-width: $screen-width-small) and (orientation: landscape) {
-    border-bottom: 3px solid $grey;
+  @media screen and (max-width: var.$screen-width-small) and (orientation: landscape) {
+    border-bottom: 3px solid var.$grey;
   }
 }
 
@@ -20,17 +20,17 @@
     '. app-logo search-video-input search-video-input filters-toggle-btn .'
     '. . video-filters video-filters . .'
     '. . video-per-page video-order . .';
-  padding: $content-indent;
+  padding: var.$content-indent;
 
-  @media screen and (max-width: $screen-width-large) {
+  @media screen and (max-width: var.$screen-width-large) {
     grid-template-columns: 1fr auto 1.5fr 1.5fr auto 1fr;
   }
 
-  @media screen and (max-width: $screen-width-medium) {
+  @media screen and (max-width: var.$screen-width-medium) {
     grid-template-columns: auto auto 1.5fr 1.5fr auto auto;
   }
 
-  @media screen and (max-width: $screen-width-small) {
+  @media screen and (max-width: var.$screen-width-small) {
     grid-template-areas:
       '. app-logo search-video-input search-video-input filters-toggle-btn .'
       '. video-filters video-filters video-filters video-filters .'
@@ -48,13 +48,13 @@
   height: 25px;
   padding: 0 5px;
 
-  font-family: RobotoMono, $default-fonts;
-  color: $black;
+  font-family: RobotoMono, var.$default-fonts;
+  color: var.$black;
 
   border-radius: 4px;
 
   &::placeholder {
-    color: $grey;
+    color: var.$grey;
   }
 
   &:focus::placeholder {
