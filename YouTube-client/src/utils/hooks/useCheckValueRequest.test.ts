@@ -1,6 +1,6 @@
 import * as redux from 'react-redux';
 
-import useCheckValueRequest from './useCheckValueRequest';
+import { useCheckValueRequest } from './useCheckValueRequest';
 
 jest.mock('react-redux');
 

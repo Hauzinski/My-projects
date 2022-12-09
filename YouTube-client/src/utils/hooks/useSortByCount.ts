@@ -1,9 +1,9 @@
 import { useSelector } from 'react-redux';
 
-import { IState, IStateSortFilters } from '../../models/store.models';
-import { Item, Statistics } from '../../models/youtubeAPI.models';
+import { Item, Statistics } from '../../api/youtubeAPI.types';
+import { IState, IStateSortFilters } from '../../store/store.types';
 
-export default function useSortByCount(data: Item[]) {
+function useSortByCount(data: Item[]) {
   const searchFilters = useSelector((state: IState) => state.sortFilters);
 
   const filterTypes: { [key: string]: string } = {
@@ -25,9 +25,11 @@ export default function useSortByCount(data: Item[]) {
       data.sort(
         (a, b) =>
           sortingType *
-          (Number(a.statistics[filterTypes[filter] as keyof Statistics]) -
-            Number(b.statistics[filterTypes[filter] as keyof Statistics]))
+          (Number((a.statistics as Statistics)[filterTypes[filter] as keyof Statistics]) -
+            Number((b.statistics as Statistics)[filterTypes[filter] as keyof Statistics]))
       );
     }
   });
 }
+
+export { useSortByCount };

@@ -1,10 +1,10 @@
 import { useDispatch } from 'react-redux';
 
 import { setRequest as setRequestAction } from '../../store/appCacheSlice';
-import useCheckValueRequest from './useCheckValueRequest';
-import useRequestVideoData from './useRequestVideoData';
+import { useCheckValueRequest } from './useCheckValueRequest';
+import { useRequestVideoData } from './useRequestVideoData';
 
-export default function useSearch() {
+function useSearch() {
   const minCharactersForSearch = 3;
 
   const requestVideoData = useRequestVideoData();
@@ -19,3 +19,5 @@ export default function useSearch() {
     }
   };
 }
+
+export { useSearch };

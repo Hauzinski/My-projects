@@ -1,11 +1,13 @@
-import { IState } from '../models/store.models';
+import { IState } from '../store/store.types';
 
-export function getLocalStorage(): IState | null {
+function getLocalStorage(): IState | null {
   const localStorage = window.localStorage.getItem('youtube-app');
 
   return localStorage ? JSON.parse(localStorage) : null;
 }
 
-export function setLocalStorage(data: IState) {
+function setLocalStorage(data: IState) {
   window.localStorage.setItem('youtube-app', JSON.stringify(data));
 }
+
+export { getLocalStorage, setLocalStorage };

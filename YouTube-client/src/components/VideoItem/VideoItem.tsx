@@ -2,8 +2,8 @@ import React from 'react';
 
 import { useNavigate } from 'react-router-dom';
 
-import { IPropsVideoItemComponent } from '../../models/app.models';
-import { Statistics } from '../../models/youtubeAPI.models';
+import { Statistics } from '../../api/youtubeAPI.types';
+import { IPropsVideoItemComponent } from '../../app.types';
 import VideoMetricsComponent from '../VideoMetrics/VideoMetrics';
 import styles from './VideoItem.module.scss';
 

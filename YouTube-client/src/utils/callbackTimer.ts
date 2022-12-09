@@ -1,6 +1,6 @@
 let typingTimer: NodeJS.Timeout;
 
-export default function callbackTimer(callback: (value: string) => void, value: string) {
+function callbackTimer(callback: (value: string) => void, value: string) {
   const doneTypingInterval = 750;
 
   clearTimeout(typingTimer);
@@ -9,3 +9,5 @@ export default function callbackTimer(callback: (value: string) => void, value: 
     callback(value);
   }, doneTypingInterval);
 }
+
+export { callbackTimer };

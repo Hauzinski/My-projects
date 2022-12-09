@@ -1,9 +1,9 @@
 import { useDispatch } from 'react-redux';
 
 import { setCountOfVideoPerPage as setCountOfVideoPerPageAction } from '../../store/appSettingsSlice';
-import useRequestVideoData from './useRequestVideoData';
+import { useRequestVideoData } from './useRequestVideoData';
 
-export default function useSetCountOfVideoPerPage() {
+function useSetCountOfVideoPerPage() {
   const requestVideoData = useRequestVideoData();
   const dispatch = useDispatch();
 
@@ -13,3 +13,5 @@ export default function useSetCountOfVideoPerPage() {
     dispatch(setCountOfVideoPerPageAction(value));
   };
 }
+
+export { useSetCountOfVideoPerPage };

@@ -1,9 +1,9 @@
 import { useDispatch } from 'react-redux';
 
 import { setVideoOrder as setVideoOrderAction } from '../../store/appSettingsSlice';
-import useRequestVideoData from './useRequestVideoData';
+import { useRequestVideoData } from './useRequestVideoData';
 
-export default function useVideoOrder() {
+function useVideoOrder() {
   const requestVideoData = useRequestVideoData();
   const dispatch = useDispatch();
 
@@ -13,3 +13,5 @@ export default function useVideoOrder() {
     dispatch(setVideoOrderAction(value));
   };
 }
+
+export { useVideoOrder };

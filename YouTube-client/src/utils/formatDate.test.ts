@@ -1,4 +1,4 @@
-import formatDate from './formatDate';
+import { formatDate } from './formatDate';
 
 it('Util test: formatDate', () => {
   expect(formatDate('2021-05-06T17:57:18Z')).toBe('Thursday, May 6, 2021');

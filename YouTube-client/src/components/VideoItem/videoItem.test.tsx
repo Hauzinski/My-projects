@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { render, screen } from '@testing-library/react';
+import { render } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 
 import { renderWithRouter } from '../../utils/helpers/testHelpers';
@@ -59,6 +59,5 @@ describe('Component test: VideoItem', () => {
     const button = container.querySelector('.video-item-button') as HTMLButtonElement;
 
     await userEvent.click(button);
-    screen.debug();
   });
 });

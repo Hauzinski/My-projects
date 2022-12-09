@@ -5,10 +5,12 @@ import { BrowserRouter } from 'react-router-dom';
 
 import store from '../../store/store';
 
-export function renderWithRedux(component: JSX.Element) {
+function renderWithRedux(component: JSX.Element) {
   return <Provider store={store}>{component}</Provider>;
 }
 
-export function renderWithRouter(component: JSX.Element) {
+function renderWithRouter(component: JSX.Element) {
   return <BrowserRouter>{component}</BrowserRouter>;
 }
+
+export { renderWithRedux, renderWithRouter };

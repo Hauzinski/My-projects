@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-import { Id, VideoDataInterface } from '../models/youtubeAPI.models';
 import apiKey from './youtubeAPI.keys';
+import { Id, VideoDataInterface } from './youtubeAPI.types';
 
 const apiURL = 'https://youtube.googleapis.com/youtube/v3';
 

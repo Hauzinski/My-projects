@@ -2,14 +2,14 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 
 import { getVideoData } from '../../api/youtubeAPI';
-import { IState } from '../../models/store.models';
 import {
   setRequestData as setRequestDataAction,
   setPageTokensData as setPageTokensDataAction,
 } from '../../store/appCacheSlice';
 import { setMainPageScroll as setMainPageScrollAction } from '../../store/appSettingsSlice';
+import { IState } from '../../store/store.types';
 
-export default function useRequestVideoData() {
+function useRequestVideoData() {
   const request = useSelector((state: IState) => state.cache.request);
   const videoOrder = useSelector((state: IState) => state.settings.videoOrder);
   const maxResults = useSelector((state: IState) => state.settings.countOfVideoPerPage);
@@ -34,3 +34,5 @@ export default function useRequestVideoData() {
     dispatch(setMainPageScrollAction(0));
   };
 }
+
+export { useRequestVideoData };

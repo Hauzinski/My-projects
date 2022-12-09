@@ -1,7 +1,7 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
-import { IStateSortFilters } from '../models/store.models';
 import { getLocalStorage } from '../utils/manageLocalStorage';
+import { IStateSortFilters } from './store.types';
 
 const defaultAppSortFilters: { [key: string]: string } = {
   byDate: 'off',

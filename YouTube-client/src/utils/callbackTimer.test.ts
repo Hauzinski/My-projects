@@ -1,4 +1,4 @@
-import callbackTimer from './callbackTimer';
+import { callbackTimer } from './callbackTimer';
 
 jest.useFakeTimers();
 

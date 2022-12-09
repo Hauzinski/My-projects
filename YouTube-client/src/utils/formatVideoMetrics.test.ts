@@ -1,4 +1,4 @@
-import formatVideoMetrics from './formatVideoMetrics';
+import { formatVideoMetrics } from './formatVideoMetrics';
 
 describe('Util it: formatVideoMetrics', () => {
   it('not a number value', () => {

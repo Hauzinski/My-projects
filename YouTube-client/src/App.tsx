@@ -2,9 +2,9 @@ import React, { useEffect } from 'react';
 
 import { useSelector } from 'react-redux';
 
-import Header from './layouts/Header/Header';
-import { IState } from './models/store.models';
+import Header from './components/Header/Header';
 import AppRoutes from './routes/AppRoutes';
+import { IState } from './store/store.types';
 import { setLocalStorage } from './utils/manageLocalStorage';
 import './styles/common.scss';
 

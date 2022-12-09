@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { IPropsButton } from '../../models/app.models';
+import { IPropsButton } from '../../app.types';
 import styles from './ButtonSVG.module.scss';
 
 export default function ButtonSVGComponent({ data }: IPropsButton) {

@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { IPropsMetric } from '../../../models/app.models';
-import formatVideoMetrics from '../../../utils/formatVideoMetrics';
+import { IPropsMetric } from '../../../app.types';
+import { formatVideoMetrics } from '../../../utils/formatVideoMetrics';
 import styles from './Metric.module.scss';
 
 export default function MetricComponent({ data }: IPropsMetric) {

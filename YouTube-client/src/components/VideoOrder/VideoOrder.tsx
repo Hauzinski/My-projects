@@ -2,9 +2,9 @@ import React from 'react';
 
 import { useSelector } from 'react-redux';
 
-import { IState } from '../../models/store.models';
-import formatLowerCamelCaseToCase from '../../utils/formatLowerCamelCaseToCase';
-import useVideoOrder from '../../utils/hooks/useVideoOrder';
+import { IState } from '../../store/store.types';
+import { formatLowerCamelCaseToCase } from '../../utils/formatLowerCamelCaseToCase';
+import { useVideoOrder } from '../../utils/hooks/useVideoOrder';
 import styles from './VideoOrder.module.scss';
 
 export default function VideoOrderComponent() {

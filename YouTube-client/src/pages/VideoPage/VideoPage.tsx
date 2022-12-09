@@ -3,11 +3,11 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import { useNavigate, useParams } from 'react-router-dom';
 
+import { Statistics } from '../../api/youtubeAPI.types';
 import ButtonSVGComponent from '../../components/ButtonSVG/ButtonSVG';
 import VideoMetricsComponent from '../../components/VideoMetrics/VideoMetrics';
-import { IState } from '../../models/store.models';
-import { Statistics } from '../../models/youtubeAPI.models';
-import formatDate from '../../utils/formatDate';
+import { IState } from '../../store/store.types';
+import { formatDate } from '../../utils/formatDate';
 import styles from './VideoPage.module.scss';
 
 export default function VideoPage() {

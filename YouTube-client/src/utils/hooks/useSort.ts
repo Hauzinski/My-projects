@@ -1,8 +1,8 @@
 import { useSelector } from 'react-redux';
 
-import { IState } from '../../models/store.models';
-import useSortByCount from './useSortByCount';
-import useSortByWord from './useSortByWord';
+import { IState } from '../../store/store.types';
+import { useSortByCount } from './useSortByCount';
+import { useSortByWord } from './useSortByWord';
 
 export default function useSort() {
   const data = useSelector((state: IState) => state.cache.requestData);

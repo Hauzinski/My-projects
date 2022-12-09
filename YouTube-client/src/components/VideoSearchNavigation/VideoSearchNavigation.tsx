@@ -2,8 +2,8 @@ import React from 'react';
 
 import { useSelector } from 'react-redux';
 
-import { IState } from '../../models/store.models';
-import useRequestVideoData from '../../utils/hooks/useRequestVideoData';
+import { IState } from '../../store/store.types';
+import { useRequestVideoData } from '../../utils/hooks/useRequestVideoData';
 import ButtonSVGComponent from '../ButtonSVG/ButtonSVG';
 import styles from './VideoSearchNavigation.module.scss';
 

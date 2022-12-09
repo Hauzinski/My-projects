@@ -1,4 +1,4 @@
-import formatLowerCamelCaseToCase from './formatLowerCamelCaseToCase';
+import { formatLowerCamelCaseToCase } from './formatLowerCamelCaseToCase';
 
 describe('Util test: formatLowerCamelCaseToCase', () => {
   it('lower camel case value', () => {

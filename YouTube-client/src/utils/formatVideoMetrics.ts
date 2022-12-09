@@ -1,4 +1,4 @@
-export default function formatVideoMetrics(value: string) {
+function formatVideoMetrics(value: string) {
   const number = parseInt(value, 10);
   const degree = Number(number.toExponential().toString().split('+')[1]);
   let postfix = '';
@@ -21,3 +21,5 @@ export default function formatVideoMetrics(value: string) {
 
   return (number / 10 ** answerDegree).toFixed(answerDegree ? 1 : 0) + postfix;
 }
+
+export { formatVideoMetrics };
