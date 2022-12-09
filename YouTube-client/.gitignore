@@ -1,3 +1,6 @@
+# Environments
+.env
+
 # Dependencies
 node_modules/
 /.pnp
@@ -9,8 +12,6 @@ build/
 # Misc
 package-lock.*
 
-# API keys
-*.keys.*
 
 # Testing
 coverage/

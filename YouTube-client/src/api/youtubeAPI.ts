@@ -1,19 +1,19 @@
 import axios from 'axios';
 
-import apiKey from './youtubeAPI.keys';
 import { Id, VideoDataInterface } from './youtubeAPI.types';
 
-const apiURL = 'https://youtube.googleapis.com/youtube/v3';
+const API_URL = 'https://youtube.googleapis.com/youtube/v3';
+const API_KEY = process.env.APP_API_KEY;
 
 async function getVideoDataByID(id: string) {
   const params = {
-    key: apiKey,
+    key: API_KEY,
     part: 'snippet,statistics',
     id,
   };
 
   try {
-    const response = await axios.get(`${apiURL}/videos`, { params });
+    const response = await axios.get(`${API_URL}/videos`, { params });
     const { data }: { data: VideoDataInterface } = response;
     return data.items;
   } catch {
@@ -24,7 +24,7 @@ async function getVideoDataByID(id: string) {
 async function getVideoData(text: string, order: string, maxResults: string, pageToken: string) {
   const searchText = text.trim().toLocaleLowerCase().replace(/ /gi, '+');
   const params = {
-    key: apiKey,
+    key: API_KEY,
     part: 'snippet',
     type: 'video',
     order,
@@ -34,7 +34,7 @@ async function getVideoData(text: string, order: string, maxResults: string, pag
   };
 
   try {
-    const response = await axios.get(`${apiURL}/search`, { params });
+    const response = await axios.get(`${API_URL}/search`, { params });
     const { data }: { data: VideoDataInterface } = response;
     const videoIDs = data.items.map((item) => (item.id as Id).videoId);
     const pageTokens = [data.prevPageToken, data.nextPageToken];

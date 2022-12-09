@@ -3,7 +3,6 @@
   "clearMocks": true,
   "collectCoverageFrom": [
     "src/**/*.{js,jsx,ts,tsx}",
-    "!**/*.keys.*",
     "!**/declarations.d.*",
     "!src/App.*",
     "!src/index.*"
