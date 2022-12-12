@@ -1,0 +1,45 @@
+{
+  "en": "АНГЛ",
+  "ru": "РУС",
+
+  "Description": "Описание",
+  "Sorry, video not found!": "Извините, видео не найдено!",
+
+  "Search options": "Параметры поиска",
+  "Enter a request": "Введите запрос",
+
+  "Sorting by": "Сортировка по",
+  "date": "дата",
+  "Sorting by date": "Сортировка по дате",
+  "views": "просмотры",
+  "Sorting by count of views": "Сортировка по просмотрам",
+  "likes": "лайки",
+  "Sorting by count of lakes": "Сортировка по лайкам",
+  "comments": "комментарии",
+  "Sorting by count of comments": "Сортировка по комментариям",
+  "by word or sentence": "по слову или предложению",
+
+  "more": "подробнее",
+
+  "Views": "Просмотры",
+  "Likes": "Лайки",
+  "Comments": "Комментарии",
+  "Favorites": "Избранное",
+
+  "Video order": "Тип видео",
+  "Select video order": "Выбрать тип видео",
+  "rating": "рейтинг",
+  "relevance": "актуальность",
+  "title": "заголовок",
+  "videoCount": "количествоВидео",
+  "viewCount": "количествоПросмотров",
+
+  "Video per page": "Видео на странице",
+  "Select count of video per page": "Выбрать количество видео на странице",
+
+  "Previous page": "Предыдущая страница",
+  "Next page": "Следующая страница",
+
+  "Language": "Язык",
+  "Select app language": "Выбрать язык приложения"
+}

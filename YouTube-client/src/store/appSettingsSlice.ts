@@ -6,6 +6,7 @@ const defaultAppSettings = {
   isAppSettings: false,
   videoOrder: 'relevance',
   countOfVideoPerPage: '24',
+  appLanguage: 'en',
   mainPageScroll: 0,
 };
 
@@ -24,12 +25,16 @@ export const appSettings = createSlice({
     setCountOfVideoPerPage: (state, action: PayloadAction<string>) => {
       state.countOfVideoPerPage = action.payload;
     },
+    setAppLanguage: (state, action: PayloadAction<string>) => {
+      state.appLanguage = action.payload;
+    },
     setMainPageScroll: (state, action: PayloadAction<number>) => {
       state.mainPageScroll = action.payload;
     },
   },
 });
 
-export const { toggleAppSettings, setVideoOrder, setCountOfVideoPerPage, setMainPageScroll } = appSettings.actions;
+export const { toggleAppSettings, setVideoOrder, setCountOfVideoPerPage, setAppLanguage, setMainPageScroll } =
+  appSettings.actions;
 
 export default appSettings.reducer;

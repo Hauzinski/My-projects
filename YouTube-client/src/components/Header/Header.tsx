@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 
+import { useTranslation } from 'react-i18next';
 import { useDispatch, useSelector } from 'react-redux';
 import { CSSTransition } from 'react-transition-group';
 
@@ -19,15 +20,17 @@ export default function Header() {
   const isAppSettings = useSelector((state: IState) => state.settings.isAppSettings);
   const [sortFiltersStyle, setSortFiltersStyle] = useState(isAppSettings ? '' : styles['sort-filters-hidden']);
 
+  const { t } = useTranslation();
   const dispatch = useDispatch();
   const search = useSearch();
 
   const button = {
     class: ['btn-sort-filters'],
     action: () => dispatch(toggleAppSettings()),
-    label: 'Search options',
+    label: t('Search options'),
     disabled: false,
   };
+
   const appSettingsComponents = [
     <SortFiltersComponent key="SortFiltersComponent" />,
     <VideoPerPageComponent key="VideoPerPageComponent" />,
@@ -48,7 +51,7 @@ export default function Header() {
             name="searchText"
             onChange={setRequest}
             type="search"
-            placeholder="Enter a request"
+            placeholder={t('Enter a request') as string}
             defaultValue={request}
           />
         </form>

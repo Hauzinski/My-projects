@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 
 import { Statistics } from '../../api/youtubeAPI.types';
@@ -9,6 +10,7 @@ import styles from './VideoItem.module.scss';
 
 export default function VideoItemComponent({ data }: IPropsVideoItemComponent) {
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   function selectVideo() {
     navigate(`/videos/${data.id}`);
@@ -20,7 +22,7 @@ export default function VideoItemComponent({ data }: IPropsVideoItemComponent) {
       <VideoMetricsComponent data={data.statistics as Statistics} />
       <h3 className={`title ${styles['video-item-title']}`}>{data.snippet.title}</h3>
       <button className={`button ${styles['video-item-button']}`} type="button" onClick={selectVideo}>
-        more...
+        {t('more')}...
       </button>
     </div>
   );

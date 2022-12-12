@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
 
 import { IState } from '../../store/store.types';
@@ -8,6 +9,8 @@ import ButtonSVGComponent from '../ButtonSVG/ButtonSVG';
 import styles from './VideoSearchNavigation.module.scss';
 
 export default function VideoSearchNavigationComponent() {
+  const { t } = useTranslation();
+
   const pageTokens = useSelector((state: IState) => state.cache.pageTokens);
 
   const requestVideoData = useRequestVideoData();
@@ -16,13 +19,13 @@ export default function VideoSearchNavigationComponent() {
     {
       class: ['btn-video-search-page-prev'],
       action: () => requestVideoData('pageToken', pageTokens[0]),
-      label: 'Previous page',
+      label: t('Previous page'),
       disabled: !pageTokens[0],
     },
     {
       class: ['btn-video-search-page-prev', 'arrow-next'],
       action: () => requestVideoData('pageToken', pageTokens[1]),
-      label: 'Next page',
+      label: t('Next page'),
       disabled: !pageTokens[1],
     },
   ];

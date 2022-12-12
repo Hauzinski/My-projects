@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
 import { useNavigate, useParams } from 'react-router-dom';
 
@@ -14,6 +15,7 @@ export default function VideoPage() {
   const { id } = useParams();
   const requestData = useSelector((state: IState) => state.cache.requestData);
   const navigate = useNavigate();
+  const { t } = useTranslation();
   const videoData = requestData.find((value) => value.id === id);
 
   const button = {
@@ -31,14 +33,14 @@ export default function VideoPage() {
             className={styles.iframe}
             src={`https://www.youtube.com/embed/${videoData.id}`}
             title="YouTube video"
-            frameBorder="0"
             allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
+            frameBorder="0"
           />
           <h3 className={`title ${styles.title}`}>{videoData.snippet.title}</h3>
           <p className={styles.date}>{formatDate(videoData.snippet.publishedAt)}</p>
           {videoData.snippet.description && (
             <>
-              <h4 className={styles['description-title']}>Description:</h4>
+              <h4 className={styles['description-title']}>{t('Description')}:</h4>
               <p className={styles.description}>{videoData.snippet.description}</p>
             </>
           )}
@@ -48,7 +50,7 @@ export default function VideoPage() {
           <ButtonSVGComponent data={button} />
         </div>
       )}
-      {!videoData && <p className={styles['not-found']}>Sorry, video not found!</p>}
+      {!videoData && <p className={styles['not-found']}>{t('Sorry, video not found!')}</p>}
     </main>
   );
 }

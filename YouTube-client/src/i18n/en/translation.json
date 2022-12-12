@@ -1,0 +1,45 @@
+{
+  "en": "EN",
+  "ru": "RU",
+
+  "Description": "Description",
+  "Sorry, video not found!": "Sorry, video not found!",
+
+  "Search options": "Search options",
+  "Enter a request": "Enter a request",
+
+  "date": "date",
+  "Sorting by date": "Sorting by date",
+  "views": "views",
+  "Sorting by count of views": "Sorting by count of views",
+  "likes": "likes",
+  "Sorting by count of lakes": "Sorting by count of lakes",
+  "comments": "comments",
+  "Sorting by count of comments": "Sorting by count of comments",
+  "Sorting by": "Sorting by",
+  "by word or sentence": "by word or sentence",
+
+  "more": "more",
+
+  "Views": "Views",
+  "Likes": "Likes",
+  "Comments": "Comments",
+  "Favorites": "Favorites",
+
+  "Video order": "Video order",
+  "Select video order": "Select video order",
+  "rating": "rating",
+  "relevance": "relevance",
+  "title": "title",
+  "videoCount": "videoCount",
+  "viewCount": "viewCount",
+
+  "Video per page": "Video per page",
+  "Select count of video per page": "Select count of video per page",
+
+  "Previous page": "Previous page",
+  "Next page": "Next page",
+
+  "Language": "Language",
+  "Select app language": "Select app language"
+}

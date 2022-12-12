@@ -24,5 +24,6 @@ interface IStateSettings {
   isAppSettings: boolean;
   videoOrder: string;
   countOfVideoPerPage: string;
+  appLanguage: string;
   mainPageScroll: number;
 }
