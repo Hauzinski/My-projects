@@ -1,0 +1,172 @@
+::-webkit-scrollbar {
+  width: 0;
+}
+
+:root {
+  --light: #ffffff;
+  --dark: #030303;
+  --purple: #7f0ee9;
+  --yellow: #e9b60e;
+  --blue: #0ebde9;
+  --red: #e90e0e;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  min-width: 100vw;
+
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.btnInstLeft:focus,
+.btnInstRight:focus,
+.keys__key:focus,
+.btnTheme:focus {
+  outline: none;
+}
+
+/* *Theme styles */
+.background-light {
+  background-image: url(files/img/background-light.jpg);
+}
+
+.background-dark {
+  background-image: url(files/img/background-dark.jpg);
+}
+
+.theme-light {
+  color: var(--light);
+  border-color: var(--purple);
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.theme-light:hover,
+.key-active-light {
+  border-color: var(--yellow);
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.theme-dark {
+  color: var(--dark);
+  border-color: var(--blue);
+  background-color: rgba(255, 255, 255, 0.85);
+}
+
+.theme-dark:hover,
+.key-active-dark {
+  border-color: var(--red);
+  background-color: rgb(230, 211, 199);
+}
+
+.key-active-light,
+.key-active-dark {
+  transition: 0.1s;
+  transform: scale(0.9);  
+}
+
+/* *Button "instrumentsControls" styles */
+.instrumentsControls {
+  position: absolute;
+  top: 10%;
+  font-size: 0;
+}
+
+.btnInstLeft,
+.btnInstRight {
+  width: 150px;
+  height: 50px;
+}
+
+.btnInstLeft_style,
+.btnInstRight_style {
+  font-size: 16px;
+
+  border-width: 5px;
+  border-style: solid;
+
+  transition: 0.3s;
+}
+
+.btnInstLeft_style:hover,
+.btnInstRight_style:hover {
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.btnInstLeft_style {
+  border-radius: 7px 0 0 7px;
+}
+
+.btnInstRight_style {
+  border-radius: 0 7px 7px 0;
+}
+
+.btn-active {
+  color: var(--yellow);
+  border-color: var(--dark);
+  background-color: var(--dark);
+}
+
+.btn-active:hover {
+  color: var(--yellow);
+  border-color: var(--dark);
+  background-color: var(--dark);
+}
+
+/* *Button styles */
+.keys {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.keys__key {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 6vw;
+  height: 80px;
+  margin: 10px;
+
+  transition: 0.3s;
+}
+
+.keys__key:active {
+  transform: scale(0.9);
+}
+
+.button_style {
+  font-size: 16px;
+
+  border-width: 5px;
+  border-style: solid;
+  border-radius: 7px;
+}
+
+.button_style:hover {
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.keys__key > p {
+  font-size: 36px;
+}
+
+/* *Button "Theme" styles */
+.btnTheme {
+  position: absolute;
+  bottom: 10%;
+  right: 6%;
+  width: 150px;
+  height: 50px;
+
+  transition: 0.3s;
+}
