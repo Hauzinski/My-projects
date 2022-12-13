@@ -8,6 +8,7 @@ import { toggleAppSettings } from '../../store/appSettingsSlice';
 import { IState } from '../../store/store.types';
 import { callbackTimer } from '../../utils/callbackTimer';
 import { useSearch } from '../../utils/hooks/useSearch';
+import AppLanguageComponent from '../AppLanguage/AppLanguage';
 import AppLogoComponent from '../AppLogo/AppLogo';
 import ButtonSVGComponent from '../ButtonSVG/ButtonSVG';
 import SortFiltersComponent from '../SortFilters/SortFilters';
@@ -35,6 +36,7 @@ export default function Header() {
     <SortFiltersComponent key="SortFiltersComponent" />,
     <VideoPerPageComponent key="VideoPerPageComponent" />,
     <VideoOrderComponent key="VideoOrderComponent" />,
+    <AppLanguageComponent key="AppLanguageComponent" />,
   ];
 
   function setRequest(event: React.ChangeEvent<HTMLInputElement>) {

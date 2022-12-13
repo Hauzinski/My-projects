@@ -23,6 +23,10 @@
   font-family: inherit;
   font-size: 1rem;
 
+  border: 1px solid var.$grey;
+  border-radius: 4px;
+  background-color: var.$white;
+
   &:hover {
     cursor: pointer;
   }

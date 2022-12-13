@@ -1,12 +1,9 @@
 @use '../../styles/variables.scss' as var;
 
 .app-language {
-  position: absolute;
-  right: 1em;
-  bottom: 0.7em;
-
   display: flex;
   align-items: center;
+  grid-area: app-language;
 
   font-family: RobotoCondensedRegular, var.$default-fonts;
   font-size: 1rem;
@@ -25,6 +22,12 @@
 .select {
   font-family: inherit;
   font-size: 1rem;
+
+  border: 1px solid var.$grey;
+  border-radius: 4px;
+  background-color: var.$white;
+
+  outline: none;
 
   &:hover {
     cursor: pointer;

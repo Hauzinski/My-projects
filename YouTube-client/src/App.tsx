@@ -3,7 +3,6 @@ import React, { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
 
-import AppLanguageComponent from './components/AppLanguage/AppLanguage';
 import Header from './components/Header/Header';
 import AppRoutes from './routes/AppRoutes';
 import { IState } from './store/store.types';
@@ -23,7 +22,6 @@ export default function App() {
     <>
       <Header />
       <AppRoutes />
-      <AppLanguageComponent />
     </>
   );
 }

@@ -19,7 +19,8 @@
   grid-template-areas:
     '. app-logo search-video-input search-video-input filters-toggle-btn .'
     '. . video-filters video-filters . .'
-    '. . video-per-page video-order . .';
+    '. . video-per-page video-order . .'
+    '. . app-language app-language . .';
   padding: var.$content-indent;
 
   @media screen and (max-width: var.$screen-width-large) {
@@ -34,7 +35,9 @@
     grid-template-areas:
       '. app-logo search-video-input search-video-input filters-toggle-btn .'
       '. video-filters video-filters video-filters video-filters .'
-      '. video-per-page video-per-page video-order video-order .';
+      '. video-per-page video-per-page video-per-page video-per-page .'
+      '. video-order video-order video-order video-order .'
+      '. app-language app-language app-language app-language .';
   }
 }
 

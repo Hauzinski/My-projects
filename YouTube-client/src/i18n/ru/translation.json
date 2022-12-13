@@ -26,13 +26,13 @@
   "Comments": "Комментарии",
   "Favorites": "Избранное",
 
-  "Video order": "Тип видео",
-  "Select video order": "Выбрать тип видео",
+  "Video order": "Порядок видео",
+  "Select video order": "Выбрать порядок видео",
   "rating": "рейтинг",
   "relevance": "актуальность",
   "title": "заголовок",
-  "videoCount": "количествоВидео",
-  "viewCount": "количествоПросмотров",
+  "videoCount": "видеоНаКанале",
+  "viewCount": "просмотры",
 
   "Video per page": "Видео на странице",
   "Select count of video per page": "Выбрать количество видео на странице",
