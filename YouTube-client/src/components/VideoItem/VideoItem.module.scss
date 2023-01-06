@@ -24,9 +24,13 @@
 
 .video-item-img {
   grid-area: video-item-img;
-  object-fit: cover;
   width: 100%;
-  aspect-ratio: 16/9;
+
+  & > * {
+    object-fit: cover;
+    width: 100%;
+    aspect-ratio: 16/9;
+  }
 }
 
 .video-item-title {

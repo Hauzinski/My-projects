@@ -2,9 +2,9 @@
 
 **App status:** Stable.
 
-**App version:** 1.9.23.
+**App version:** 1.9.24.
 
-**Last update:** 13.12.2022.
+**Last update:** 06.01.2023.
 
 **Description:** this is a YouTube video hosting client that uses the YouTube Data API v3. The application searches for videos by keywords, has several filters for sorting search results, switching between pages of results. The user can go to the video page, which contains the video, title, description, statistics. Search results are cached to prevent repeated requests to the YouTube server. All application data is stored in the Redux store. The application uses lazy loading of pages.
 
