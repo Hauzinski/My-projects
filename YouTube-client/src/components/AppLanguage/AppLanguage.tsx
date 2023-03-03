@@ -3,8 +3,9 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { useSelector, useDispatch } from 'react-redux';
 
-import { setAppLanguage as setAppLanguageAction } from '../../store/appSettingsSlice';
-import { IState } from '../../store/store.types';
+import { setAppLanguage as setAppLanguageAction } from '@/store/appSettingsSlice';
+import { IState } from '@/store/store.types';
+
 import styles from './AppLanguage.module.scss';
 
 export default function AppLanguageComponent() {

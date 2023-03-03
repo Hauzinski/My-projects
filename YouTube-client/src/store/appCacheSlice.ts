@@ -1,7 +1,7 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
-import { Item } from '../api/youtubeAPI.types';
-import { getLocalStorage } from '../utils/manageLocalStorage';
+import { Item } from '@/api/youtubeAPI.types';
+import { getLocalStorage } from '@/utils/helpers/manageLocalStorage';
 
 const defaultAppCache = {
   request: '',

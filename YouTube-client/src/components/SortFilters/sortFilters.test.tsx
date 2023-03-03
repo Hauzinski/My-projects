@@ -3,7 +3,8 @@ import React from 'react';
 import { render } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 
-import { renderWithRedux } from '../../utils/helpers/testHelpers';
+import { renderWithRedux } from '@/utils/helpers/testHelpers';
+
 import SortFiltersComponent from './SortFilters';
 
 describe('Component test: SortFilters', () => {

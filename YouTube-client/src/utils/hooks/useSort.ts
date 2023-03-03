@@ -1,6 +1,7 @@
 import { useSelector } from 'react-redux';
 
-import { IState } from '../../store/store.types';
+import { IState } from '@/store/store.types';
+
 import { useSortByCount } from './useSortByCount';
 import { useSortByWord } from './useSortByWord';
 

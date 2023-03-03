@@ -2,9 +2,10 @@ import React from 'react';
 
 import { useDispatch, useSelector } from 'react-redux';
 
-import { IPropsFilter } from '../../../app.types';
-import { setFilter } from '../../../store/appSortFiltersSlice';
-import { IState, IStateSortFilters } from '../../../store/store.types';
+import { IPropsFilter } from '@/app.types';
+import { setFilter } from '@/store/appSortFiltersSlice';
+import { IState, IStateSortFilters } from '@/store/store.types';
+
 import styles from './Filter.module.scss';
 
 export default function FilterComponent({ data }: IPropsFilter) {

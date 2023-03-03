@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
-import { getLocalStorage } from '../utils/manageLocalStorage';
+import { getLocalStorage } from '@/utils/helpers/manageLocalStorage';
 
 const defaultAppSettings = {
   isAppSettings: false,

@@ -8,7 +8,7 @@ module.exports = {
   entry: './src/index.tsx',
   module: {
     rules: [
-      // TypeScript and JavaScript
+      //* TypeScript and JavaScript
       {
         test: /\.(ts|js)x?$/i,
         exclude: /node_modules/,
@@ -21,7 +21,7 @@ module.exports = {
           },
         ],
       },
-      // Images and Icons
+      //* Images and Icons
       {
         test: /\.(?:ico|gif|png|jpg|jpeg)$/i,
         type: 'asset/resource',
@@ -29,12 +29,12 @@ module.exports = {
         //   filename: 'assets/img/[name][ext]'
         // },
       },
-      // Fonts and SVGs
+      //* Fonts and SVGs
       {
-        test: /\.(woff(2)?|eot|ttf|otf|svg|)$/i,
+        test: /\.(woff(2)?|eot|ttf|otf|svg)$/i,
         type: 'asset/inline',
       },
-      // MP3
+      //* MP3
       {
         test: /.mp3$/i,
         type: 'asset/resource',
@@ -46,10 +46,9 @@ module.exports = {
   },
   resolve: {
     extensions: ['.tsx', '.ts', '.jsx', '.js'],
-    // alias: {
-    //   css: './src/assets/styles',
-    //   '@': './src/',
-    // },
+    alias: {
+      '@': path.resolve(__dirname, '../src'),
+    },
   },
   plugins: [
     new HtmlWebpackPlugin({

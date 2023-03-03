@@ -1,12 +1,7 @@
 {
   "bail": 1,
   "clearMocks": true,
-  "collectCoverageFrom": [
-    "src/**/*.{js,jsx,ts,tsx}",
-    "!**/declarations.d.*",
-    "!src/App.*",
-    "!src/index.*"
-  ],
+  "collectCoverageFrom": ["src/**/*.{js,jsx,ts,tsx}", "!**/declarations.d.*", "!src/App.*", "!src/index.*"],
   "coveragePathIgnorePatterns": ["src/models"],
   "coverageThreshold": {
     "global": {
@@ -16,7 +11,8 @@
   "moduleFileExtensions": ["tsx", "ts", "json", "node", "jsx", "js", "mjs", "cjs"],
   "moduleNameMapper": {
     "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "./__mocks__/fileMock.js",
-    "\\.(css|less|scss)$": "identity-obj-proxy"
+    "\\.(css|less|scss)$": "identity-obj-proxy",
+    "^@/(.*)$": "<rootDir>/src/$1"
   },
   "setupFilesAfterEnv": ["./config/setupTest.ts"],
   "slowTestThreshold": 8,

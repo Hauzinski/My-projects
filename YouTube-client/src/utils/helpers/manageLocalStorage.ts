@@ -1,4 +1,4 @@
-import { IState } from '../store/store.types';
+import { IState } from '@/store/store.types';
 
 function getLocalStorage(): IState | null {
   const localStorage = window.localStorage.getItem('youtube-app');

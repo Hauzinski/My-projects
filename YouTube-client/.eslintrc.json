@@ -67,10 +67,27 @@
     "react-hooks/exhaustive-deps": "warn",
     "import/prefer-default-export": "off",
     "import/no-extraneous-dependencies": ["error", { "devDependencies": true }],
+    "import/no-unresolved": [
+      "error",
+      {
+        "ignore": ["^@/"]
+      }
+    ],
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "": "never",
+        "js": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never"
+      }
+    ],
     "import/order": [
       "error",
       {
-        "groups": [["external", "builtin"], "internal", ["sibling", "parent"], "index"],
+        "groups": [["builtin", "external"], "internal", "parent", "sibling", "index", ["object", "type"]],
         "pathGroups": [
           {
             "pattern": "@(react|react-native)",
@@ -78,7 +95,7 @@
             "position": "before"
           },
           {
-            "pattern": "@src/**",
+            "pattern": "@/**",
             "group": "internal"
           }
         ],
@@ -91,6 +108,5 @@
       }
     ]
   },
-
   "ignorePatterns": ["node_modules/", "build/", "webpack/", "*.svg"]
 }

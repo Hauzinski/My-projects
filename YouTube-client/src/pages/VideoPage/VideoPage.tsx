@@ -4,11 +4,12 @@ import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
 import { useNavigate, useParams } from 'react-router-dom';
 
-import { Statistics } from '../../api/youtubeAPI.types';
-import ButtonSVGComponent from '../../components/ButtonSVG/ButtonSVG';
-import VideoMetricsComponent from '../../components/VideoMetrics/VideoMetrics';
-import { IState } from '../../store/store.types';
-import { formatDate } from '../../utils/formatDate';
+import { Statistics } from '@/api/youtubeAPI.types';
+import ButtonSVGComponent from '@/components/ButtonSVG/ButtonSVG';
+import VideoMetricsComponent from '@/components/VideoMetrics/VideoMetrics';
+import { IState } from '@/store/store.types';
+import { formatDate } from '@/utils/helpers/formatDate';
+
 import styles from './VideoPage.module.scss';
 
 export default function VideoPage() {

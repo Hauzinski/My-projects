@@ -1,6 +1,7 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
-import { getLocalStorage } from '../utils/manageLocalStorage';
+import { getLocalStorage } from '@/utils/helpers/manageLocalStorage';
+
 import { IStateSortFilters } from './store.types';
 
 const defaultAppSortFilters: { [key: string]: string } = {

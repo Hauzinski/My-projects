@@ -1,6 +1,7 @@
 import { useDispatch } from 'react-redux';
 
-import { setRequest as setRequestAction } from '../../store/appCacheSlice';
+import { setRequest as setRequestAction } from '@/store/appCacheSlice';
+
 import { useCheckValueRequest } from './useCheckValueRequest';
 import { useRequestVideoData } from './useRequestVideoData';
 

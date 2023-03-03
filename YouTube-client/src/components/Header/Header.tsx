@@ -4,16 +4,17 @@ import { useTranslation } from 'react-i18next';
 import { useDispatch, useSelector } from 'react-redux';
 import { CSSTransition } from 'react-transition-group';
 
-import { toggleAppSettings } from '../../store/appSettingsSlice';
-import { IState } from '../../store/store.types';
-import { callbackTimer } from '../../utils/callbackTimer';
-import { useSearch } from '../../utils/hooks/useSearch';
-import AppLanguageComponent from '../AppLanguage/AppLanguage';
-import AppLogoComponent from '../AppLogo/AppLogo';
-import ButtonSVGComponent from '../ButtonSVG/ButtonSVG';
-import SortFiltersComponent from '../SortFilters/SortFilters';
-import VideoOrderComponent from '../VideoOrder/VideoOrder';
-import VideoPerPageComponent from '../VideoPerPage/VideoPerPage';
+import AppLanguageComponent from '@/components/AppLanguage/AppLanguage';
+import AppLogoComponent from '@/components/AppLogo/AppLogo';
+import ButtonSVGComponent from '@/components/ButtonSVG/ButtonSVG';
+import SortFiltersComponent from '@/components/SortFilters/SortFilters';
+import VideoOrderComponent from '@/components/VideoOrder/VideoOrder';
+import VideoPerPageComponent from '@/components/VideoPerPage/VideoPerPage';
+import { toggleAppSettings } from '@/store/appSettingsSlice';
+import { IState } from '@/store/store.types';
+import { callbackTimer } from '@/utils/helpers/callbackTimer';
+import { useSearch } from '@/utils/hooks/useSearch';
+
 import styles from './Header.module.scss';
 
 export default function Header() {

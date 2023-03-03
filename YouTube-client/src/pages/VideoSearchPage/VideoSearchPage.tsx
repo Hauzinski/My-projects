@@ -1,12 +1,13 @@
-import React, { useRef, useLayoutEffect } from 'react';
+import React, { useLayoutEffect, useRef } from 'react';
 
 import { useDispatch, useSelector } from 'react-redux';
 
-import VideoItemComponent from '../../components/VideoItem/VideoItem';
-import VideoSearchNavigationComponent from '../../components/VideoSearchNavigation/VideoSearchNavigation';
-import { setMainPageScroll as setMainPageScrollAction } from '../../store/appSettingsSlice';
-import { IState } from '../../store/store.types';
-import useSort from '../../utils/hooks/useSort';
+import VideoItemComponent from '@/components/VideoItem/VideoItem';
+import VideoSearchNavigationComponent from '@/components/VideoSearchNavigation/VideoSearchNavigation';
+import { setMainPageScroll as setMainPageScrollAction } from '@/store/appSettingsSlice';
+import { IState } from '@/store/store.types';
+import useSort from '@/utils/hooks/useSort';
+
 import styles from './VideoSearchPage.module.scss';
 
 export default function VideoSearchPage() {

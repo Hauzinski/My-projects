@@ -1,6 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 const publicPath = '/My-projects/YouTube-client-react/';
@@ -19,7 +20,7 @@ module.exports = {
   devtool: 'source-map',
   module: {
     rules: [
-      // Styles
+      //* Styles
       {
         test: /\.(scss|sass|css)$/i,
         use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader', 'sass-loader'],
@@ -28,14 +29,18 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: '[name].[contenthash].css',
+      filename: '[name].[contenthash].bundle.css',
+      chunkFilename: '[name].[chunkhash].chunk.css',
     }),
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify('production'),
       'process.env.BASENAME': JSON.stringify(publicPath),
     }),
-    // new BundleAnalyzerPlugin(),
+    new BundleAnalyzerPlugin(),
   ],
+  optimization: {
+    minimizer: [new CssMinimizerPlugin()],
+  },
   performance: {
     hints: 'warning',
     maxEntrypointSize: 512000,

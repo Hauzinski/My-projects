@@ -2,9 +2,9 @@ import React, { lazy, Suspense } from 'react';
 
 import { Routes, Route, Navigate } from 'react-router-dom';
 
-const VideoSearchPage = lazy(() => import('../pages/VideoSearchPage/VideoSearchPage'));
-const VideoPage = lazy(() => import('../pages/VideoPage/VideoPage'));
-const LoadingSpinnerPage = lazy(() => import('../pages/LoadingSpinnerPage/LoadingSpinnerPage'));
+const VideoSearchPage = lazy(() => import('@/pages/VideoSearchPage/VideoSearchPage'));
+const VideoPage = lazy(() => import('@/pages/VideoPage/VideoPage'));
+const LoadingSpinnerPage = lazy(() => import('@/pages/LoadingSpinnerPage/LoadingSpinnerPage'));
 
 export default function AppRoutes() {
   return (

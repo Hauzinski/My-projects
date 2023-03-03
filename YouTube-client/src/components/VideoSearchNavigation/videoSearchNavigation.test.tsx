@@ -2,7 +2,8 @@ import React from 'react';
 
 import { render } from '@testing-library/react';
 
-import { renderWithRedux, renderWithRouter } from '../../utils/helpers/testHelpers';
+import { renderWithRedux, renderWithRouter } from '@/utils/helpers/testHelpers';
+
 import VideoSearchNavigationComponent from './VideoSearchNavigation';
 
 describe('Component test: VideoSearchNavigation', () => {

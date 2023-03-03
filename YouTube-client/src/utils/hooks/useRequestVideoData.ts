@@ -1,13 +1,13 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 
-import { getVideoData } from '../../api/youtubeAPI';
+import { getVideoData } from '@/api/youtubeAPI';
 import {
   setRequestData as setRequestDataAction,
   setPageTokensData as setPageTokensDataAction,
-} from '../../store/appCacheSlice';
-import { setMainPageScroll as setMainPageScrollAction } from '../../store/appSettingsSlice';
-import { IState } from '../../store/store.types';
+} from '@/store/appCacheSlice';
+import { setMainPageScroll as setMainPageScrollAction } from '@/store/appSettingsSlice';
+import { IState } from '@/store/store.types';
 
 function useRequestVideoData() {
   const request = useSelector((state: IState) => state.cache.request);

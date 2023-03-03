@@ -3,8 +3,9 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { useDispatch, useSelector } from 'react-redux';
 
-import { setWordFilter as setWordFilterAction } from '../../store/appSortFiltersSlice';
-import { IState } from '../../store/store.types';
+import { setWordFilter as setWordFilterAction } from '@/store/appSortFiltersSlice';
+import { IState } from '@/store/store.types';
+
 import FilterComponent from './Filter/Filter';
 import styles from './SortFilters.module.scss';
 

@@ -3,7 +3,8 @@ import React from 'react';
 import { render } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 
-import { renderWithRedux, renderWithRouter } from '../../utils/helpers/testHelpers';
+import { renderWithRedux, renderWithRouter } from '@/utils/helpers/testHelpers';
+
 import Header from './Header';
 
 describe('Layout test: Header', () => {

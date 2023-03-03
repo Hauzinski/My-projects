@@ -3,9 +3,10 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
 
-import { IState } from '../../store/store.types';
-import { useRequestVideoData } from '../../utils/hooks/useRequestVideoData';
-import ButtonSVGComponent from '../ButtonSVG/ButtonSVG';
+import ButtonSVGComponent from '@/components/ButtonSVG/ButtonSVG';
+import { IState } from '@/store/store.types';
+import { useRequestVideoData } from '@/utils/hooks/useRequestVideoData';
+
 import styles from './VideoSearchNavigation.module.scss';
 
 export default function VideoSearchNavigationComponent() {

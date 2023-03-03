@@ -3,7 +3,8 @@ import React from 'react';
 import { render } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 
-import { renderWithRouter } from '../../utils/helpers/testHelpers';
+import { renderWithRouter } from '@/utils/helpers/testHelpers';
+
 import VideoItem from './VideoItem';
 
 const data = {

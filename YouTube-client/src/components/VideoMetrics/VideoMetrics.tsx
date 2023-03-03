@@ -2,7 +2,8 @@ import React from 'react';
 
 import { useTranslation } from 'react-i18next';
 
-import { IPropsVideoMetricsComponent } from '../../app.types';
+import { IPropsVideoMetricsComponent } from '@/app.types';
+
 import MetricComponent from './Metric/Metric';
 import styles from './VideoMetrics.module.scss';
 

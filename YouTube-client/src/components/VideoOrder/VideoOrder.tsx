@@ -3,9 +3,10 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
 
-import { IState } from '../../store/store.types';
-import { formatLowerCamelCaseToCase } from '../../utils/formatLowerCamelCaseToCase';
-import { useVideoOrder } from '../../utils/hooks/useVideoOrder';
+import { IState } from '@/store/store.types';
+import { formatLowerCamelCaseToCase } from '@/utils/helpers/formatLowerCamelCaseToCase';
+import { useVideoOrder } from '@/utils/hooks/useVideoOrder';
+
 import styles from './VideoOrder.module.scss';
 
 export default function VideoOrderComponent() {

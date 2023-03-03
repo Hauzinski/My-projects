@@ -18,7 +18,7 @@ module.exports = {
   },
   module: {
     rules: [
-      // Styles
+      //* Styles
       {
         test: /\.(scss|sass|css)$/i,
         use: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader'],

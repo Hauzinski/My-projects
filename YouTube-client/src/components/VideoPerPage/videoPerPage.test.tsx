@@ -3,7 +3,8 @@ import React from 'react';
 import { render } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 
-import { renderWithRedux, renderWithRouter } from '../../utils/helpers/testHelpers';
+import { renderWithRedux, renderWithRouter } from '@/utils/helpers/testHelpers';
+
 import VideoPerPageComponent from './VideoPerPage';
 
 describe('Component test: VideoPerPage', () => {

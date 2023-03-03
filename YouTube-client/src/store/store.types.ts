@@ -1,4 +1,4 @@
-import { Item } from '../api/youtubeAPI.types';
+import { Item } from '@/api/youtubeAPI.types';
 
 export interface IState {
   cache: IStateCache;
