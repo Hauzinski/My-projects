@@ -22,7 +22,7 @@ module.exports = {
     rules: [
       //* Styles
       {
-        test: /\.(scss|sass|css)$/i,
+        test: /\.(sa|s?c)ss$/i,
         use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader', 'sass-loader'],
       },
     ],

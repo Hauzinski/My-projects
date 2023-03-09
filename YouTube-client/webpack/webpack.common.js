@@ -10,7 +10,7 @@ module.exports = {
     rules: [
       //* TypeScript and JavaScript
       {
-        test: /\.(ts|js)x?$/i,
+        test: /\.[tj]sx?$/i,
         exclude: /node_modules/,
         use: [
           {
@@ -23,7 +23,7 @@ module.exports = {
       },
       //* Images and Icons
       {
-        test: /\.(?:ico|gif|png|jpg|jpeg)$/i,
+        test: /\.(ico|gif|png|jpe?g)$/i,
         type: 'asset/resource',
         // generator: {
         //   filename: 'assets/img/[name][ext]'
@@ -31,12 +31,12 @@ module.exports = {
       },
       //* Fonts and SVGs
       {
-        test: /\.(woff(2)?|eot|ttf|otf|svg)$/i,
+        test: /\.(woff2?|eot|[to]tf|svg)$/i,
         type: 'asset/inline',
       },
       //* MP3
       {
-        test: /.mp3$/i,
+        test: /\.mp3$/i,
         type: 'asset/resource',
         // generator: {
         //   filename: 'assets/audio/[name][ext]',
